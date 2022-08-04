@@ -13,8 +13,6 @@ public class KOMENTARZE {
     char    16          2           single character
     boolean 1           1bit        true / false only
 
-
      */
-
 
 }

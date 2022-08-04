@@ -14,8 +14,6 @@ public class Variables {
 
         System.out.println(d);
 
-
-
     }
 
 
