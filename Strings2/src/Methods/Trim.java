@@ -2,6 +2,8 @@ package Methods;
 
 public class Trim {
 
+    // TODO - Trim kasuje spacje
+
     public static void main(String[] args) {
 
 

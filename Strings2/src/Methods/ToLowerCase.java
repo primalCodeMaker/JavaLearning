@@ -2,6 +2,7 @@ package Methods;
 
 public class ToLowerCase {
 
+    // TODO ToLowerCase ToUpperCase - ZMIENIA WIELKOSC LITER W STRINGU
     public static void main(String[] args) {
 
         String s1 = "michALRObiKURSZajaVKA.PL";
