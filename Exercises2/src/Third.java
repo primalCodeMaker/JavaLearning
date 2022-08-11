@@ -2,7 +2,7 @@ public class Third {
 
     public static void main(String[] args) {
 
-        String sentence = "MichalIsLearningJavaEveryday";
+        String sentence = "MichalIsLearningJavaEverydayAAY";
         String a = "a";
         String o = "o";
         String e = "e";
@@ -12,13 +12,16 @@ public class Third {
 
         char[] vowel = {'a','o','e','i','u','y'};
 
-        double value = 0.1;
+        // TODO Double.parseDouble potrafi ze stringa zrobic doubla i wykonywac na nim dzialania
+//        String value = "1.1";
+//        double novalue = Double.parseDouble(value);
 
-        //String StringValueOff = sentence.replace(a, String.valueOf(value)).replace(o, String.valueOf(value));
+        double value = 7.4;
+        String x = String.valueOf(value);
 
+        String xx = sentence.toLowerCase().replace(a,x).replace(o,x).replace(e,x).replace(i,x).replace(u,x).replace(y,x);
+        System.out.println(xx);
 
-        String StringValueOff = sentence.replace(a, (value));
-        System.out.println(StringValueOff);
 
 
 
