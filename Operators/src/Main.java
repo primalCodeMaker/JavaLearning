@@ -8,7 +8,7 @@ public class Main {
         System.out.println(i);
         System.out.println("a: "  + a);
 
-        int b = a + ++a;
+        int b = a + ++a;  //b = a + (1 +a )
         System.out.println("b: " + b);
         System.out.println("a: "  + a);
 
