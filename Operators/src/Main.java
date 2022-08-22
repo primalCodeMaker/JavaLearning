@@ -5,10 +5,14 @@ public class Main {
         System.out.println(a);
 
         int i = a + a++;
-        System.out.println(i);
         System.out.println("a: "  + a);
 
+<<<<<<< HEAD
         int b = a + ++a;  //b = a + (1 +a )
+=======
+        int b = a + ++a;
+        System.out.println(a == b);
+>>>>>>> 9ed34060eb44fb16d87e2997413814e314f3c8fa
         System.out.println("b: " + b);
         System.out.println("a: "  + a);
 
