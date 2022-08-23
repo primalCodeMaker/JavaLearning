@@ -11,7 +11,7 @@ public class Constructions {
         // int - typ danych
         // [] - informacja ze jest to tablica
         // aray3 - nazwa zmiennej
-        // new int - tworzy tablice, ktora jest tylu int
+        // new int - tworzy tablice, ktora jest typu int
         // [10] - tozmiar tablicy w ktorej jest 10 elementow
 
 
