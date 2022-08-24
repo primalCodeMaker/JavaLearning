@@ -16,7 +16,11 @@ public class LargestNumberInRow {
 
     private static void largestNumberInRow(int[][] matrix) {
         for (int row = 0; row < matrix.length; row++) {
-            int largest = matrix[row] [0];
+            int [] podtablica = matrix[row];
+                int largest = podtablica[0];
+
+           // int largest = matrix[row] [0];
+
             for (int column = 0; column < matrix[row].length; column++) {
                 if (matrix[row][column] > largest) {
                     largest = matrix[row][column];
