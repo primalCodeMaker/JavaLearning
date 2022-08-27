@@ -13,7 +13,7 @@ public class VariableVisibilityScope {
 
     private static void method2(int b) {
         System.out.println(b);
-        method1(b);
+        method1(c);
         }
 
     public static void main(String[] args) {
