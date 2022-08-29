@@ -1,4 +1,4 @@
-package OjectBasics;
+package ObjectsBasics;
 
 //KLASA - schemat opisujacy zestaw cech i zachowan ktory towazyszy obiektowi, ktory zsostal w tej klasie utworzony
 

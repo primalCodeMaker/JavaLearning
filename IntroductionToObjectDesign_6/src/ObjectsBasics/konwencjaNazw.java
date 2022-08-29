@@ -1,3 +1,5 @@
+package ObjectsBasics;
+
 public class konwencjaNazw {
 
     /*

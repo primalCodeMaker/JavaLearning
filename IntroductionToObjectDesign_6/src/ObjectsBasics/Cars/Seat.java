@@ -1,4 +1,4 @@
-package cars;
+package ObjectsBasics.Cars;
 
 public class Seat {
 

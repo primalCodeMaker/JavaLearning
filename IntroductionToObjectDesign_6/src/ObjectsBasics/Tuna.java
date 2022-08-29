@@ -1,4 +1,4 @@
-package OjectBasics;
+package ObjectsBasics;
 
 public class Tuna {
     // zmienna zdefiniowana z pola klasy mozemy uzywac w metodzie nawet  bez zainicjalizowania.

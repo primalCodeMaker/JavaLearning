@@ -1,4 +1,4 @@
-package OjectBasics;
+package ObjectsBasics;
 
 public class Test {
 

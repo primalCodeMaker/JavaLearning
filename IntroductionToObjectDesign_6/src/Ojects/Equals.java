@@ -1,4 +1,4 @@
-package Methods;
+package Ojects;
 
 // metoda Equals musi miec pewne zasady "principles""
 // x.equals(y) <==> y.equals(x)
@@ -8,6 +8,8 @@ package Methods;
 //przy nullu nie moze byc blad tylko powinno zwracac false
 
 //Alt + insert generuje automatycznie Equalsa
+
+import Methods.This;
 
 import java.util.Objects;
 

@@ -1,6 +1,7 @@
+package ObjectsBasics.Cars;
 
-import cars.Seat;
-import cars.VolksWagen;
+import ObjectsBasics.Cars.Seat;
+import ObjectsBasics.Cars.VolksWagen;
 
 public class Main {
 

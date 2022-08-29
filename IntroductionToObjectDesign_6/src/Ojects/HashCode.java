@@ -1,4 +1,4 @@
-package Methods;
+package Ojects;
 
 // mechanizm, ktory pozwala na posegregowanie pewnych obiektow w grupy
 // do kazdego obiektu na podstawie jego pol oblicza i przypisuje pewna wartosc
