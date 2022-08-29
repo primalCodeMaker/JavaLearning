@@ -24,7 +24,7 @@ public class Basics {
 
     public static int odejmowanie(int liczba1, int liczbe2) {
         int wynik = liczba1 - liczbe2;
-                return wynik;
+        return wynik;
 
     }
 

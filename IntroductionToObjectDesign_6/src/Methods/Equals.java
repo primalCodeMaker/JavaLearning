@@ -67,6 +67,8 @@ public class Equals {
     public int hashCode() {
         return Objects.hash(fieldOfClass);
     }
+
+
 }
 
 

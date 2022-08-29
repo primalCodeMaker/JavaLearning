@@ -8,9 +8,10 @@ package Methods;
 
 public class HashCode {
 
-    private String marka;
-    private String model;
-    private int productionYear;
+    public static String marka = "nothink";
+    public static String model;
+    public static int productionYear;
+
 
 
     public static void main(String[] args) {
@@ -20,18 +21,42 @@ public class HashCode {
         HashCode car4 = new HashCode();
         HashCode car5 = new HashCode();
 
-        car1.VWgarbus(
-        System.out.println(car1());
-        // todo 41 min filmu
+        System.out.println(car1.hashCode());
+        System.out.println(car2.hashCode());
+        System.out.println(car3.hashCode());
 
+
+       car1.VWgarbus();
+       car2.Mercedes();
+
+        System.out.println(car1.toString());
+        System.out.println(car1.hashCode());
+        System.out.println(car2.toString());
+        System.out.println(car2.hashCode());
 
 
     }
 
-    private static void VWgarbus (String marka, String model, int productionYear) {
+    public void VWgarbus () {
         marka = "VolksWagen";
         model = "Garbus";
         productionYear = 1984;
+    }
+
+        public void Mercedes () {
+            marka = "Mercedes";
+            model = "amg gt";
+            productionYear =  2022;
+    }
+
+
+    @Override
+    public String toString() {
+        return "HashCode{" +
+                "marka='" + marka + '\'' +
+                ", model='" + model + '\'' +
+                ", productionYear=" + productionYear +
+                '}';
     }
 }
 
