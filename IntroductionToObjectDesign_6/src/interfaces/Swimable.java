@@ -8,12 +8,13 @@ public interface Swimable {
         System.out.println("you move while swimming");
     }
 
+
     default String sthelse(){
         return "sth else" + anything();
     }
 
     private String anything() {
         return "anything from private method";
-    }
+    } // private stringa uzywamy metode wyzej, nigdzie indziej sie nie da
 
 }
