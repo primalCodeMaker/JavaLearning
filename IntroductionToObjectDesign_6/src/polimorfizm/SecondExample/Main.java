@@ -17,18 +17,15 @@ public class Main {
         for (int i = 0; i < arr.length; i++) {
             System.out.println("iter" + i);
             arr[i].describle();
-                if(Cabriolet.class.equals(true)) { //todo jak to napisac jesli klasa = cabriolet to wywolaj open door
-                    openDoor(arr[i]);
-                }
+
+            if (arr[i] instanceof Cabriolet) {
+                openDoor();
+            }
             System.out.println("");
         }
-
     }
-
-    private static void openDoor(Car cabriolet) {
-        System.out.println("door opened" + cabriolet);
-
-
-        }
-
+    private static void openDoor() {
+        System.out.println("door opened");
+    }
 }
+
