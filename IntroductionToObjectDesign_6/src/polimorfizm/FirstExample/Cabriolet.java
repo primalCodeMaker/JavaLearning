@@ -16,7 +16,10 @@ public class Cabriolet extends Car {
 
     public void describleDefault() {
         super.describle();
+    }
 
+    public void sth() {
+        System.out.println("somethink in Cabriolet class only");
     }
 
     @Override

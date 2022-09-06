@@ -18,14 +18,14 @@ public class Main {
             System.out.println("iter" + i);
             arr[i].describle();
 
-            if (arr[i] instanceof Cabriolet) {
-                openDoor();
-            }
+//            if (arr[i] instanceof Cabriolet) {
+//                openDoor((Car)(arr[i]));
+//            }
             System.out.println("");
+
+
         }
     }
-    private static void openDoor() {
-        System.out.println("door opened");
-    }
+
 }
 
