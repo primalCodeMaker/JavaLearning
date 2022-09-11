@@ -1,7 +1,5 @@
 package Final.immutableClass;
 
-import Casting.Car;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -14,9 +12,7 @@ public class Main {
         System.out.println(cat1);  // nie mozna zmienic pol klasy immutable poprzez meody
 
         cat1 = new Cat("asd", "asd");
-        System.out.println(cat1); // mozna to zrobic natomiast poprzez zmiane referencj cat1 na nory opbiekt klasy immutable Cat
-
-
+        System.out.println(cat1); // mozna to zrobic natomiast poprzez zmiane referencj cat1 na nowy opbiekt klasy immutable Cat
 
 
         System.out.println();

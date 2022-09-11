@@ -14,7 +14,6 @@ public final class Cat {
 
     }
 
-
     public Cat newOwner(String name, String owner) {
         return new Cat(this.name, owner);
     }
