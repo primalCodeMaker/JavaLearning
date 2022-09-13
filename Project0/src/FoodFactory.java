@@ -4,7 +4,6 @@ import person.ProducingMan;
 import person.Consumer;
 import product.Food;
 
-
 public class FoodFactory {
 
 
