@@ -1,9 +1,6 @@
 package staticPolimorfizm;
 
 public class Exe {
-
-
-
     public static void main(String[] args) {
 
         A a = new A();
@@ -18,6 +15,12 @@ public class Exe {
         System.out.println();
         A.printA();
         B.printA();
+
+        System.out.println();
+
+        System.out.println(A.NAME);
+        System.out.println(B.NAME); // przy stałych wystepuje dziedziczenie. Jesli usunemy NAME z klasy B to bedzie sie drukowac wartość NAME z klasy dziedziczonej
+                                    // jesli w klasie B bedzie stała o tej samej nazwie to zadziała mechanizm przykrywania
 
     }
 }
