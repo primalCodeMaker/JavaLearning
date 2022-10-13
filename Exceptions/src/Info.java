@@ -18,3 +18,8 @@ public class Info {
 //możemy użyć RuntimeException i takie wyjątki nie muszą być obsługiwane przez Try {} Catch {} na poziomie kompilacji
 
 // Analyze stack trace or Thread dump - opcja w intelliJ, ktora pozwala wkleic sobie i sprawdzic raport bledow
+
+// mozna lapac kilka bledow w jednym sprawdzeniu jesli klasy Exceprions rozszerzaja sie wzajemnie
+    // w takim wypadku trzeba zaczac pisac Catche od tego najwyzej w hierarhii (najbardziej szczegolowy)
+
+// mozna zlapac 2 rozne bledy w 1 catchu za pomoca operatora "lub" |
