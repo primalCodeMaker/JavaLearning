@@ -26,3 +26,8 @@ public class Info {
 
 //jesli w bloku inicjalizacyjnym static uzyjemy exception to w taki sposob mozna sprawdzac dostepnosc plikow zewnetrznych
     // jesli nie znajdzie pliku o danej nazwie to rzuci wyjatek
+
+// finally wykonuje akcje po wywaleniu bledu. 2 dzialania:
+    // try - catch - finaly >> jesli zlapiemy wyjatek to wykona instruckje finally i program  przejdzie do dalszego dzialania
+    // try - finnaly >> jesli zucimy wyjatkiem ale go nie zlapiemy catchem to finnaly sie wykona ale przerwie dalsze wykonywanie programu
+// w finnaly tez mozna sypac wyjatkami i je lapac
