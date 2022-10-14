@@ -23,3 +23,6 @@ public class Info {
     // w takim wypadku trzeba zaczac pisac Catche od tego najwyzej w hierarhii (najbardziej szczegolowy)
 
 // mozna zlapac 2 rozne bledy w 1 catchu za pomoca operatora "lub" |
+
+//jesli w bloku inicjalizacyjnym static uzyjemy exception to w taki sposob mozna sprawdzac dostepnosc plikow zewnetrznych
+    // jesli nie znajdzie pliku o danej nazwie to rzuci wyjatek
