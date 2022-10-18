@@ -2,11 +2,12 @@ package listAndArrayList;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Methods {
     public static void main(String[] args) {
 
-        ArrayList<String> citiesList = new ArrayList<>();
+        List<String> citiesList = new ArrayList<>();
         citiesList.add("Wroclaw");
         citiesList.add("Szczecin");
         citiesList.add("Gdynia");

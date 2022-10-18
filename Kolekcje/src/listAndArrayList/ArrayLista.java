@@ -1,6 +1,7 @@
 package listAndArrayList;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ArrayLista {
 
@@ -9,7 +10,7 @@ public class ArrayLista {
         String first;
         first = "HI";
 
-        ArrayList<Integer> myList = new ArrayList<>();
+        List<Integer> myList = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
             myList.add(i);
         }
