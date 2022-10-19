@@ -22,3 +22,12 @@ public class Info {
     //podwujnie - czyli z każdego elementu jesteśmy się w stanie cofjąć albo pójść do przodu
     // pojedynczo - to taka lista, ktora będzie mogła iść tylko do przodu. Nie będzie możliwości cofnięcia się element do tyłu
 // jesli chcemy sie dostac do jakiegos elementu tej listy to nie mozemy sie do niego bezposrednio odwolac, tylko trzeba isc od pierwszeg lub ostatniego elementu
+
+
+//Set - pozwala wykonywać rozne dzialania na osobnych zbiorach.
+// Nie zachowuje kolejnosci elementow w zbiorze
+// porownujac ze soba obiekty w setach trzeba nadpisac metody equals i hashcode
+
+// lepiej używać Interfejsu w definicji zmiennej np List albo Collection
+    // poniewaz pozniej jak robimy metode a mamy array liste i linkedliste to nie musimy pisac 2och metod aby je osobno obsluzyc
+    // jesli uyjemy interfejsu Collection bedziemy mogli taka metode uzywac rowniez na setach
