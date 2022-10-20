@@ -1,4 +1,4 @@
-public class Info {
+public class InfoKolekcje {
 }
 
 // Vektor i  Hashtable to jedne z pierwszych kolekcji.
