@@ -12,7 +12,7 @@ public class Info {
 //najwazniejsze metody do dzialan na dacie i czasie:
     // .of() deklarowanie zmiennej czasowej
     // plus / minus - manipulowanie czasem
-    // with - calkowita zmiana daty/czasu na zdeklarowana przez nas
+    // with - calkowita zmiana daty/czasu na zdeklarowana przez naso
     // Epoch - liczenie od 01.01.1970r
     // MIN/MAX  -999999999-01-01 / +999999999-12-31
     // ofSecondOfDay(x) - zwraca godzine na podstawie sekund
