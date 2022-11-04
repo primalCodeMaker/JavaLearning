@@ -27,3 +27,6 @@ public class Info {
 
 // ZonedDateTime sluzy do odnoszenia sie do dat i czasu w kontekscie stref czasowych
     // ogarnia zmiane czasu zimowy / letni
+    // plus i minus dzialaja
+    //dzialaja with, loLocalDateTime, get
+    // nie dziala tutaj MIX / MAX
