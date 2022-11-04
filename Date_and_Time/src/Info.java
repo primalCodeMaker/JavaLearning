@@ -20,3 +20,10 @@ public class Info {
     // toSecondOfDay - ilosc sekund jaka minela od poczatku dnia
     // Arrays.toString(Month.values()) - drukuje dni w meiosiacu w postaci tabeli
     // get np: getDayOfWeek()
+    // .atDate() / .atTime() >>> mozna dodac czas do samej daty, lub date do czasu
+
+// OffsetDataTime - pozwala na ustawienie przesuniecia w dacie i czasie. Mozna sie odnosic do UTC
+    // w offsecie dzialaja: with, get, MIN, MAX
+
+// ZonedDateTime sluzy do odnoszenia sie do dat i czasu w kontekscie stref czasowych
+    // ogarnia zmiane czasu zimowy / letni
