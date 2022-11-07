@@ -23,7 +23,7 @@ public class Examples {
 
         System.out.println(zonedDateTime.getDayOfMonth());
         zonedDateTime.withHour(2);
-        //todo 17:50 w kursie
+
 
     }
 }

@@ -30,3 +30,7 @@ public class Info {
     // plus i minus dzialaja
     //dzialaja with, loLocalDateTime, get
     // nie dziala tutaj MIX / MAX
+
+// Period - klasa, ktora oznacza jakis okres czasu.
+    // uzywa sie jej w tylko w odniesieniu do dat a nie do czasu
+    // w przypadku klasy Period nie działa chainowanie metod, poniewaz wywolywane metody sa Statyczne i zawsze wynik bedzie nadpisywany ostatnia metoda w lancuchu
