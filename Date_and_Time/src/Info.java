@@ -34,3 +34,6 @@ public class Info {
 // Period - klasa, ktora oznacza jakis okres czasu.
     // uzywa sie jej w tylko w odniesieniu do dat a nie do czasu
     // w przypadku klasy Period nie działa chainowanie metod, poniewaz wywolywane metody sa Statyczne i zawsze wynik bedzie nadpisywany ostatnia metoda w lancuchu
+
+// to.Instant >>> metoda, ktora wydrukuje nam UTC dla np obiektu klasy OffsetDateTime
+    // obiektKlasyOffsetDateTime.toInstant()
