@@ -21,6 +21,10 @@ public class Przesuniecie_Czasu {
         zonedDateTime = zonedDateTime.plusHours(1);
         System.out.println("Step3: " + zonedDateTime); // tutaj nastepuje zmiana UTC na +1
 
+        System.out.println("ile sekund minelo od epoch:");
+        System.out.println(zonedDateTime.toEpochSecond());
+
+
 
 
 

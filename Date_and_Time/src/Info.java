@@ -30,10 +30,24 @@ public class Info {
     // plus i minus dzialaja
     //dzialaja with, loLocalDateTime, get
     // nie dziala tutaj MIX / MAX
+    // nie mozna dodac Period do localTime
 
 // Period - klasa, ktora oznacza jakis okres czasu.
     // uzywa sie jej w tylko w odniesieniu do dat a nie do czasu
     // w przypadku klasy Period nie działa chainowanie metod, poniewaz wywolywane metody sa Statyczne i zawsze wynik bedzie nadpisywany ostatnia metoda w lancuchu
+    //chainowanie metod tu nie dziala
+    // Duration nie operuje w ogole na dniach. Momo metody Duration.ofDays jest to przeliczane na minuty
+    // LocalDate nie jest w stanie obsluzyc Duration
+    // LocalDateTime dziala z Duration
+
+// Instant zwraca ile czasu minelo od EPOCH (1970)
+    // do instanta mozna dodac godziny i dni >>> instant.plus(1, ChronoUnit.DAYS);
+    // nie mozna dodac tygodni
+    // dka instanta mozna uzyc metody .with()
+
 
 // to.Instant >>> metoda, ktora wydrukuje nam UTC dla np obiektu klasy OffsetDateTime
     // obiektKlasyOffsetDateTime.toInstant()
+
+//Duration - klasa podobna do Period ale operuje na czasie a nie na dacie
+    //klase Period mozna zainicjalizowac podajac 3 wartosci na raz, w duration tego nie mozna zrobic
