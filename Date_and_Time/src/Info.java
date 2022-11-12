@@ -51,3 +51,7 @@ public class Info {
 
 //Duration - klasa podobna do Period ale operuje na czasie a nie na dacie
     //klase Period mozna zainicjalizowac podajac 3 wartosci na raz, w duration tego nie mozna zrobic
+
+//DateTimeFormater  >>> klasa do formatowania w rozny sposob dat i czasow
+    // wyswietla w ladny i czytelny sposob zapisane daty
+    // wlasnie wyswietlanie, szczegoly  >>> formating.Custom
