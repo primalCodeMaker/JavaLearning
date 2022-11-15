@@ -20,7 +20,9 @@ public class Info {
     // Java nie zawsze tworzy nowe obiekty podczas wywolywania lambdy
 
 
-
+// Predykat - interfejs funkcykny dostarczany przez Jave, ktory przyjmuje tylko jeden argument oraz posiada wbudowana jedna metode Test
+    // wymaga zdefiniowania typu generycznego
+// Predykat jako arkument wejściowy może przyjąć Obiekty lub Stringa, ale zawsze zwraca boola
 
 
 
