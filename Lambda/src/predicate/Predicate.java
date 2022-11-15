@@ -9,6 +9,5 @@ public class Predicate {
         System.out.println(predicate.test("Angelika"));
         System.out.println(predicate.test("Karol"));
 
-        // todo 46min Predicate List<>
     }
 }
