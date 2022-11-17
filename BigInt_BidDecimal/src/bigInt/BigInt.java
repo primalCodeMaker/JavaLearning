@@ -18,8 +18,5 @@ public class BigInt {
         System.out.println(plus);
         System.out.println(bigInteger2.intValue());
 
-
-
-
     }
 }
