@@ -2,7 +2,7 @@ package oprional;
 
 import java.util.Optional;
 
-public class Main {
+public class Basics {
 
     public static void main(String[] args) {
 
