@@ -16,3 +16,7 @@ public class Info {
         // takie operacje sa kosztowne w programowaniu i chcemy uniknac wykonywania ich jesli to wykonanie nie jest potrzebne
         // inaczej mowiac ta metoda wykona sie tylko w momencie kiedy konieczne bedzie jej wykonanie
 
+// ifPresent() >> jesli pelne to wykonaj metode
+    // funkcja stosowana do lambd. W argumentach wymaga Interfejsu Funkcyjnego Supplier. isPresent nie dziala dla lambd
+// ifPresentOrElse() >> do powyzszej metody mozna dopisac co ma zwracac w przypadku gdy wartosc bedzie pusta
+    // w innym wypadku zwrocilo by wyjatek
