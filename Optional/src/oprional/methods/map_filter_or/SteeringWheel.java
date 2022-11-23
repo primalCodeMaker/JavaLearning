@@ -1,4 +1,4 @@
-package oprional.methods.map;
+package oprional.methods.map_filter_or;
 
 import java.util.Optional;
 

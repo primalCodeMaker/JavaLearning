@@ -29,6 +29,13 @@ public class Info {
 // jesli getter jest rowniez opakowany w optionala to do wyciagniecia tej wartosci jest metoda .FlatMap()
     // flatMap rozpakowuje Optionala, ktory jest zagniezdzony i tym samym skraca zapis i poprawia czytelnosc kodu
 
+//Filter:  stosujemy jesli dla Optionala chcemy okreslis warunki jakie musza byc spelnione
+    // jesli choc jeden warunek nie jest spełniony to zwraca wartosc Optional.Empty
 
+// .or()
+    // metoda ktora moze zwrocic innego optionala, jesli mamy Optional.Empty
+    // metora .orElse() moze zwracac tylko wartosc wiec nie mozna jej do tego uzyc
+    // jesli pierwsza wartosc w metodzie bedzie pusta, to wykona sie druga czesc metody
+    // jesli pierwsza wartosc w metodzie nie bedzie empty, to kod nie bedzie sie dalej wykonywal, tylko zwroci ta wartosc
 
-
+// Tworcy Javy zalozyli ze Optional nie powinien byc parameetrem metody, bo moze zwrocic nulla
