@@ -10,7 +10,7 @@ public class Basics {
 
 //      sposoby inicjalizacji:
         Optional<String> op1 = Optional.empty();
-        Optional<String> op2 = Optional.of("somethink is  here");
+        Optional<String> op2 = Optional.of("somethink is  here"); // tu moze byc wszystko w zaleznosci od typy generycznego
         Optional<String> op3 = Optional.ofNullable(null);
 
         Lam lam = (s) -> somethink(); {

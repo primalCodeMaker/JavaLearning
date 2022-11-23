@@ -20,3 +20,10 @@ public class Info {
     // funkcja stosowana do lambd. W argumentach wymaga Interfejsu Funkcyjnego Supplier. isPresent nie dziala dla lambd
 // ifPresentOrElse() >> do powyzszej metody mozna dopisac co ma zwracac w przypadku gdy wartosc bedzie pusta
     // w innym wypadku zwrocilo by wyjatek
+
+
+// W przypadku tworzenia nowego obiektu opakowanego w Optional nie można zwrócić ich wartości zwykłym getterem
+// w takim przypadku mamy metode .map()
+    // map operuje na wartosci, ktora jest w srodku optionala
+    // mapy wywoluja sie tylko gdy wartosc na ktorej chcemy operowac istnieje
+

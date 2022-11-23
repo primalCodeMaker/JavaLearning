@@ -11,7 +11,7 @@ public class orElse_VS_ifElse {
         //human1.ifPresentOrElse(h ->(new Human("ifPresentName")), () -> System.out.println("nothing here"));
 
         // roznia sie typem zwracanym
-        // orElse zwraca obiekt klasy,
+        // orElse zwraca np: obiekt klasy, albo Stringa
         // IfPresentOrElse zwraca Customera w pierwszym argumencie, a Customer zwraca Voida
     }
 
