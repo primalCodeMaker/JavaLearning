@@ -18,12 +18,12 @@ public class Car {
     // kierownice dla Cara mozna zwrocic zwyklym geterem, oraz geterem, ktory zwroci Optionala
         // W tym 2gim przypadku geter jest ofNullable gdyby zwracna wartosc byla nullem
     public SteeringWheel getSteeringWheel() {
-        System.out.println("getti Sterring wheel Normal");
+        System.out.println("gettin Sterring wheel Normal");
         return steeringWheel;
     }
 
     public Optional<SteeringWheel> getSteeringWheelOpt() {
-        System.out.println("getti Sterring wheel Optional");
+        System.out.println("gettin Sterring wheel Optional");
         return Optional.ofNullable(steeringWheel);
     }
 

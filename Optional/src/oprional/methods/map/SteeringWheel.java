@@ -12,12 +12,12 @@ public class SteeringWheel {
 
     // kierownica ma 2 getery: jeden zwraca doubla a jeden optionala
     public double getDiameter() {
-        System.out.println("getti Diameter Normal");
+        System.out.println("gettin Diameter Normal");
         return diameter;
     }
 
     public Optional<Double> getDiameterOpt() {
-        System.out.println("getti Diameter Optional");
+        System.out.println("gettin Diameter Optional");
         return Optional.of(diameter);
     }
 

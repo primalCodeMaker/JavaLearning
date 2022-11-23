@@ -26,4 +26,9 @@ public class Info {
 // w takim przypadku mamy metode .map()
     // map operuje na wartosci, ktora jest w srodku optionala
     // mapy wywoluja sie tylko gdy wartosc na ktorej chcemy operowac istnieje
+// jesli getter jest rowniez opakowany w optionala to do wyciagniecia tej wartosci jest metoda .FlatMap()
+    // flatMap rozpakowuje Optionala, ktory jest zagniezdzony i tym samym skraca zapis i poprawia czytelnosc kodu
+
+
+
 

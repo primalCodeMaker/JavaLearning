@@ -18,6 +18,7 @@ public class MapRun {
                 .map(c1 -> c1.getSteeringWheel())
                 .map(sw -> sw.getDiameter()); // przez to zagniezdzenie musimy zmienic tym zwracany na Diameter
         System.out.println(diameter);
+        System.out.println("car1: " + car1);
         System.out.println();
 
         // dla Cara, ktory jest empty mapy sie nie wywolaja, tutaj tez przyklad chainowania metod
@@ -27,11 +28,12 @@ public class MapRun {
         System.out.println();
 
         // dla wartosci empty mozna za pomoca orElse ustanowic jakas wartosc. Wtedy trzeba rowniez zmienic typ zwracany na Double bez optionala
-        // bo ostatnia wartosc jaka zwracamy to double
+        // bo ostatnia wartosc jaka zwracamy to double. Ta wartość z metody orElse nie jest dostepna dla obiektu car3
         Double noDiameter = car3
                 .map(c4 -> c4.getSteeringWheel())
                 .map(c4 -> c4.getDiameter())
                 .orElse(0.0);
         System.out.println(noDiameter);
+
     }
 }
