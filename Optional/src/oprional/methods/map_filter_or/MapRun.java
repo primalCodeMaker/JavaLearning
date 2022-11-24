@@ -27,11 +27,10 @@ public class MapRun {
         System.out.println("diameter3: " + diameter3);
         System.out.println();
 
-
         // dla wartosci empty mozna za pomoca orElse ustanowic jakas inna wartosc.
         // Wtedy trzeba rowniez zmienic typ zwracany na Double bez Optopnala, bo ostatnia wartosc jaka zwracamy to double.
         // Jak bym chcial miec to w optionalu to uzyl bym metody.or()
-        // Ta wartość z metody orElse jest dostepna TYLKO dla zmiennej, ktora inicjalizujemy wyciagajac wartosci z obiektu empty
+        // Ta wartość z metody orElse jest dostepna TYLKO dla zmiennej, ktora inicjalizujemy jesli obiekt na ktorym pracujmy jest empty
         // nie ma to zadnego wplywu na sam obiekt, ale mozemy ja pozniej przypisac / podmienic
         Double noDiameter = car3
                 .map(c4 -> c4.getSteeringWheel())
