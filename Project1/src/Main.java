@@ -1,6 +1,5 @@
 import calculator.InputData;
-import service.PrintingService;
-import service.PrintingServiceImp;
+import service.*;
 
 import java.math.BigDecimal;
 
@@ -12,6 +11,12 @@ public class Main {
                 .witwMonthsDuration(BigDecimal.valueOf(160));
 
         PrintingService printingService = new PrintingServiceImp();
-        printingService.printingInputDataInfo(inputData);
+        RateCalculationService rateCalculationService = new RateCalculationServiceImp();
+
+        MortgageCalculationService mortgageCalculationService = new MortgageCalculationServiceImp(
+                printingService,
+                rateCalculationService
+        );
+        mortgageCalculationService.calculate(inputData);
     }
 }
