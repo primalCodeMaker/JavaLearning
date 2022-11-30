@@ -26,3 +26,21 @@ public class Info {
         // effectively final oznacza ze zmienna raz zdefiniopwana nie moze byc nadpisywana po raz kolejny
         // jesli zrobimy zmienna a, to mamy do niej dostep z Local Inner Class. Natomiast jesli nadpiszemy ta zmianna po raz drugi to proba odwolania sie do niej spowoduje blad kompilacji
         // effectively final nie ma swojego modyfikatora dostepu ani slowa kluczowego. To jest umowna koncepcja
+
+// Anonymous Inner Class
+    // nie ma nazwy
+    // deklaruje sie ja w jednej linijce
+    // musi cos extendowac albo implementowac
+    // nie moze extendowac albo implementowac jednoczesnie
+    // zapis klasy anonimowej byl stosowany przed java8,
+    // teraz jest zamienna z lambdami o ile implementuje interfejs
+    // taki interfejs nie moze miec wiecej niz 1 metode abstrakcyjna tak jak w interfejsie funkcyjnym
+    // implementacja klasy abstrakcyjnej poprzez Anonymous Class ma dostep do pol z klasy zewnetrznej
+
+// Statcic nested Class
+    // definiowane na tym samym poziomie co zmienne statyczne
+    // nie ma dostepu do pol instancyjnych (nie statycznych) klasy zewnetrznej
+    // moze miec wsyzstkie modyfikatory dostepu
+    // klasa zewnetrzna moze sie odnosic do jej pol oraz metod
+    // moze posiadac pola i metody statyczne i niestatyczne
+    // mozna zagniezdzac w niej kolejne klasy
