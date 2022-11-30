@@ -11,12 +11,20 @@ public class Main {
                 .witwMonthsDuration(BigDecimal.valueOf(160));
 
         PrintingService printingService = new PrintingServiceImp();
-        RateCalculationService rateCalculationService = new RateCalculationServiceImp();
+        RateCalculationService rateCalculationService = new RateCalculationServiceImp(
+                new TimePointServiceImp(),
+                new AmountCalculationServiceImp(),
+                new ResidualCalculationServiceImp()
+
+        );
+
 
         MortgageCalculationService mortgageCalculationService = new MortgageCalculationServiceImp(
                 printingService,
                 rateCalculationService
         );
         mortgageCalculationService.calculate(inputData);
+
+        //todo day3 9:30
     }
 }
