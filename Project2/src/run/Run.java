@@ -14,5 +14,10 @@ public class Run {
 
         System.out.println("");
         System.out.println("[__]");
+
+        System.out.println("▏▔▏");
+        System.out.println();
+
+
     }
 }
