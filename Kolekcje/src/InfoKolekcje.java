@@ -24,11 +24,14 @@ public class InfoKolekcje {
 // jesli chcemy sie dostac do jakiegos elementu tej listy to nie mozemy sie do niego bezposrednio odwolac, tylko trzeba isc od pierwszeg lub ostatniego elementu
 
 
+    //Set jest Interfejsem, Hashset jego implementacja
 // Set - pozwala wykonywać rozne dzialania na osobnych zbiorach.
 // Nie zachowuje kolejnosci elementow w zbiorze
 // porownujac ze soba obiekty w setach trzeba nadpisac metody equals i hashcode
 // nie moze zawierac duplikatow
 // mozna sklejac ze soba  2 sety i wartosci nie beda sie duplikwowac
+
+
 
 
 //HashSet - HashSet jest klasą, ktora implementuje interfejs Set, posiada więc metody:
