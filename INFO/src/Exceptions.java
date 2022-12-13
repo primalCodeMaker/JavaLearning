@@ -7,7 +7,7 @@ public class Exceptions {
     // sa sprawdzane na etapie kompilacji
     // wymagaja obslugi Try {} Cath {}
 
-// Wyjatki mozna wyzucac wyzej, aby zostaly obsluzone na pozniejszym etapie kompilacji a nie bezposrednio
+// Wyjatki mozna wyzucac wyzej, aby zosta ly obsluzone na pozniejszym etapie kompilacji a nie bezposrednio
 // np: w metodzie ktora generuje wyjatek,
 // uzywa sie do tego slowa kluczowego throws za sygnatura metody + typ wyjatku jaki ma byc rzucany
 
