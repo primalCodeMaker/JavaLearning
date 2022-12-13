@@ -24,9 +24,18 @@ public class InfoKolekcje {
 // jesli chcemy sie dostac do jakiegos elementu tej listy to nie mozemy sie do niego bezposrednio odwolac, tylko trzeba isc od pierwszeg lub ostatniego elementu
 
 
-//Set - pozwala wykonywać rozne dzialania na osobnych zbiorach.
+// Set - pozwala wykonywać rozne dzialania na osobnych zbiorach.
 // Nie zachowuje kolejnosci elementow w zbiorze
 // porownujac ze soba obiekty w setach trzeba nadpisac metody equals i hashcode
+// nie moze zawierac duplikatow
+// mozna sklejac ze soba  2 sety i wartosci nie beda sie duplikwowac
+
+
+//HashSet - HashSet jest klasą, ktora implementuje interfejs Set, posiada więc metody:
+    // add(), clear(), clone(), contains(), isEmpty(), iterator(), remove(), size().
+//HashSet najpierw oblicza hash obiektu, aby określić indeks tablicy, pod którym obiekt będzie przechowywany.
+// Później obiekt jest przechowywany pod obliczonym indeksem. Tak samo dziala  wyszukiwanie i usuwanie
+
 
 // lepiej używać Interfejsu w definicji zmiennej np List albo Collection
     // poniewaz pozniej jak robimy metode a mamy array liste i linkedliste to nie musimy pisac 2och metod aby je osobno obsluzyc
