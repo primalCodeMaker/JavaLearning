@@ -19,7 +19,9 @@ public class Immutable {
 //Final metoda - nie da się takiej metody @Overridowac
 
 //Interface i metody abstrakt nie mogą być final.
-//Czy w interfejsach moga byc defaultowe metody final??
+//W interfejsach metody default nie moga byc final.
+// w interfejsach pola sa neijawnie definiowane jako public final i musza miec od razu wartosc domyslna
+    //  public final String name = "xx";
 
 //Klasa abstrakcyjna nie może być final, bo nie bedzie mogla nic rozszerzać
 //	może zawierać pola final i static
