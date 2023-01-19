@@ -1,3 +1,5 @@
+package testing;
+
 public final class Test extends Test2 {
 
     private final String name;

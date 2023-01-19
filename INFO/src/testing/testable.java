@@ -1,3 +1,5 @@
+package testing;
+
 public interface testable {
 
     public void xyz();
@@ -7,4 +9,5 @@ public interface testable {
     public default void xyzf() {
         System.out.println("asd");
     }
+
 }
