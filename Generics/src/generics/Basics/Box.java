@@ -1,4 +1,4 @@
-package Generics;
+package generics.Basics;
 
 public class Box<T> {
 

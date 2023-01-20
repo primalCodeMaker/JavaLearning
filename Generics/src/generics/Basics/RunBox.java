@@ -1,7 +1,7 @@
-package Generics;
+package generics.Basics;
 
 public class RunBox {
-// todo 12:35 w filmie
+
     public static void main(String[] args) {
 
         // nadal moge zrobić obiekt bez generyka i wsadzic do niego wszystko
