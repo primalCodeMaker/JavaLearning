@@ -22,3 +22,12 @@ public class INFO {
 // typy generyczne obslugują dziedziczenie dla klas. Jesli SUV rozszerza CAR
     // to w typie generycznym CAR mozemy tez dodawac SUVy
 
+// Interfejsy moga tez byc generyczne
+
+
+// Nie mozna wywolac konstruktora klasy T (generycznej nieustalonej)
+// Nie mozna zrobic tablicy typu generycznego
+// Nie mozna zalowac instanceof dla generyka
+// Nie mozna uzywac prymitywow dla typow generycznych
+// Nie moznatypu generycznego uzywac w POLU statycznym.
+    // jest na to obejscie w metodach generycznych
