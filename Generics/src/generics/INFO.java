@@ -29,5 +29,5 @@ public class INFO {
 // Nie mozna zrobic tablicy typu generycznego
 // Nie mozna zalowac instanceof dla generyka
 // Nie mozna uzywac prymitywow dla typow generycznych
-// Nie moznatypu generycznego uzywac w POLU statycznym.
-    // jest na to obejscie w metodach generycznych
+// do typu generycznego zdeklarowanego w klasie nie mozna sie odnosic z metod statycznych
+    // jest na to obejscie w przykladzie StaticMethod
