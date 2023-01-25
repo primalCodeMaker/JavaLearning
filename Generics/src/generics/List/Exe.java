@@ -1,13 +1,15 @@
 package generics.List;
+
 //todo 27.30 film
 public class Exe {
 
     public static void main(String[] args) {
 
-        Backpack<Backpack.Item> backpack = new Backpack<>();
-        System.out.println(backpack);
+        Backpack<Item<Weapons>> backpack = new Backpack<>();
 
-        //backpack.put(new Backpack.Weapons(2));
+//        Weapons sword = new Weapons(2);
+        Item<Weapons> sword = new Item<>(new Weapons(2));
+        backpack.put(sword);
 
 
 
