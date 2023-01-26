@@ -1,6 +1,5 @@
 package generics.Practice.First;
 
-//todo 27.30 film
 public class Exe {
 
     public static void main(String[] args) {
