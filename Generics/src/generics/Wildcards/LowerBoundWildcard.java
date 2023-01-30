@@ -15,7 +15,7 @@ public class LowerBoundWildcard {
         addFlyingDog(dogs);
         addFlyingDog(animals);
 
-        // mowimy javie ze nie bedziemy uzywac w liscie nic co jest wyzej w hierarhii dziedziczenia niz pies
+        // mowimy javie ze nie bedziemy uzywac w liscie nic co jest niżej w hierarhii dziedziczenia niz pies
         List<? super Dog> list1 = dogs;
         List<? super Dog> list2 = animals;
         // List<? super Dog> list3 = new ArrayList<FlyingDog>();  taki zapis nie dziala
