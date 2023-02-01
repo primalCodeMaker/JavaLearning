@@ -2,9 +2,10 @@ package Exercises.Third;
 
 
 // Napisz metodę generyczną, która zliczy ilość elementów w kolekcji,
-// które mają w sobie coś charakterystycznego, np. liczby są nieparzyste, podane wyrazy są palindromami.
+// które mają w sobie coś charakterystycznego, np. liczby są nieparzyste
 // Wykorzystaj predykat.
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +14,7 @@ public class Count {
 
     public static void main(String[] args) {
 
-        List<Integer> list = new ArrayList<>();
+        List<Number> list = new ArrayList<>();
 
         for (int i = 0; i < 10; i++) {
             list.add(i);
@@ -21,18 +22,20 @@ public class Count {
 
         System.out.println(list);
         System.out.println(countOddNumbers(list));
+        // to mi wywala błąd bo na etapie runtimu wszystko rzutuje na Longa a liste mam z intami
 
-        //Predicate<T> count = (c) -> c%2 == 0;
     }
+
     public static <Y> int countOddNumbers(List<Y> list) {
         int counter = 0;
         for (Y element : list) {
-            if ((Integer) element % 2 != 0) {
+            if ((Long) element % 2 != 0) {
                 counter++;
 
             }
-        }
-       return counter;
-    }
 
+        }
+        return counter;
+
+    }
 }
