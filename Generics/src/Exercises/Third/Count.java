@@ -19,13 +19,12 @@ public class Count {
             list.add(i);
         }
 
-
         System.out.println(list);
+        System.out.println(countOddNumbers(list));
 
         //Predicate<T> count = (c) -> c%2 == 0;
     }
-
-    public <Y> void countOddNumbers(List<Y> list) {
+    public static <Y> int countOddNumbers(List<Y> list) {
         int counter = 0;
         for (Y element : list) {
             if ((Integer) element % 2 != 0) {
@@ -33,7 +32,7 @@ public class Count {
 
             }
         }
-     //   return counter;
+       return counter;
     }
 
 }

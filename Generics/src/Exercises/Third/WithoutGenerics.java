@@ -15,8 +15,7 @@ public class WithoutGenerics {
 
         System.out.println(list);
         WithoutGenerics wg = new WithoutGenerics();
-        wg = list;
-        wg.countOddNumbers();
+        
     }
 
     public int countOddNumbers(List list) {
