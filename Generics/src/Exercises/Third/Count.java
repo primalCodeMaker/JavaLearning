@@ -6,7 +6,6 @@ package Exercises.Third;
 // Wykorzystaj predykat.
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 public class Count {
@@ -20,19 +19,21 @@ public class Count {
             list.add(i);
         }
 
+
         System.out.println(list);
+
         //Predicate<T> count = (c) -> c%2 == 0;
     }
 
-    public <Y> int countOddNumbers(List<Y> list) {
+    public <Y> void countOddNumbers(List<Y> list) {
         int counter = 0;
         for (Y element : list) {
-            //if (element % 2 != 0) {
-            counter++;
+            if ((Integer) element % 2 != 0) {
+                counter++;
 
+            }
         }
-        return 0;
+     //   return counter;
     }
-
 
 }
