@@ -10,7 +10,7 @@ public class Fourth {
 
     public static void main(String[] args) {
 
-        int[] arr = new int[]{0, 1, 2, 3, 4};
+        Byte[] arr = new Byte[]{0, 1, 2, 3, 4};
         Fourth obj = new Fourth();
 
         System.out.println(Arrays.toString(arr));
@@ -21,10 +21,10 @@ public class Fourth {
 
     }
 
-    void swap(int[] array, int element1, int element2) {
+    <T> void swap(T[] array, int element1, int element2) {
         int el1 = element1;
         int el2 = element2;
-        int temp;
+        T temp;
         temp = array[el2];
 
         array[el2] = array[el1];
