@@ -21,7 +21,7 @@ public class Run {
                 new Employee("Angelika", "Kwiatkowska", 32, 9500),
                 new Employee("Ewelina", "Ruda", 33, 6500),
                 new Employee("Zuzia", "Pyza", 23, 4500),
-                new Employee("Angelika", "Wajda", 40, 2500)
+                new Employee("Angelika", "Wajda", 40, 27500)
         );
 
         System.out.println(employees);
@@ -30,16 +30,17 @@ public class Run {
         System.out.println();
 
         Comparator<Employee> employeeComparator = ((o1, o2) -> o2.getName().compareTo(o1.getName()));
-        employeeComparator = employeeComparator.thenComparing ((o1, o2) -> o2.getSurName().compareTo(o1.getSurName()));
-        employeeComparator = employeeComparator.thenComparingInt(Employee::getAge);
-        employeeComparator = employeeComparator.thenComparing((o1, o2) -> o1.getSalary()- o2.getSalary());
+        employeeComparator = employeeComparator
+                .thenComparing((o1, o2) -> o2.getSurName().compareTo(o1.getSurName()))
+                .thenComparingInt(Employee::getAge)
+                .thenComparing((o1, o2) -> o1.getSalary() - o2.getSalary());
         employees.sort(employeeComparator);
         System.out.println(employees);
 
         Comparator<Employee> employeeComparatorRev = ((o1, o2) -> o1.getName().compareTo(o2.getName()));
-        employeeComparatorRev = employeeComparatorRev.thenComparing ((o1, o2) -> o1.getSurName().compareTo(o2.getSurName()));
-        employeeComparatorRev = employeeComparatorRev.thenComparing((o1, o2) -> o2.getAge()- o1.getAge());
-        employeeComparatorRev = employeeComparatorRev.thenComparing((o1, o2) -> o2.getSalary()- o1.getSalary());
+        employeeComparatorRev = employeeComparatorRev.thenComparing((o1, o2) -> o1.getSurName().compareTo(o2.getSurName()));
+        employeeComparatorRev = employeeComparatorRev.thenComparing((o1, o2) -> o2.getAge() - o1.getAge());
+        employeeComparatorRev = employeeComparatorRev.thenComparing((o1, o2) -> o2.getSalary() - o1.getSalary());
         employees.sort(employeeComparatorRev);
         System.out.println(employees);
     }
