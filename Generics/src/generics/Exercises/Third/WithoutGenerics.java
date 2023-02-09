@@ -1,4 +1,4 @@
-package Exercises.Third;
+package generics.Exercises.Third;
 
 import java.util.ArrayList;
 import java.util.List;

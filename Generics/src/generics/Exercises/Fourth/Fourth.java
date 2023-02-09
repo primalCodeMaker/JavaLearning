@@ -1,9 +1,8 @@
-package Exercises.Fourth;
+package generics.Exercises.Fourth;
 
 // Napisz metodę generyczną, która w podanej tablicy będzie w stanie zamienić ze sobą elementy
 // na dwóch podanych pozycjach.
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Fourth {

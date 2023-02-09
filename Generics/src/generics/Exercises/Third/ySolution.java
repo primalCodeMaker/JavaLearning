@@ -1,4 +1,4 @@
-package Exercises.Third;
+package generics.Exercises.Third;
 
 // Napisz metodę generyczną, która zliczy ilość elementów w kolekcji,
 // które mają w sobie coś charakterystycznego, np. liczby są nieparzyste
