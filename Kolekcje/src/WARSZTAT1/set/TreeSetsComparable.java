@@ -1,10 +1,9 @@
 package WARSZTAT1.set;
 
-import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class TreeSets {
+public class TreeSetsComparable {
 
     public static void main(String[] args) {
         Set<Dog> dogos = new TreeSet<>();

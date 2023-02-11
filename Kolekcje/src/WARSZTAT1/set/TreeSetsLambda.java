@@ -3,7 +3,7 @@ package WARSZTAT1.set;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class TreeSets2 {
+public class TreeSetsLambda {
 
     public static void main(String[] args) {
         Set<Dog> dogos = new TreeSet<>((o1, o2) -> o1.getAge() - o2.getAge());
