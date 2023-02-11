@@ -5,7 +5,7 @@ import java.time.LocalTime;
 import java.util.HashSet;
 import java.util.Set;
 
-public class BadHashSetTimes {
+public class BadEquals {
 
     public static void main(String[] args) {
         Set<Dog> dogs = new HashSet<>();

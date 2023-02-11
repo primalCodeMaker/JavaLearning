@@ -40,6 +40,28 @@ public class InfoKolekcje {
 // Później obiekt jest przechowywany pod obliczonym indeksem. Tak samo dziala  wyszukiwanie i usuwanie
 
 
+// LinkedHashSet zachowuje kolejnosc dodawania
+// pod spodem ma implementacje podwojnie linkowanej LinkListy
+    // nie ma mozliwosci iteracji id tylu
+// nie zachowuje duplikatow
+// nie mozna porbac obiektu na danym miejscu (nie ma metody get)
+// wazne jest napisanie dobrej metody equals()
+
+// TreeSet kolejna implementacja seta
+// nie zachowuje duplikatow i od razu sortuje elementy (jego elementy sa zawsze posortowane)
+// ma strukture drzewiasta, to znaczy ze kazdy kolejny element porownuje z poprzednim, zgodnie z naszymi wymaganiami
+// i umieszcza go pod spodem juz w odpowiednim posortowanym miejscu
+// implementuje SortedSet
+// elementy TreeSetu musza implementowac Interfejs Comparable, inaczej poleci Exception
+// jesli nie implementuje to musimy zdefoniowac lambda comparator podczas definiowania TreeSeta
+
+//NavigableSet - interfejs ktory moze sluzyc do deklarowania TreeSetu
+//posiada metody:
+    // E lower(E e) - Zwraca najwiekszy element, ktory jest < e, lub null jestli taki element nie istnieje
+    // E floor(E e) - Zwraca najwiekszy element, ktory jest <= e, lub null jestli taki element nie istnieje
+    // E ceiling(E e) - Zwraca najmniejszy element, ktory jest >= e, lub null jestli taki element nie istnieje
+    // E higher(E e) - Zwraca najmniejszy element, ktory jest > e, lub null jestli taki element nie istnieje
+
 // lepiej używać Interfejsu w definicji zmiennej np List albo Collection
     // poniewaz pozniej jak robimy metode a mamy array liste i linkedliste to nie musimy pisac 2och metod aby je osobno obsluzyc
     // jesli uyjemy interfejsu Collection bedziemy mogli taka metode uzywac rowniez na setach
