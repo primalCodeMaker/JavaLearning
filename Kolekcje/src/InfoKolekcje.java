@@ -32,13 +32,39 @@ public class InfoKolekcje {
 // mozna sklejac ze soba  2 sety i wartosci nie beda sie duplikwowac
 
 
-
-
 //HashSet - HashSet jest klasą, ktora implementuje interfejs Set, posiada więc metody:
     // add(), clear(), clone(), contains(), isEmpty(), iterator(), remove(), size().
-//HashSet najpierw oblicza hash obiektu, aby określić indeks tablicy, pod którym obiekt będzie przechowywany.
+// HashSet najpierw oblicza hash obiektu, aby określić indeks tablicy, pod którym obiekt będzie przechowywany.
 // Później obiekt jest przechowywany pod obliczonym indeksem. Tak samo dziala  wyszukiwanie i usuwanie
 
+
+// LinkedHashSet zachowuje kolejnosc dodawania
+// pod spodem ma implementacje podwojnie linkowanej LinkListy
+    // nie ma mozliwosci iteracji id tylu
+// nie zachowuje duplikatow
+// nie mozna porbac obiektu na danym miejscu (nie ma metody get)
+// wazne jest napisanie dobrej metody equals()
+
+// TreeSet kolejna implementacja seta
+// nie zachowuje duplikatow i od razu sortuje elementy (jego elementy sa zawsze posortowane)
+// ma strukture drzewiasta, to znaczy ze kazdy kolejny element porownuje z poprzednim, zgodnie z naszymi wymaganiami
+// i umieszcza go pod spodem juz w odpowiednim posortowanym miejscu
+// implementuje SortedSet
+// elementy TreeSetu musza implementowac Interfejs Comparable, inaczej poleci Exception
+// jesli nie implementuje to musimy zdefiniowac lambda comparator podczas definiowania TreeSeta
+// treeSet nie kozysta z Equals i Hashcode, do porownywania obbiektow kozysta tylko z Comparatora
+
+//NavigableSet - interfejs ktory moze sluzyc do deklarowania TreeSetu
+//posiada metody:
+    // E lower(E e) - Zwraca najwiekszy element, ktory jest < e, lub null jestli taki element nie istnieje
+    // E floor(E e) - Zwraca najwiekszy element, ktory jest <= e, lub null jestli taki element nie istnieje
+    // E ceiling(E e) - Zwraca najmniejszy element, ktory jest >= e, lub null jestli taki element nie istnieje
+    // E higher(E e) - Zwraca najmniejszy element, ktory jest > e, lub null jestli taki element nie istnieje
+
+// Po dodaniu elementu do Seta jako nowy obiekt, nie mozna go pozniej modyfikowac.
+    // Raz dodany element do Mapy nie jest weryfikowany i moze dojsc do zrobienia duplikatu,
+    // podczas zmiany jego stanu Seterem
+    // Obiekty dodawane do Seta powinny byc Immutable
 
 // lepiej używać Interfejsu w definicji zmiennej np List albo Collection
     // poniewaz pozniej jak robimy metode a mamy array liste i linkedliste to nie musimy pisac 2och metod aby je osobno obsluzyc
