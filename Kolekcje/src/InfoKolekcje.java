@@ -14,6 +14,8 @@ public class InfoKolekcje {
 // moze zawierać duplikaty
 // mozemy sie bezposrednio odwolac do kazdego elementu listy
 // Przy nadpisywaniu jakiegoś elementy wszyskie kolejne muszą zostać przesunięte
+// ArrayList obsluguje nulle i duplikaty
+    // natomiast podczas proby sortowania wywala null pointer, chyba ze napiszemy dobry comaprator, ktory ogarnie nulle
 
 // LinkedList - ma informacje co jest jej pierwszym elementem a co ostatnim. Każdy koeljny element ma połązenie z następnym elementem.
 // poza medodami dostepnymi dla ArrayListy Linked Lista ma dodatkowo kilka metod np: addFirst, addLast.
@@ -36,6 +38,7 @@ public class InfoKolekcje {
     // add(), clear(), clone(), contains(), isEmpty(), iterator(), remove(), size().
 // HashSet najpierw oblicza hash obiektu, aby określić indeks tablicy, pod którym obiekt będzie przechowywany.
 // Później obiekt jest przechowywany pod obliczonym indeksem. Tak samo dziala  wyszukiwanie i usuwanie
+// HashSet obsluguje nulle ale usuwa duplikaty
 
 
 // LinkedHashSet zachowuje kolejnosc dodawania
@@ -53,7 +56,7 @@ public class InfoKolekcje {
 // elementy TreeSetu musza implementowac Interfejs Comparable, inaczej poleci Exception
 // jesli nie implementuje to musimy zdefiniowac lambda comparator podczas definiowania TreeSeta
 // treeSet nie kozysta z Equals i Hashcode, do porownywania obbiektow kozysta tylko z Comparatora
-// TreeSet nie moze zawierac wartosci null
+// TreeSet nie moze zawierac wartosci null, bo od razu prubuje sortowac elementy. Musimy pisac swoja obsluge nulli
 
 //NavigableSet - interfejs ktory moze sluzyc do deklarowania TreeSetu
 //posiada metody:

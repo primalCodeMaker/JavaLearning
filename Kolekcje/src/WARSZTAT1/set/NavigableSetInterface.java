@@ -19,5 +19,8 @@ public class NavigableSetInterface {
         System.out.println(navigableSet.ceiling(100));  // 100
         System.out.println(navigableSet.higher(100));   // null
 
+        System.out.println(navigableSet.floor(555));
+
+
     }
 }

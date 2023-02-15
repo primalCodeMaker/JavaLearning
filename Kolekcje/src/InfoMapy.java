@@ -29,6 +29,7 @@ public class InfoMapy {
 // Trzeba dobrze napisac metode hashCode(), bo inaczej bardzo zwiekszy sie czas operacji. Przyklady w secie
 
 // LinkedHashMap zapewnia kolejnosc dodawania obiektow
+// LinkedHashMap moze zawierac wartosci null i klucze null
 
 // TreeMap - podobnie jak w przykladzie Setow taka implementacja od razu sortuje dodawane elementy
 // Jesli klucze w TreeMapie sa dodawane jako obiekty to klasa na korej twozymy te instancje musi implementowac interface Comparable

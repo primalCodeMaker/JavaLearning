@@ -1,5 +1,6 @@
 package WARSZTAT1.nullExample;
 
+import java.util.ArrayList;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -24,5 +25,6 @@ public class Null1 {
         treeSetWithNull.add(null);
 
         System.out.println(treeSetWithNull);
+
     }
 }

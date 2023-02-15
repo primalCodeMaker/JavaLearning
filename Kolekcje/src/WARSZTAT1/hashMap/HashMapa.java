@@ -24,7 +24,9 @@ public class HashMapa {
             System.out.print(entry.getKey() + "-" + entry.getValue() + ", ");
 
         }
+        System.out.println("---------");
 
-        someMap.getOrDefault(5, "nie ma");
+        System.out.println(someMap.getOrDefault("1", null));
+        System.out.println(someMap.getOrDefault("6", null));
     }
 }
