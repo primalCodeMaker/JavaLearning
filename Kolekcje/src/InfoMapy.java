@@ -18,6 +18,7 @@ public class InfoMapy {
 // Jesli dodamy element o tym samym kluczu to zostanie on nadpisany
 // do obslugi nulli jest metoda getOrDefauly(), w ktorej podaje sie wartosc jesli nie ma szukanego klucza
 // Domyslnie Mapa hashuje elementy po kluczach a nie po wartosciach. Klucze musza byc unikalne
+// HashMapa moze zawierac wartosci null i klucze null, z tym ze klucz moze byc tylko jeden
 
 // Po doddaniu elementu do Mapy jako Wartosc, nie mozna go pozniej modyfikowac.
     // Raz dodany element do Mapy nie jest weryfikowany i moze dojsc do zrobienia duplikatu,
@@ -34,3 +35,4 @@ public class InfoMapy {
 // Inaczej poleci exceptoin bo Java nie wie jak porownywac takie obiekty
 // Mozna tez w sygnaturze TreeSeta podac Comparator za pomoca Lambdy
 // TreeMapa opiera sie na Comparable a nie na HashCode
+// TreeMapa nie moze zawierac null dla kluczy, null dla wartosci jest ok

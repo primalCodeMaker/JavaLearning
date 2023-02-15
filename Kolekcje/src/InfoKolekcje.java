@@ -6,7 +6,7 @@ public class InfoKolekcje {
     // w vektorach moge dodac nulla
 
 // hashtable >> sluzy do przechowywania klucza oraz jakieś wartości dla niego
-    // Hashtable nie obsługuje Nulla
+    // Hashtable nie obsługuje nulla ani dla kluczy ani dla wartosci
 
 
 //Arraylist - w srodku ma tablice, którą zarządza. jak miejsce w tablicy się konczy to automatycznie tworzy nową tablicę o 50% większą niż poprzednia
@@ -53,6 +53,7 @@ public class InfoKolekcje {
 // elementy TreeSetu musza implementowac Interfejs Comparable, inaczej poleci Exception
 // jesli nie implementuje to musimy zdefiniowac lambda comparator podczas definiowania TreeSeta
 // treeSet nie kozysta z Equals i Hashcode, do porownywania obbiektow kozysta tylko z Comparatora
+// TreeSet nie moze zawierac wartosci null
 
 //NavigableSet - interfejs ktory moze sluzyc do deklarowania TreeSetu
 //posiada metody:

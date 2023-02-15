@@ -11,7 +11,7 @@ public class InfoQueue {
 // kolejka ma spoecjalne metody, ktore umozliwiaja dodawanie elementow na poczatku kolejki
 
 
-// Implementacja Queeue to ArrayDeck<>(), mozna tez za pomoca LinkedListy<>()
+// Implementacja Queeue to ArrayDeque<>(), mozna tez za pomoca LinkedListy<>()
 // Referencja LinkedListy lub Queue maja dodatkowo metody: add.first, add.last
 // do wkladania elementu do kolejki uzywamy metody .offer()
 // do zdejmowania elementow z kolejki uzywamy metody .poll()
@@ -24,3 +24,5 @@ public class InfoQueue {
 // metody .peek() - odczytuja 1wszy element stacka
 // metoda .push() wklada elementy do Stosu
 // metoda .pop() wykonuje/sciaga 1wszy element ze stosu zgodnie z LiFo
+
+// ArrayDeque<>() nie moze zawierac wartosci nullowych
