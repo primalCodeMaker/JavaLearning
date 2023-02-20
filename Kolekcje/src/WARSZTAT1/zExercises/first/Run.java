@@ -10,12 +10,13 @@ public class Run {
         List list2 = listPersoneOne();
         List list1 = listPersoneTwo();
 
-        Comparator<Car> carComparator = (o1, o2) -> o1.getYear() - o2.getYear();
-        carComparator.thenComparing((o1, o2) -> o1.getBrand().compareTo(o2.getBrand()))
-                .thenComparing((o1, o2) -> o1.getModel().compareTo(o2.getModel()));
+
+//        Comparator<Car> carComparator = (o1, o2) -> o1.getYear() - o2.getYear();
+//        carComparator.thenComparing((o1, o2) -> o1.getBrand().compareTo(o2.getBrand()))
+//                .thenComparing((o1, o2) -> o1.getModel().compareTo(o2.getModel()));
 
 
-        Set<Car> merge = new TreeSet<>(carComparator);
+        Set<Car> merge = new TreeSet<>();
         merge.addAll(list1);
         merge.addAll(list2);
 
