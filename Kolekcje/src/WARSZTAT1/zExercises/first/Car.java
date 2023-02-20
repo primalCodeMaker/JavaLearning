@@ -1,4 +1,4 @@
-package WARSZTAT1.zExercises;
+package WARSZTAT1.zExercises.first;
 
 public class Car {
 
