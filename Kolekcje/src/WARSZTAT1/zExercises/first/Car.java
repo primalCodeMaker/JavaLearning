@@ -1,5 +1,7 @@
 package WARSZTAT1.zExercises.first;
 
+import java.util.Objects;
+
 public class Car {
 
     private final String brand;
@@ -31,5 +33,17 @@ public class Car {
                 ", model='" + model + '\'' +
                 ", year=" + year +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Car car)) return false;
+        return getYear() == car.getYear() && getBrand().equals(car.getBrand()) && getModel().equals(car.getModel());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getBrand(), getModel(), getYear());
     }
 }
