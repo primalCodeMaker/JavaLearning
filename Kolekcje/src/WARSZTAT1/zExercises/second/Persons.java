@@ -1,19 +1,40 @@
 package WARSZTAT1.zExercises.second;
 
-public class Persons {
+import java.util.Comparator;
 
-    private String name;
+public class Persons implements Comparable<Persons>{
+
     private String surName;
+    private String name;
     private String number;
 
-
-    public String[] getPerson(String person) {
-        String[] split = person.split(" ");
-        System.out.println(split);
-
-        return split;
-
+    public Persons(String surName, String name, String number) {
+        this.surName = surName;
+        this.name = name;
+        this.number = number;
     }
 
+    public String getSurName() {
+        return surName;
+    }
 
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public String toString() {
+        return "Persons{" +
+                ", surName='" + surName + '\'' +
+                "name='" + name + '\'' +
+                ", number='" + number + '\'' +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Persons o) {
+        Comparator<Persons> personComparator = ((o1, o2) -> o1.getSurName().compareTo(o2.getSurName()));
+        personComparator.thenComparing((o1, o2) -> o1.getName().compareTo(o2.getName()));
+        return personComparator.compare(this, o);
+    }
 }
