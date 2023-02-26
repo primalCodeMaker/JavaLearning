@@ -13,6 +13,9 @@ public class Invoice {
         this.amount = amount;
     }
 
+    public BigDecimal getAmount() {
+        return amount;
+    }
 
     @Override
     public String toString() {

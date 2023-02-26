@@ -2,7 +2,6 @@ package WARSZTAT1.zExercises.third;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.text.DecimalFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayDeque;
@@ -11,35 +10,52 @@ import java.util.Deque;
 public class Run {
 
     public static void main(String[] args) {
-        DecimalFormat numberFormat = new DecimalFormat("#.000");
+
         Ceo ceo = new Ceo();
         Acountant acountant = new Acountant();
 
         Deque<Invoice> invoicesStack = new ArrayDeque<>();
-
-        for (int i = 1; i <= 5 ; i++) {
+        for (int i = 1; i <= 4; i++) {
             invoicesStack.push(new Invoice(i + " " + getNumber() + " ", getRandomPrice()));
         }
 
-        for (Invoice invoice : invoicesStack) {
-            System.out.println(invoice);
-        }
+        print(invoicesStack);
+        ceo.takeAction(invoicesStack);
 
 
-
-
+        acountant.takeAction(invoicesStack);
+        acountant.takeAction(invoicesStack);
+        acountant.takeAction(invoicesStack);
+        print(invoicesStack);
 
     }
 
+    public static void print(Deque<Invoice> invoicesStack) {
+        for (Invoice invoice : invoicesStack) {
+            System.out.println(invoice);
+        }
+        System.out.println("sum = " + getSumm(invoicesStack));
+        System.out.println();
+    }
 
 
-    private static BigDecimal getRandomPrice() {
-        BigDecimal randomDouble = new BigDecimal(Math.random()*100);
+    public static BigDecimal getSumm(Deque<Invoice> stack) {
+        BigDecimal sum = new BigDecimal(0.0);
+        for (Invoice invoice : stack) {
+            sum = sum.add(invoice.getAmount());
+        }
+
+        return sum;
+    }
+
+
+    public static BigDecimal getRandomPrice() {
+        BigDecimal randomDouble = new BigDecimal(Math.random() * 100);
         randomDouble = randomDouble.setScale(3, RoundingMode.CEILING);
         return randomDouble;
     }
 
-    private static String getNumber() {
+    public static String getNumber() {
         DateTimeFormatter dataFormat = DateTimeFormatter.ofPattern("yyyy");
         String number = LocalDate.now().format(dataFormat);
         return number;
