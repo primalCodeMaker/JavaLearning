@@ -48,6 +48,11 @@ public class Run {
         return sum;
     }
 
+    public static Invoice createInvoice(Deque stack) {
+        int i = stack.size();
+        Invoice newInvoice = new Invoice(i + 1 + " " + getNumber() + " ", getRandomPrice());
+        return newInvoice;
+    }
 
     public static BigDecimal getRandomPrice() {
         BigDecimal randomDouble = new BigDecimal(Math.random() * 100);

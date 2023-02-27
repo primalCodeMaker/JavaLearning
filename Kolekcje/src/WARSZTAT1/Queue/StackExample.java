@@ -3,7 +3,6 @@ package WARSZTAT1.Queue;
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.List;
-import java.util.Queue;
 
 public class StackExample {
 
