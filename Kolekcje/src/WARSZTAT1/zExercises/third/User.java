@@ -4,7 +4,7 @@ import java.util.Deque;
 
 public interface User {
 
-    void takeAction(Deque stack);
+    void takeAction(Deque stack, User user);
 
    default String sayHello() {
        return "Hello";

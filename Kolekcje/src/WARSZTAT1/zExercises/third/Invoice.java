@@ -1,6 +1,10 @@
 package WARSZTAT1.zExercises.third;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Deque;
 import java.util.Objects;
 
 public class Invoice {
@@ -13,14 +17,32 @@ public class Invoice {
         this.amount = amount;
     }
 
+    public static Invoice createInvoice(Deque stack) {
+        int i = stack.size();
+        Invoice newInvoice = new Invoice(i + 1 + "/" + getNumber(), getRandomPrice());
+        return newInvoice;
+    }
+
+    public static String getNumber() {
+        DateTimeFormatter dataFormat = DateTimeFormatter.ofPattern("yyyy");
+        String number = LocalDate.now().format(dataFormat);
+        return number;
+    }
+
+    public static BigDecimal getRandomPrice() {
+        BigDecimal randomDouble = new BigDecimal(Math.random() * 100);
+        randomDouble = randomDouble.setScale(3, RoundingMode.CEILING);
+        return randomDouble;
+    }
+
     public BigDecimal getAmount() {
         return amount;
     }
 
     @Override
     public String toString() {
-        return "Invoice{" +
-                "id='" + id + '\'' +
+        return "Invoice {"
+                + id +
                 ", amount=" + amount +
                 '}';
     }
