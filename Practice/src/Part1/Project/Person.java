@@ -1,28 +1,36 @@
 package Part1.Project;
 
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 public class Person {
 
-
-    Set<Person> personRegistry = new HashSet<>();
-
+    private static List<Person> personRegistry = new ArrayList<>();
 
     private String name;
     private String surname;
     private int counter;
 
-    public Person(String name, String surname, int counter) {
+
+    public Person(String name, String surname) {
         this.name = name;
         this.surname = surname;
-        this.counter = counter;
+
+        counter = 0;
+        int counter2 = 0;
+
+        if (!personRegistry.contains(this)) {
+            this.counter = counter;
+
+        } else {
+            for (Person person : personRegistry) {
+                counter2 = person.getCounter() + 1;
+            }
+            this.counter = counter2;
+        }
+        personRegistry.add(this);
+        System.out.println(personRegistry);
     }
 
-    public Person(String name) {
-        this.name = name;
-    }
 
     public String getName() {
         return name;

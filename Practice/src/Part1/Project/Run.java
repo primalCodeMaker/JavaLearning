@@ -1,8 +1,6 @@
 package Part1.Project;
 
-import java.util.ArrayDeque;
 import java.util.LinkedList;
-import java.util.Queue;
 
 import static Part1.Project.QueueMethod.*;
 
@@ -12,14 +10,22 @@ public class Run {
 
         LinkedList<Person> shopQueue = new LinkedList<>();
 
-        shopQueue.offer(new Person("Edek"));
-        shopQueue.offer(new Person("Zenek"));
-        shopQueue.offer(new Person("Adek"));
+//        shopQueue.offer(new Person("Edek", "Kwiatek"));
+//        shopQueue.offer(new Person("Zenek", "Zenkowski"));
+        Person a1 = new Person("Adek", "Adek");
+        Person a2 = new Person("Edek", "Adek");
+        Person a3 = new Person("Adek", "Adek");
+        Person a4 = new Person("Adek", "Adek");
+        Person a5 = new Person("Adek", "Adek");
+        Person a6 = new Person("Adek", "Adek");
 
-
-
-        printQ(shopQueue);
-        creatingPerson("Matylda", "Nowak", 2, shopQueue);
+        shopQueue.offer(a1);
+        shopQueue.offer(a4);
+        shopQueue.offer(a3);
+        shopQueue.offer(a6);
+        System.out.println();
+        System.out.println();
+        System.out.println(shopQueue);
 
     }
 
