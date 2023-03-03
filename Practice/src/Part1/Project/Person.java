@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Person {
 
-    private static List<Person> personRegistry = new ArrayList<>();
+    private static List<Person> personRegistry = new LinkedList<>();
 
     private String name;
     private String surname;
@@ -23,12 +23,12 @@ public class Person {
 
         } else {
             for (Person person : personRegistry) {
-                counter2 = person.getCounter() + 1;
+                counter2 = person.counter +1 ;
+               // counter2 = person.getCounter() + 1;
             }
             this.counter = counter2;
         }
         personRegistry.add(this);
-        System.out.println(personRegistry);
     }
 
 
