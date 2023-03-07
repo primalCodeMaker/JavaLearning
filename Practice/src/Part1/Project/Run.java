@@ -23,7 +23,9 @@ public class Run {
         Person a7 = new Person("Zenek", "Zenek");
         Person a8 = new Person("Staszek", "Staszek");
         Person a9 = new Person("Staszek", "Staszek");
-        Person a10 = new Person("Zenek", "Zenek");
+        Person a10 = new Person("Staszek", "Staszek");
+
+        Person a12 = new Person("Zenek", "Zenek");
 
         shopQueue.offer(a1);
         shopQueue.offer(a2);
@@ -36,11 +38,13 @@ public class Run {
         shopQueue.offer(a9);
         shopQueue.offer(a10);
 
+        shopQueue.offer(a12);
+
  printQ(shopQueue);
 //        process(shopQueue);
 //        printQ(shopQueue);
 
-        findPerson(shopQueue, "Zenek", "Zenek");
+        //findPerson(shopQueue, "Zenek", "Zenek");
 
     }
 
