@@ -19,7 +19,27 @@ public class QueueMethod {
     static void process(LinkedList<Person> queue) {
         System.out.println("Person who already enter: " + queue.peek());
         queue.poll();
+        System.out.println("Next person in Queue " + queue.peek());
         System.out.println();
+    }
+
+    public static LinkedList<Person> fillQueueWithDefaultValue (LinkedList<Person> list) {
+        list.offer(new Person("Adek", "Adek"));
+        list.offer(new Person("Zenek", "Zenek"));
+        list.offer(new Person("Adek", "Adek"));
+//        list.offer(new Person("Adek", "Adek"));
+//        list.offer(new Person("Adek", "Adek"));
+//        list.offer(new Person("Zenek", "Zenek"));
+//        list.offer(new Person("Zenek", "Zenek"));
+//        list.offer(new Person("Zenek", "Zenek"));
+        list.offer( new Person("Zenek", "Zenek"));
+        list.offer( new Person("Staszek", "Staszek"));
+//        list.offer( new Person("Staszek", "Staszek"));
+//        list.offer( new Person("Staszek", "Staszek"));
+//        list.offer( new Person("Staszek", "Staszek"));
+        list.offer( new Person("Zenek", "Zenek"));
+        list.offer( new Person("Adek", "Adek"));
+        return list;
     }
 
 }

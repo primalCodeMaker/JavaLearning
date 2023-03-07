@@ -23,10 +23,10 @@ public class Person {
 
         } else {
             for (Person person : personRegistry) {
-                counter2 = person.getCounter();
-                System.out.println(counter2);
-                counter2++;
-               // counter2 = person.getCounter() + 1;
+                if (this.equals(person)) {
+                    counter2 = person.getCounter();
+                    counter2 ++;
+                }
             }
             this.counter = counter2;
         }
