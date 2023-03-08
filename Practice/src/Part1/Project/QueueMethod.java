@@ -41,5 +41,4 @@ public class QueueMethod {
         list.offer( new Person("Adek", "Adek"));
         return list;
     }
-
 }

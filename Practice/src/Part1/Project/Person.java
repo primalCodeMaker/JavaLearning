@@ -10,6 +10,8 @@ public class Person {
     private String surname;
     private int counter;
 
+    public Person() {
+    }
 
     public Person(String name, String surname) {
         this.name = name;
@@ -46,6 +48,13 @@ public class Person {
         return counter;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
 
     @Override
     public boolean equals(Object o) {
