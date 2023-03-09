@@ -48,6 +48,10 @@ public class Person {
         return counter;
     }
 
+    public void setCounter(int counter) {
+        this.counter = counter;
+    }
+
     public void setName(String name) {
         this.name = name;
     }

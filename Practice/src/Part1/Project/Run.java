@@ -1,7 +1,10 @@
 package Part1.Project;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.function.Predicate;
 
 import static Part1.Project.QueueMethod.*;
 
@@ -34,30 +37,55 @@ public class Run {
 
         } else {
             System.out.println("People founded: ");
+            List<Person> equalsPersonList = new ArrayList<>();
             for (Person person : list) {
                 if (person.equals(searching)) {
                     System.out.println(person);
+                    equalsPersonList.add(person);
                 }
             }
+            System.out.println(equalsPersonList);
 
             System.out.println();
             System.out.println("Which person You want to remove?");
             System.out.println("Select by index");
             int wywal = 2;
-            //todo tu jest blad. ladnie usuwa w 2giej czesci ale nie niedzia if
-            if (list.contains(searching && list.getPerson == wywal)) {
-//            (list.removeIf((p1) -> p1.equals(searching) && p1.getCounter() != wywal)); {
-                System.out.println("There is no person with index " + wywal + " in the queue");
+            searching.setCounter(wywal);
 
-//            }else {
-//                list.removeIf((p1) -> p1.equals(searching) && p1.getCounter() == wywal);
+
+                // todo problem w tym miejscu nadal nie rozwiazany
+
+            list.removeIf((p1) -> p1.equals(searching) && p1.getCounter() == wywal);
+                        System.out.println("jest");
+
+                    Predicate nieMa = p1 -> p1.equals(searching.getCounter());
+                    nieMa.test(list.contains(searching.getCounter()));
+            System.out.println("nei ma");
+
+
+
+//                } else {
+//                    System.out.println("There is no person with index: " + wywal + " in the queue");
+//                }
 //            }
-//                System.out.println();
-//                for (Person person : list) {
-//                    System.out.println(person);
+
+//            } else {
+//                list.removeIf((p1) -> p1.equals(searching) && p1.getCounter() == wywal);
                 }
-            }
+
+
+//            System.out.println();
+//            for (Person person : list) {
+//                System.out.println(person);
+//            }
         }
     }
+
+
+
+
+
+
+
 
 
