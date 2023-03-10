@@ -27,7 +27,7 @@ public class Person {
             for (Person person : personRegistry) {
                 if (this.equals(person)) {
                     counter2 = person.getCounter();
-                    counter2 ++;
+                    counter2++;
                 }
             }
             this.counter = counter2;
@@ -46,10 +46,6 @@ public class Person {
 
     public int getCounter() {
         return counter;
-    }
-
-    public void setCounter(int counter) {
-        this.counter = counter;
     }
 
     public void setName(String name) {

@@ -39,4 +39,15 @@ public class INFO {
 //    powiemy, że kolejkę musi opuścić osoba, której na tej kolejce nie ma. Pozwalam Ci wymyślić
 //    samodzielnie co zrobić w takich sytuacjach
 
+
+//     Następnie dodaj opcję VIPów, czyli ludzi, którzy jak przyjdą to trafiają na początek kolejki.
+//     Nie narzucam kryteriów ustalania kto ma być pierwszy w kolejce jak przyjdzie 2 VIPów, możesz to ustalić jak chcesz.
+//     Jeżeli jeszcze nie rozumiesz czemu o tym piszę, to zrozumiesz pisząc kod.
+//     Do wiadomości wysyłanych do Twojego programu dodaj takie parametry:
+
+//• ADD PERSON(Tomasz_Romański,VIP) - taki gość jest VIPem,
+//• ADD PERSON(Tomasz_Romański) - a taki nie jest,
+//• PROCESS oraz LEAVE PERSON(Tomasz_Romański_2) zostają tak jak były wcześniej.
+
+
 }
