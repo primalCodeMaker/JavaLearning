@@ -9,8 +9,15 @@ public class Person {
     private String name;
     private String surname;
     private int counter;
+    private boolean vip;
 
     public Person() {
+    }
+
+    public Person(String name, String surname, boolean vip) {
+        this.name = name;
+        this.surname = surname;
+        this.vip = vip;
     }
 
     public Person(String name, String surname) {
@@ -46,6 +53,10 @@ public class Person {
 
     public int getCounter() {
         return counter;
+    }
+
+    public boolean isVip() {
+        return vip;
     }
 
     public void setName(String name) {

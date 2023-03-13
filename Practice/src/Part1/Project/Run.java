@@ -18,9 +18,12 @@ public class Run {
         removeSpecyficPerson(shopQueue, "Zenek", "Zenek");
         //printQ(shopQueue);
 
-        Person test = new Person("Adek","Adek");
-        shopQueue.offer(test);
-        printQ(shopQueue);
+    }
+
+    private static Person addPerrsonToQueue(Person person) {
+        if ()
+
+        return null;
     }
 }
 
