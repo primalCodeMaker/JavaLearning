@@ -9,37 +9,43 @@ public class Person {
     private String name;
     private String surname;
     private int counter;
-    private boolean vip;
+    private String vip;
 
     public Person() {
-    }
-
-    public Person(String name, String surname, boolean vip) {
-        this.name = name;
-        this.surname = surname;
-        this.vip = vip;
     }
 
     public Person(String name, String surname) {
         this.name = name;
         this.surname = surname;
 
-        counter = 0;
-        int counter2 = 0;
+        addCounter(this);
+    }
 
-        if (!personRegistry.contains(this)) {
-            this.counter = counter;
+    public Person(String name, String surname, String vip) {
+        this.name = name;
+        this.surname = surname;
+        this.vip = vip;
+
+        addCounter(this);
+    }
+
+    private static int addCounter(Person person) {
+        int counter = 0;
+        if (!personRegistry.contains(person)) {
+            person.counter = counter;
 
         } else {
-            for (Person person : personRegistry) {
-                if (this.equals(person)) {
-                    counter2 = person.getCounter();
-                    counter2++;
+            for (Person element : personRegistry) {
+                if (person.equals(element)) {
+                    counter = element.getCounter();
+                    counter++;
                 }
             }
-            this.counter = counter2;
+            person.counter = counter;
         }
-        personRegistry.add(this);
+        personRegistry.add(person);
+        return person.counter = counter;
+
     }
 
 
@@ -47,24 +53,29 @@ public class Person {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getSurname() {
         return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
     public int getCounter() {
         return counter;
     }
 
-    public boolean isVip() {
-        return vip;
-    }
+    public boolean getVip() {
+        if (!vip.equals(null)) {
+            return false;
+        } else {
+            return true;
+        }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
     }
 
     @Override

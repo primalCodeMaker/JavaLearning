@@ -24,6 +24,21 @@ public class QueueMethod {
         System.out.println();
     }
 
+    public static void createPerson(Queue<Person> list, String name, String surname) {
+        Person person = new Person(name, surname);
+        list.offer(person);
+    }
+
+    public static void createVIP(LinkedList<Person> list, String name, String surname, String vip) {
+        if (vip.equals("VIP")) {
+            Person person = new Person(name, surname, vip);
+            list.addFirst(person);
+        } else {
+            System.out.println("Wrong parameters. enter \"VIP\" if you want to put a person at the beginning of the queue");
+            System.out.println();
+        }
+    }
+
     public static void removeSpecyficPerson(List<Person> list, String name, String surname) {
         Person searching = new Person();
         searching.setName(name);
