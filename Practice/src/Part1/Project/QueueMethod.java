@@ -81,7 +81,7 @@ public class QueueMethod {
         return found;
     }
 
-    public static LinkedList<Person> fillQueueWithDefaultValue(LinkedList<Person> list) {
+    public static void fillQueueWithDefaultValue(Queue<Person> list) {
         list.offer(new Person("Adek", "Adek"));
         list.offer(new Person("Zenek", "Zenek"));
         list.offer(new Person("Adek", "Adek"));
@@ -97,6 +97,6 @@ public class QueueMethod {
 //        list.offer( new Person("Staszek", "Staszek"));
         list.offer(new Person("Zenek", "Zenek"));
         list.offer(new Person("Adek", "Adek"));
-        return list;
+        //return list;
     }
 }
