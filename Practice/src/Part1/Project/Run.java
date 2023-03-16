@@ -5,8 +5,7 @@ import java.util.Scanner;
 
 
 import static Part1.Project.QueueMethod.*;
-import static Part1.Project.Scaner.leavePerson;
-import static Part1.Project.Scaner.startMenu;
+import static Part1.Project.Scaner.*;
 
 public class Run {
 
@@ -16,9 +15,9 @@ public class Run {
        // fillQueueWithDefaultValue(shopQueue);
 
         Scanner scan = new Scanner(System.in);
-//        startMenu(scan);
+        startMenu(scan);
 
-        System.out.println(leavePerson(scan));
+
 //
 //        printQ(shopQueue);
 //        process(shopQueue);

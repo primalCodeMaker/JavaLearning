@@ -18,15 +18,26 @@ public class Scaner {
         LinkedList<Person> shopQueue = new LinkedList<>();
         mainMenu(scan, shopQueue);
 
-
     }
 
     private static void mainMenu(Scanner scan, LinkedList<Person> list) {
-        System.out.println(NormalFont + "Select command entered");
+        System.out.println(NormalFont + "Select command");
         String mainMenu = scan.nextLine();
-        String name;
-        String surname;
 
+
+
+
+        if (mainMenu.contains("ADD PERSON")) {
+            extractValues(mainMenu);
+
+        } else if (mainMenu.contains("ADD PERS" + "") && mainMenu.contains("VIP")) {
+
+
+        } else extracted(scan, list, mainMenu);
+
+    }
+
+    private static void extracted(Scanner scan, LinkedList<Person> list, String mainMenu) {
         switch (mainMenu) {
             case "ADD DEFAULT VALUE":
                 fillQueueWithDefaultValue(list);
@@ -45,27 +56,33 @@ public class Scaner {
                 startMenu(scan);
                 break;
 
-          //  case "LEAVE PERSON(" + enterName(scan) + "_" + enterSurname(scan) + ")":
-          //  case "LEAVE PERSON(" + new String(enterName(scan)) + "_" + enterSurname(scan) + ")":
-//            case leavePerson(scan, scan2):
-              //  System.out.println("");
-              //  removeSpecyficPerson(list, enterName(scan), enterSurname(scan));
-
-
             default:
                 System.out.println(RedFont + "Wrong command");
                 mainMenu(scan, list);
         }
     }
 
-    private static String enterName(Scanner scan) {
-        String name = scan.nextLine();
-        return name;
+    static void extractValues(String comand) {
+        int first = comand.indexOf("(") + 1;
+        int last = comand.indexOf(")");
+        String separate = comand.substring(first, last);
+        System.out.println(separate);
+
+        String[] parts = separate.split("_");
+
+        String name = parts[0];
+        String surname = parts[1];
+
+
+        if (comand.contains("_")) {
+
+
+        }
+        System.out.println(parts[0]);
+        System.out.println(surname);
+
     }
-    private static String enterSurname(Scanner scan) {
-        String surname = scan.nextLine();
-        return surname;
-    }
+
 
     private static void command() {
         System.out.println(infoFont + "Command Info: ");
