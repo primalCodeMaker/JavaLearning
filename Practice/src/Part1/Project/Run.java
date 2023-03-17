@@ -11,11 +11,11 @@ public class Run {
 
     public static void main(String[] args) {
 
-       // LinkedList<Person> shopQueue = new LinkedList<>();
+        LinkedList<Person> shopQueue = new LinkedList<>();
        // fillQueueWithDefaultValue(shopQueue);
 
         Scanner scan = new Scanner(System.in);
-        startMenu(scan);
+        startMenu(shopQueue, scan);
 
 
 //

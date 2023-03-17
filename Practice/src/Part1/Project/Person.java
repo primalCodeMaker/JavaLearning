@@ -92,10 +92,21 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", counter=" + counter +
-                '}';
+
+        if (vip != null) {
+            return "Person{" +
+                    "name='" + name + '\'' +
+                    ", surname='" + surname + '\'' +
+                    ", counter=" + counter +
+                    ", VIP" +
+                    '}';
+        } else {
+
+            return "Person{" +
+                    "name='" + name + '\'' +
+                    ", surname='" + surname + '\'' +
+                    ", counter=" + counter +
+                    '}';
+        }
     }
 }
