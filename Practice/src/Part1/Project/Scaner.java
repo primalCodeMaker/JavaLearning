@@ -10,11 +10,9 @@ public class Scaner {
     static String RedFont = "\033[0;31m";
     static String NormalFont = "\033[0;97m";
     static String infoFont = "\033[0;37m";
-    static String infoFontBackground = "\033[47m";
 
 
     static void startMenu(LinkedList<Person> list, Scanner scan) {
-        System.out.println("\033[0;97m" + "Welcome in a queue Admin Panel");
         System.out.println("");
         info();
         System.out.println();
@@ -30,7 +28,7 @@ public class Scaner {
         String surname = separateSurname(command);
 
 
-        if (command.equals("ADD DEFAULT VALUE")) {
+        if (command.equals("ADD DEFAULT VALUES")) {
 
             fillQueueWithDefaultValue(list);
             System.out.println("queue filled with default values");
@@ -57,14 +55,21 @@ public class Scaner {
             addVIP(list, command);
             startMenu(list, scan);
 
+        } else if (command.equals("LEAVE PERSON(" + name + "_" + surname + ")")) {
+            removeSpecyficPerson(list,name,surname);
+            startMenu(list, scan);
+
+        } else if (command.equals("EXIT")) {
+            System.out.println("Have a nice day :)");
+            System.exit(0);
+
         } else {
             System.out.format(RedFont);
-            System.out.println("wrong comand mate!!!!!");
+            System.out.println("wrong comand");
             startMenu(list, scan);
 
         }
     }
-
 
     static void addPerson(LinkedList<Person> list, String sentence) {
         int first = sentence.indexOf("(") + 1;
@@ -92,7 +97,7 @@ public class Scaner {
 
 
     private static String separateName(String command) {
-        if (command.contains("ADD PERSON(")) {
+        if (command.contains("ADD PERSON(") || command.contains("LEAVE PERSON(")) {
             int first = command.indexOf("(") + 1;
             int last = command.indexOf(")");
             String separate = command.substring(first, last);
@@ -106,7 +111,7 @@ public class Scaner {
     }
 
     private static String separateSurname(String command) {
-        if (command.contains("ADD PERSON(")) {
+        if (command.contains("ADD PERSON(") || command.contains("LEAVE PERSON(")) {
             int first = command.indexOf("(") + 1;
             int last = command.indexOf(")");
             String separate = command.substring(first, last);
@@ -124,7 +129,8 @@ public class Scaner {
         System.out.println("Command Info: ");
         System.out.println("ADD PERSON(Name_Surname)     ADD PERSON(Name_Surname_VIP)");
         System.out.println("PROCESS                      PRINT");
-        System.out.println("LEAVE PERSON                 ADD DEFAULT VALUE");
+        System.out.println("LEAVE PERSON                 ADD DEFAULT VALUES");
+        System.out.println("EXIT");
     }
 }
 

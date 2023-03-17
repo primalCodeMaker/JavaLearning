@@ -11,22 +11,33 @@ import static Part1.Project.Scaner.infoFont;
 public class QueueMethod {
 
     public static void printQ(LinkedList<Person> queue) {
-        System.out.println(NormalFont + "People in queue: ");
 
-        System.out.format(infoFont);
-        for (Object person : queue) {
-            System.out.println(person);
+        if (queue.peek() != null) {
+            System.out.println(NormalFont + "People in queue: ");
+
+            System.out.format(infoFont);
+            for (Object person : queue) {
+                System.out.println(person);
+            }
+            System.out.println();
+            System.out.println(NormalFont + "Next person to enter: " + queue.peek());
+            System.out.println();
+
+        } else {
+            System.out.println("\033[0;31m" + "Queue is empty. Add specific person or use command: ADD DEFAULT VALUE");
         }
-        System.out.println();
-        System.out.println(NormalFont + "Next person to enter: " + queue.peek());
-        System.out.println();
     }
 
     static void process(LinkedList<Person> queue) {
-        System.out.println("Person who already enter: " + queue.peek());
-        queue.poll();
-        System.out.println("Next person in Queue " + queue.peek());
-        System.out.println();
+        if (queue.peek() != null) {
+            System.out.println("Person who already enter: " + queue.peek());
+            queue.poll();
+            System.out.println("Next person in Queue " + queue.peek());
+            System.out.println();
+
+        } else {
+            System.out.println("\033[0;31m" + "Queue is empty. add someone before using the PROCESS command");
+        }
     }
 
     public static void createPerson(Queue<Person> list, String name, String surname) {
