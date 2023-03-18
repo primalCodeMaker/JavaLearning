@@ -14,12 +14,14 @@ public class Person {
     public Person() {
     }
 
+
     public Person(String name, String surname) {
         this.name = name;
         this.surname = surname;
 
         addCounter(this);
     }
+
 
     public Person(String name, String surname, String vip) {
         this.name = name;
@@ -28,6 +30,7 @@ public class Person {
 
         addCounter(this);
     }
+
 
     private static int addCounter(Person person) {
         int counter = 0;
@@ -45,7 +48,6 @@ public class Person {
         }
         personRegistry.add(person);
         return person.counter = counter;
-
     }
 
 
@@ -69,14 +71,15 @@ public class Person {
         return counter;
     }
 
-    public boolean getVip() {
-        if (!vip.equals(null)) {
-            return false;
-        } else {
-            return true;
-        }
 
-    }
+//    public boolean getVip() {
+//        if (!vip.equals(null)) {
+//            return false;
+//        } else {
+//            return true;
+//        }
+//    }
+
 
     @Override
     public boolean equals(Object o) {
@@ -85,10 +88,12 @@ public class Person {
         return Objects.equals(getName(), person.getName()) && Objects.equals(getSurname(), person.getSurname());
     }
 
+
     @Override
     public int hashCode() {
         return Objects.hash(getName(), getSurname());
     }
+
 
     @Override
     public String toString() {
