@@ -36,7 +36,30 @@ public class Info {
 
 // Mozna stosowac na 3 sposoby:
     // w odniesieniu do metod instancyjnych
+        // nazwaObjektu::nazwaMetodyInstancyjnej
     // w odniesieniu do metod statyczynch
+        // NazwaKlasy :: nazwaMetody
     // w odniesieniu do konstruktorow
+        // NazwaKlasy :: new
 
-//todo 15:55 podsumowanie
+
+// Java ma wbudowane interfejsy funkcyjne, różnią sie typem danych wejściowych i typem zwracanym
+// Predicate
+    // przyjmuje cokolwiek i zwraca boola.
+    // Posiada metode test(), którą musimy wywolac aby uruchomic nasz predykat
+
+
+// Consumer - konsumuje
+    // przujmuje jakis argument i nie zwraca voida. (konsumuje - przyjmuje cos i nic nie zwraca)
+    // posiada metode accept()
+
+// Supplier - dostawca
+    // nie przyjmuje zadnego argumentu a zwraca cos
+    // posiada metode get()
+
+// BiPredicate
+    // posiada dwa parametry i rowniez zwraca boola
+    // Posiada metode test()
+
+// BiConsumer
+    // todo 25:30 w filmie
