@@ -50,16 +50,38 @@ public class Info {
 
 
 // Consumer - konsumuje
-    // przujmuje jakis argument i nie zwraca voida. (konsumuje - przyjmuje cos i nic nie zwraca)
+    // przujmuje jakis argument i zwraca voida. (konsumuje - przyjmuje cos i nic nie zwraca)
     // posiada metode accept()
 
 // Supplier - dostawca
     // nie przyjmuje zadnego argumentu a zwraca cos
     // posiada metode get()
+    // nie ma czegos takiego jak BiSupplier
 
 // BiPredicate
     // posiada dwa parametry i rowniez zwraca boola
     // Posiada metode test()
 
 // BiConsumer
-    // todo 25:30 w filmie
+    // przujmuje daw argumenty i  zwraca voida
+    // posiada metode accept()
+
+// Function
+    // uzywany gdy z jakiegos typu chcemy zrobic inny typ
+    // posiada funkcje apply()
+
+// BiFunction
+    // uzywany gdy z jakiegos typu chcemy zrobic inny typ
+    // Przyjmuje 2 typy wejsciowe a zwraca jeden
+    // posiada funkcje apply()
+
+//UnaryOperator
+    // rozszerza Function, ale przyjmuje ten sam typ i zwraca ten sam typ
+    // Przyjmuje to samo i zwraca to samo
+    // dziedziczy z Function wiec przejmuje metode apply()
+
+// BinaryOperator
+    // rozszerza BiFunction, ale przyjmuje te same typy i zwraca ten sam typ
+    // Przyjmuje 2 takie same i zwraca 1 taki sam
+    // dziedziczy z BiFunction wiec przejmuje metode apply()
+
