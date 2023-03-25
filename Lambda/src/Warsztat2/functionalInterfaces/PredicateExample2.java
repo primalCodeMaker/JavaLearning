@@ -19,7 +19,5 @@ public class PredicateExample2 {
         stringlist.removeIf((s1) -> s1.equals("asd") || s1.length() < 5);
 
         System.out.println(stringlist);
-
-        // todo  14:10
     }
 }

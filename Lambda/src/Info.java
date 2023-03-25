@@ -85,3 +85,4 @@ public class Info {
     // Przyjmuje 2 takie same i zwraca 1 taki sam
     // dziedziczy z BiFunction wiec przejmuje metode apply()
 
+// w lambdach wyjatki checked Exception trzeba od razu obslugiwac. Nie mozna ich zucic dalej z maina
