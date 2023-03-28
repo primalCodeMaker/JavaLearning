@@ -1,4 +1,4 @@
-package Part1.functionalInterfacesExercises;
+package Part2.functionalInterfacesExercises;
 
 public class INFO {
 }

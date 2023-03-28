@@ -1,4 +1,4 @@
-package Part1.functionalInterfacesExercises.first;
+package Part2.functionalInterfacesExercises.first;
 
 import java.util.function.BiFunction;
 

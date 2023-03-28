@@ -1,4 +1,4 @@
-package Part1.functionalInterfacesExercises.third;
+package Part2.functionalInterfacesExercises.third;
 
 import java.util.*;
 import java.util.function.BinaryOperator;

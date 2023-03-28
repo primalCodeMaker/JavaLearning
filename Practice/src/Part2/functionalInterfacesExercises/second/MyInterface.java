@@ -1,4 +1,4 @@
-package Part1.functionalInterfacesExercises.second;
+package Part2.functionalInterfacesExercises.second;
 
 @FunctionalInterface
 public interface MyInterface <S, I, O> {
