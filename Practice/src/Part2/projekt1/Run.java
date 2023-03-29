@@ -13,7 +13,16 @@ public class Run {
         Object functionRun = producer.function1.apply("asdasd");
         System.out.println(functionRun);
 
-        Supplier something = producer.supplier1("Something");
-        System.out.println(something);
+//
+//        String supplierRun = producer.setMyString(()-> "ssd");
+//        System.out.println(supplierRun);
+
+        Supplier<String> test = () -> {
+            String s = "why em I doin this?";
+            return s;
+        };
+
+        System.out.println(producer.setMyString(test.get()));
+
     }
 }
