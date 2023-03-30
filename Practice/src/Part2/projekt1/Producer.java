@@ -8,21 +8,25 @@ public class Producer {
 
     private static String myString;
 
-    Supplier<String> sup1 = () -> "as";
 
-
-    public  String setMyString(String s) {
-        Supplier<String> ss = () -> "asd";
-        return ss.get();
+    public String setMyString(Supplier<String> s) {
+        myString = s.get();
+        return s.get();
     }
-
 
     Consumer<String> consumer1 = s -> System.out.println(s + " consumed");
 
     Function<String, Integer> function1 = (s -> s.length());
 
-
     public String getMyString() {
         return myString;
+    }
+
+    @Override
+    public String toString() {
+        return "Producer{" +
+                "consumer1=" + consumer1 +
+                ", function1=" + function1 +
+                '}';
     }
 }
