@@ -45,6 +45,10 @@ Samego streama nie mozna soutPrintowac bo wychodza krzaki. Trzeba poprzez metode
     // noneMatch - jesli zaden z elementow nie zawiera naszej wartosci zwraca true
     //forEach - wykonaj jakas akcje dla kazdego elementu. Mozna przypisac do nowej listy i zmienic elementy
             // przy operacjach wielowatkowych elementy moga nam sie pobierac w streamie niezgodnie z kolejnoscia
+    // reduce - skleja wszystkie elementy w streamie do jednej wartosci wynikowej. Moze to byc string albo np: Lista
+    // collect - laczy elementy streama w jakas kolekcje. Nie mamy gwarancji jaka to bedzie kolekcja
+        //jesli chcemy wymusic jaka to ma byc kolekcja np: treeSet to uzywamy metody toCollection(Supplier ()->kolekcja)
+    // kolektor joining laczy wartosci do streinga. Mozna mu podac wartosc jaka beda oddzielone elementy
 
 
  */

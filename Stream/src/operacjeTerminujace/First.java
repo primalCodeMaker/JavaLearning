@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Stream;
 
-public class Main {
+public class First {
 
     public static void main(String[] args) {
 
