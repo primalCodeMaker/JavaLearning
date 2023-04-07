@@ -31,4 +31,20 @@ lub np takie, ktore iteruja wartosc +1...
 Samego streama nie mozna soutPrintowac bo wychodza krzaki. Trzeba poprzez metode peak() podgladac jego wartosci
 
 
+
+//operacje posrednie to takie, ktore zwracaja Stream
+
+
+
+// operacje terminujace:
+    // count - zlciza ilosc elementow, ktora wystepuje w streamie
+    // findFirst / findAny
+    // min / max -> wymaga podania comparatora
+    // allMatch - czy wszystkie elementy zawieraja, Jesli jakikolwiek z elementow sie nie zgadza zwraca false
+    // anyMatch - jesli jakikolwiek element zawiera nasza wartosc to zwraca true
+    // noneMatch - jesli zaden z elementow nie zawiera naszej wartosci zwraca true
+    //forEach - wykonaj jakas akcje dla kazdego elementu. Mozna przypisac do nowej listy i zmienic elementy
+            // przy operacjach wielowatkowych elementy moga nam sie pobierac w streamie niezgodnie z kolejnoscia
+
+
  */
