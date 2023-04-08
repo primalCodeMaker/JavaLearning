@@ -33,7 +33,10 @@ Samego streama nie mozna soutPrintowac bo wychodza krzaki. Trzeba poprzez metode
 
 
 //operacje posrednie to takie, ktore zwracaja Stream
-
+    // filter - przyjmuje predykat i filtruje nasz zbior
+    // map - uzywamy jesli chcemy w jakis sposob zminic rodzaj danych na ktorych operujemy
+    // flatMap - jesli mamy zagniezdzone generyki podobnie jak w przypadku optionala
+        // to pozwala nam to odpakowac i dostac sie do wartosci jaka potrzebujemy
 
 
 // operacje terminujace:
