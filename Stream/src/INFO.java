@@ -74,6 +74,10 @@ Samego streama nie mozna soutPrintowac bo wychodza krzaki. Trzeba poprzez metode
         mapping <<< laczay w jednym kroku map oraz operacje terminujaca
             IntelliJ podpowiada aby zamieniac to na klasyczny zapis
 
+        toMap - przerabia zbior na mape, ma 3 przeladowania - info w klasie toMapExample
+
+// todo 15:09 w filmie partitioningBy
+
 
     // Streamy obslugujace prymitywy:
         // IntStream
