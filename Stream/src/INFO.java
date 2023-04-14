@@ -50,7 +50,7 @@ Samego streama nie mozna soutPrintowac bo wychodza krzaki. Trzeba poprzez metode
 
 
 // operacje terminujace:
-    // count - zlciza ilosc elementow, ktora wystepuje w streamie
+    // count - zlicza ilosc elementow, ktora wystepuje w streamie
     // findFirst / findAny
     // min / max -> wymaga podania comparatora
     // allMatch - czy wszystkie elementy zawieraja, Jesli jakikolwiek z elementow sie nie zgadza zwraca false
@@ -60,8 +60,19 @@ Samego streama nie mozna soutPrintowac bo wychodza krzaki. Trzeba poprzez metode
              przy operacjach wielowatkowych elementy moga nam sie pobierac w streamie niezgodnie z kolejnoscia
     // reduce - skleja wszystkie elementy w streamie do jednej wartosci wynikowej. Moze to byc string albo np: Lista
     // collect - laczy elementy streama w jakas kolekcje. Nie mamy gwarancji jaka to bedzie kolekcja
-        jesli chcemy wymusic jaka to ma byc kolekcja np: treeSet to uzywamy metody toCollection(Supplier ()->kolekcja)
+        jesli chcemy wymusic jaka to ma byc kolekcja np: treeSet to uzywamy metody toCollection(Supplier ()->new kolekcja)
     // kolektor joining laczy wartosci do streinga. Mozna mu podac wartosc jaka beda oddzielone elementy
+
+
+
+    // Collectory Zaawansowane:
+        .collect(Collectors.counting()) <<< robi to samo co .count()
+        .collect(Collectors.joining()) <<< laczy wartosci w jednego stringa, mozna mu podac czym maja byc oddzielone
+              przyjmuje CharSequence, ma byc stosowany dla kals ktore implementuja CharSequence
+        maxBy / minBy << zwraca minimalna albo maxymalna wartosc podczas porownywania
+              wymaga podania comparatora
+        mapping <<< laczay w jednym kroku map oraz operacje terminujaca
+            IntelliJ podpowiada aby zamieniac to na klasyczny zapis
 
 
     // Streamy obslugujace prymitywy:
