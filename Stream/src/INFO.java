@@ -49,8 +49,6 @@ Samego streama nie mozna soutPrintowac bo wychodza krzaki. Trzeba poprzez metode
         przed linijka sorted() elementy w streamie beda w poprzedniej kolejnosci
 
 
-
-
 // operacje terminujace:
     // count - zlciza ilosc elementow, ktora wystepuje w streamie
     // findFirst / findAny
@@ -66,4 +64,13 @@ Samego streama nie mozna soutPrintowac bo wychodza krzaki. Trzeba poprzez metode
     // kolektor joining laczy wartosci do streinga. Mozna mu podac wartosc jaka beda oddzielone elementy
 
 
+    // Streamy obslugujace prymitywy:
+        // IntStream
+        // LongStream
+        // DoubleStream
+
+    // maja swoje dodatkowe metody, charakterystyczne dla wartosci numerycznych np:
+        // mapToInt, boxed, mapToObj
+        // average, sum
+        // maja swoje klasy np: OptionalDouble
  */
