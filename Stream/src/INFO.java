@@ -71,21 +71,29 @@ Samego streama nie mozna soutPrintowac bo wychodza krzaki. Trzeba poprzez metode
               przyjmuje CharSequence, ma byc stosowany dla kals ktore implementuja CharSequence
         maxBy / minBy << zwraca minimalna albo maxymalna wartosc podczas porownywania
               wymaga podania comparatora
-        mapping <<< laczay w jednym kroku map oraz operacje terminujaca
-            IntelliJ podpowiada aby zamieniac to na klasyczny zapis
+        mapping <<< laczay w jednym kroku map oraz jakas operacje terminujaca
+                    mapping moze wplywac na stan obiektow, ktore przetwazamy i je zmieniac
 
         toMap - przerabia zbior na mape, ma 3 przeladowania - info w klasie toMapExample
 
-// todo 15:09 w filmie partitioningBy
+        partitioningBy - zwraca mape, ktora jako klucz ma boolean,
+                         a jako wartosci ma listy z przydzielonymi elementami dla True i False
+                 uzywamy jesli chcemy podzielic wartosci w streamie na True / False i przypozadkowac im liste wartosci
+
+        groupingBy - Uzywamy gdy chcemy podzielic elementty w streamie na jakies grupy
+                     podobnie jak partitioningBy zwraca Mape, ale sami ustalamy co bedze kluczem
+                     w tym przypadku mozemy sami okreslic implementacje tej Mapy,
+                     oraz implementacje kolekcji, w ktorej bedziemy przechowywac wartosci
+                     bardzo zlozony kolektor
+
 
 
     // Streamy obslugujace prymitywy:
         // IntStream
         // LongStream
         // DoubleStream
-
     // maja swoje dodatkowe metody, charakterystyczne dla wartosci numerycznych np:
         // mapToInt, boxed, mapToObj
         // average, sum
-        // maja swoje klasy np: OptionalDouble
+        // maja swoje oddzielne klasy, ktore je obsluguja np: OptionalDouble
  */

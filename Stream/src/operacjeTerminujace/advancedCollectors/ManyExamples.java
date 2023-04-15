@@ -47,6 +47,7 @@ public class ManyExamples {
 
         // mapping <<< laczay w jednym kroku map oraz operacje terminujaca
         // IntelliJ podpowiada aby zamieniac to na klasyczny zapis
+        // mapping moze wplywac na stan obiektow, ktore przetwazamy i je zmieniac
 
         // zapis klasyczny :
         Integer classicMap = list.stream()
