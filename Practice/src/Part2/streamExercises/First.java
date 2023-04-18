@@ -1,8 +1,7 @@
 package Part2.streamExercises;
 
 import java.util.List;
-import java.util.function.BinaryOperator;
-import java.util.stream.Collectors;
+import java.util.Optional;
 import java.util.stream.Stream;
 
 public class First {
@@ -11,15 +10,12 @@ public class First {
 
     public static void main(String[] args) {
 
-        long now = System.currentTimeMillis();
-
         List<Integer> list = Stream.iterate(1, (a) -> a + 1)
-                .limit(10).toList();
+                .limit(5).toList();
 
-        //stream1.forEach(a -> System.out.println("number: " + a + " milis: " + ((System.currentTimeMillis()) - now)));
-
-     //   BinaryOperator silnia = ((a,b) -> a*b);
-
+        Optional<Integer> reduceSilnia = list.stream()
+                .reduce((a, b) -> a * b);
+        System.out.println(reduceSilnia);
 
     }
 }
