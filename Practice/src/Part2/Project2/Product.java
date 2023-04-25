@@ -9,6 +9,14 @@ public class Product implements Comparable<Product> {
     // konstruktory, gettery itp
 
 
+    public String getProductId() {
+        return id;
+    }
+
+    public Money getPrice() {
+        return price;
+    }
+
     public Product(String id, String name, Category category, Money price) {
         this.id = id;
         this.name = name;

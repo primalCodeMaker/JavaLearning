@@ -25,6 +25,14 @@ public class Purchase {
         return buyer;
     }
 
+    public Product getProduct() {
+        return product;
+    }
+
+    public Payment getPayment() {
+        return payment;
+    }
+
     @Override
     public String toString() {
         return "Purchase{" +
@@ -53,4 +61,5 @@ public class Purchase {
         SENT,
         DONE
     }
+
 }

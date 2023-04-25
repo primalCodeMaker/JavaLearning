@@ -14,6 +14,16 @@ public class Money {
         this.currency = currency;
     }
 
+    public BigDecimal getValue() {
+        return value;
+    }
+
+    public Currency getCurrency() {
+        return currency;
+
+
+    }
+
     @Override
     public String toString() {
         return "Money{" +
