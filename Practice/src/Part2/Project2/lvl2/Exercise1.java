@@ -2,10 +2,12 @@ package Part2.Project2.lvl2;
 
 import Part2.Project2.Money;
 
-import java.security.cert.PolicyNode;
+import java.math.BigDecimal;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import static Part2.Project2.DataFactory.produce;
+import static java.util.stream.Collectors.reducing;
 
 public class Exercise1 {
 
@@ -16,14 +18,14 @@ public class Exercise1 {
     public static void main(String[] args) {
 
 
-        long exercise1 = produce().stream()
+        Map<String, BigDecimal> exercise1 = produce().stream()
                 .filter(a -> a.getProduct().getPrice().getCurrency().equals(Money.Currency.PLN))
-                .map(a -> a.getPayment()
-                .peek(a -> System.out.println(a))
-                .count();
+                .collect(Collectors.groupingBy(k -> k.getBuyer().getId(),
+                        Collectors.mapping(
+                                val -> val.getProduct().getPrice().getValue().multiply(BigDecimal.valueOf(val.getQuantity())),
+                                reducing(BigDecimal.ZERO, ((currentSum, nextValue) -> currentSum.add(nextValue))))));
 
-        System.out.println(exercise1);
-
+        exercise1.forEach((k, v) -> System.out.println(k + " " + v));
 
     }
 }

@@ -14,6 +14,7 @@ public class Client implements Comparable<Client> {
     // konstruktory, gettery itp
 
 
+
     public String getId() {
         return id;
     }

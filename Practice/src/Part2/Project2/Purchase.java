@@ -29,6 +29,10 @@ public class Purchase {
         return product;
     }
 
+    public long getQuantity() {
+        return quantity;
+    }
+
     public Payment getPayment() {
         return payment;
     }
