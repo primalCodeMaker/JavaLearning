@@ -21,6 +21,14 @@ public class Product implements Comparable<Product> {
         return category;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
     public Product(String id, String name, Category category, Money price) {
         this.id = id;
         this.name = name;
