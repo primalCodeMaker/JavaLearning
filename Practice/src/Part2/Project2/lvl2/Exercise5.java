@@ -1,9 +1,7 @@
 package Part2.Project2.lvl2;
 
-import Part2.Project2.Purchase;
-
-import java.math.BigInteger;
-import java.util.*;
+import java.util.Map;
+import java.util.TreeMap;
 import java.util.stream.Collectors;
 
 import static Part2.Project2.DataFactory.produce;
