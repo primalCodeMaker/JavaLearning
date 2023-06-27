@@ -17,5 +17,10 @@ public class INFO {
         // taki folder dostaje rozszerzenie .properties
 
 
+    // Klasa NumberFormat - formatauje daty i liczby zgodnie z przyjetymi normami w fanym kraju
+        // klasa number format potfari zwrocic Stringa z wartsci numerycznej np: w metodzie getPercentInstance()
+
+
+
 
 }
