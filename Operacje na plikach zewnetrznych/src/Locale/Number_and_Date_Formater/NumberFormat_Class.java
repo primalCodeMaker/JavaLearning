@@ -1,4 +1,4 @@
-package Number_and_Date_Formater;
+package Locale.Number_and_Date_Formater;
 
 import java.text.NumberFormat;
 import java.util.Locale;

@@ -1,4 +1,4 @@
-package languages;
+package Locale.languages;
 
 import java.util.Locale;
 import java.util.Map;

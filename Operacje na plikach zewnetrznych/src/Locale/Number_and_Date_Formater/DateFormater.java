@@ -1,4 +1,4 @@
-package Number_and_Date_Formater;
+package Locale.Number_and_Date_Formater;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
