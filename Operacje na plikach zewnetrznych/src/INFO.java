@@ -37,8 +37,6 @@ public class INFO {
 //                          oraz dzialanie z bloku catch << to musze sprawdzic
 //           }
 
-    // todo 17:40 film podsumowanie
-
 //    jesli w bloku try () { chcemy definiowac obiekty jakis klas to musza one rozrzeszac interfejs AutoClosable
 //            inaczej bedzie blad. Nie mozna zrobic np: instancji Stringa
 //            W try(with resources) deklarujemy tylko obiekty AutoClosable
@@ -53,6 +51,24 @@ public class INFO {
 
     // jesli nie zrobimy catcha i po try rzucimy wyjatek w finally, to stracimy dostep do poprzednich wyjatkow,
         // ktore rzucalismy wczesniej
+
+
+    // --------------------------------------------------------------------
+
+    // klasa File - pozwala odwolywac sie do plikow i katalogow. Za pomoca tej klasy nie mozna modyfikowac plikow
+    // klasa File ma metody np: exist, ktora sprawdza czy plik lub katalog istnieje
+    // klasa File dziala na sciezkach relatwnych. Poczatkiem jest sciezka w ktorej umieszczeony jest projekt:
+            // D:\Git Clone\JavaLearning\Operacje na plikach zewnetrznych>
+            // jesli zrobimy sobie z poziomu InteliJ jakis plik i chcemy sie do niego odwolywac w kodzie to nalezy podac do niego dalsza sciezke
+            // ./src/nazwaPackage/nazwaKolejnegoPackage/nazwaPliku.rozszerzenie
+
+    // w Javie sciezki oddzielamy slashem "/" Java go rozumie niezaleznie od systemu
+    // w windowsie oddziela sie backSlashem ale nie ma to znaczenia
+
+    // klasa File pozwala Tworzyc nowe pliki, usówać, zmieniać nazwy, sprawdzac ostatnie modyfilacje itp >>> .\src\OutsideFiles\FileClass\
+    // klasa File nie pozwala na modyfikacje plikow wewnatrz
+
+
 
 
 }
