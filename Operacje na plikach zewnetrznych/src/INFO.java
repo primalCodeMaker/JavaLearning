@@ -68,7 +68,13 @@ public class INFO {
     // klasa File pozwala Tworzyc nowe pliki, usówać, zmieniać nazwy, sprawdzac ostatnie modyfilacje itp >>> .\src\OutsideFiles\FileClass\
     // klasa File nie pozwala na modyfikacje plikow wewnatrz
 
+    // --------------------------------------------------------------------
 
+//        IO Streamy:
+//    In / Out stream - mechanizm do operacji na plikach
+//    InputStream / Output Stream - streamy do operacji na pojedyńczych bajtach
+//    BufferedStream - streamy do operacji na paczkach bajtów np:  8 / 16 / 32 ... 256 (kiedy chcemy operować na paczkach danych a nie pojedynczych wartosciach)
+//    Reader / Writer - streamy w ktorych operujemy na znakach
 
 
 }
