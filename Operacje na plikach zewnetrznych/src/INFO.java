@@ -78,5 +78,10 @@ public class INFO {
 
     // .flush() > metoda ktora wymusza zapis danych
 
-
+//    ------------------------------------
+//    klasa fileInputStream operuje na surowych bajtach. Odczytuje kazdy pojedynczy znak jako bajt, i zapisuje go jako bajt.
+//    Podczas odczytywania znakow specjalnych powstaja bledy
+//            nie ma tutaj jak dodac opcji z jakiego kodowania ma kozystac aby zrobić ą ę ź ...
+//    z tej klasy warto kozystac w przypadku np: obrazow a nie textu.
+//    W przypadku textu bedziemy uzywac Buffer Readera  i Buffer Writera
 }
