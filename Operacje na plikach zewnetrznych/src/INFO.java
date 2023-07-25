@@ -84,4 +84,7 @@ public class INFO {
 //            nie ma tutaj jak dodac opcji z jakiego kodowania ma kozystac aby zrobić ą ę ź ...
 //    z tej klasy warto kozystac w przypadku np: obrazow a nie textu.
 //    W przypadku textu bedziemy uzywac Buffer Readera  i Buffer Writera
+
+//    Klase BufferedInputStream zapisuje sie w specyficzny sposob
+//        poprzez opakowanie klasy FileInputStream w BufferedInpud stream
 }

@@ -6,21 +6,23 @@ public class BufferedExample1 {
 
     public static void main(String[] args) throws IOException {
 
-        File inputFile = new File("src/IO_stream/copy_pasteValues/someInputFile.txt");
-        File outputFile = new File("src/IO_stream/copy_pasteValues/someOutputFile.txt");
+        //todo film 5:01 min
 
-        copyOnly(inputFile, outputFile);
+        File inputFile = new File("src/IO_stream/copy_pasteValues/BufferedStream/someInputFile.txt");
+        File outputFile = new File("src/IO_stream/copy_pasteValues/BufferedStream/someOutputFile.txt");
+
+        bufferedCopy(inputFile, outputFile);
 
     }
-
-    private static void copyOnly(File inputFile, File outputFile) throws IOException {
+    private static void bufferedCopy(File inputFile, File outputFile) throws IOException {
         try (
-                InputStream input = new FileInputStream(inputFile);
-                OutputStream output = new FileOutputStream(outputFile);
+                InputStream input = new BufferedInputStream(new FileInputStream(inputFile));
+                OutputStream output = new BufferedOutputStream(new FileOutputStream(outputFile))
         ) {
-            int value = input.read();
-            System.out.printf("start reading file: [%s]%n", inputFile);
-            System.out.printf("Readin Valure[%s], char: [%s]%n", value, (char)value);
+            byte[] buffer = new byte[1024];
+            int value = input.read(buffer);
+            System.out.printf("start buffered reading file: [%s]%n", inputFile);
+            System.out.printf("Readin Valures[%s], chars: [%s]%n", value, (char)value);
 
             while (value != -1) {
                 output.write(value);
@@ -28,7 +30,6 @@ public class BufferedExample1 {
                 System.out.printf("Readin Valure[%s], char: [%s]%n", value, (char)value);
 
             }
-
         }
     }
 }
