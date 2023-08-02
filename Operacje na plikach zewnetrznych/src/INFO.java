@@ -87,4 +87,5 @@ public class INFO {
 
 //    Klase BufferedInputStream zapisuje sie w specyficzny sposob
 //        poprzez opakowanie klasy FileInputStream w BufferedInpud stream
+//    nie kozystamy z pojedynczych byte'ow tylk oz tablicy byte'ow[]
 }
