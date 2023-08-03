@@ -88,4 +88,6 @@ public class INFO {
 //    Klase BufferedInputStream zapisuje sie w specyficzny sposob
 //        poprzez opakowanie klasy FileInputStream w BufferedInpud stream
 //    nie kozystamy z pojedynczych byte'ow tylk oz tablicy byte'ow[]
+//    aby uniknac bledow w zapisie podczas inicjalizowania zapisu trzeba napisac: output.write(buffer, 0, length)
+//        inaczej jesli zdeklarujemy tablice o rozmiarze 4, a w ostatniej linijce zostanie 1 znak, to tablica powtorzy sie z przedostatniego zapisu i podmieni tylko ilosc znakow ktore byly nowe
 }
