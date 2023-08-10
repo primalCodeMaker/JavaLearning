@@ -3,11 +3,9 @@ package IO_stream.copy_pasteValues.BufferedStream;
 import java.io.*;
 import java.util.Arrays;
 
-public class BufferedExample1 {
+public class IO_BufferedExample1 {
 
     public static void main(String[] args) throws IOException {
-
-        //todo film 20:00 min
 
         File inputFile = new File("src/IO_stream/copy_pasteValues/BufferedStream/someInputFile.txt");
         File outputFile = new File("src/IO_stream/copy_pasteValues/BufferedStream/someOutputFile.txt");
@@ -52,7 +50,8 @@ public class BufferedExample1 {
         return replaceNewLines(Arrays.toString(input));
 
     }
-    private static String replaceNewLines(String input){
+
+    private static String replaceNewLines(String input) {
         return input.replace("\n", "\\n").replace("\r", "\\r");
     }
 }

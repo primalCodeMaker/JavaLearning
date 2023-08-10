@@ -90,4 +90,15 @@ public class INFO {
 //    nie kozystamy z pojedynczych byte'ow tylk oz tablicy byte'ow[]
 //    aby uniknac bledow w zapisie podczas inicjalizowania zapisu trzeba napisac: output.write(buffer, 0, length)
 //        inaczej jesli zdeklarujemy tablice o rozmiarze 4, a w ostatniej linijce zostanie 1 znak, to tablica powtorzy sie z przedostatniego zapisu i podmieni tylko ilosc znakow ktore byly nowe
+
+
+//    BufferedReader - kolejna klasa opakowujaca FileReadera, ktora operuje na Liscie Stringow
+//    w tej klasie nie operujemy na bajtach. Podczas zapisywania trzeba zdefinowac kodowanie znakow
+//    daje mozlosc apend > true (opcjonalny argument do dodania po zdefiniowaniu kodowania)
+//       opcja ta nie tworzy pliku na nowo, tylko do istniejącego dodaje nową zawartość
+//    nie dziala przy kopiowaniu obrazkow
+
+
+
+
 }
