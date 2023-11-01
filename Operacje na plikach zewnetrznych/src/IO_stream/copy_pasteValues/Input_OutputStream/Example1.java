@@ -6,8 +6,8 @@ public class Example1 {
 
     public static void main(String[] args) throws IOException {
 
-        File inputFile = new File("src/IO_stream/copy_pasteValues/Input_OutputStream/someInputFile.txt");
-        File outputFile = new File("src/IO_stream/copy_pasteValues/Input_OutputStream/someOutputFile.txt");
+        File inputFile = new File("src/IO_stream/copy_pasteValues/someInputFile.txt");
+        File outputFile = new File("src/IO_stream/copy_pasteValues/someOutputFile.txt");
 
         copyOnly(inputFile, outputFile);
 

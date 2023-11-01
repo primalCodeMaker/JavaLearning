@@ -7,10 +7,9 @@ public class BufferedExample1 {
 
     public static void main(String[] args) throws IOException {
 
-        //todo film 20:00 min
 
-        File inputFile = new File("src/IO_stream/copy_pasteValues/BufferedStream/someInputFile.txt");
-        File outputFile = new File("src/IO_stream/copy_pasteValues/BufferedStream/someOutputFile.txt");
+        File inputFile = new File("src/IO_stream/copy_pasteValues/someInputFile.txt");
+        File outputFile = new File("src/IO_stream/copy_pasteValues/someOutputFile.txt");
 
         bufferedCopy(inputFile, outputFile);
 
