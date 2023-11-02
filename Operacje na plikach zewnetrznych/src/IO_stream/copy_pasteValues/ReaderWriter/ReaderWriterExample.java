@@ -4,7 +4,6 @@ import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 public class ReaderWriterExample {
@@ -20,7 +19,6 @@ public class ReaderWriterExample {
 
     }
 
-
     private static List<String> readFile(final File inputFile) throws IOException {
         List<String> result = new ArrayList<>();
         try (
@@ -30,12 +28,11 @@ public class ReaderWriterExample {
             while (lineReader != null) {
                 result.add(lineReader);
                 lineReader = buffReader.readLine();
-
             }
-
         }
         return result;
     }
+
 
     private static void writeFile(File outputFile, List<String> fileRead) throws IOException {
 
@@ -43,33 +40,10 @@ public class ReaderWriterExample {
             for (String line : fileRead) {
                 bufferedWriter.write(line);
                 bufferedWriter.newLine();
-                
+
             }
         }
     }
 
-
-    private static void bufferedCopy(File inputFile, File outputFile) throws IOException {
-
-    }
-
-    static String toCharString(byte[] input) {
-        char[] charArray = new char[input.length];
-
-        for (int i = 0; i < input.length; i++) {
-            charArray[i] = (char) input[i];
-        }
-        return replaceNewLines(Arrays.toString(charArray));
-
-    }
-
-    static String byteArrayToString(byte[] input) {
-        return replaceNewLines(Arrays.toString(input));
-
-    }
-
-    private static String replaceNewLines(String input) {
-        return input.replace("\n", "\\n").replace("\r", "\\r");
-    }
 }
 

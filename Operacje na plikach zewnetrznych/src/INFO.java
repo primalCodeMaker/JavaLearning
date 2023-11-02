@@ -1,3 +1,5 @@
+import java.io.BufferedWriter;
+
 public class INFO {
 
 
@@ -90,4 +92,25 @@ public class INFO {
 //    nie kozystamy z pojedynczych byte'ow tylk oz tablicy byte'ow[]
 //    aby uniknac bledow w zapisie podczas inicjalizowania zapisu trzeba napisac: output.write(buffer, 0, length)
 //        inaczej jesli zdeklarujemy tablice o rozmiarze 4, a w ostatniej linijce zostanie 1 znak, to tablica powtorzy sie z przedostatniego zapisu i podmieni tylko ilosc znakow ktore byly nowe
+
+
+
+//    klasa Raeder / Writer operuje na znakach zgodnie z podanym kodowaniem podczas inicjalizacji
+//    jesli nie zdefiniujemy jakie kodowanie ma byc uzyte zostanie zaczytane default z systemu
+//    nie działa na obrazach tylko na danych textowych.
+
+//    BufferedReader i Buffered Writer
+//    opakowuje Readera i Writera w paczki. Popularna metoda .readLine()
+//    posiada metode .append() która pozwala dopisywać dane do pliku bez kasowania jego zawartosci
+
+
+//    Serializable - marker interface, ktory pozwala na serializowanie obiektow klasy jesli ta klasa go implementuje
+    // wszystkie inne klasy, na ktorych dziala polimorfizm tez musza implementowac serializable w takim przypadku
+    // obiekty klas typu Intiger czy String implementują domyslnie Serializable
+    // transient - slowko kluczowe, ktore oznacza ze danego elementu w klasie nie chcemy seriaizowac (np pola, ktore zwraca obiekt z innej klasy)
+    // Static w serializacji jest pomijany bo nalezy do klasy a serializuje sie Obiekty
+    // private static final long serialVersionUID = 1L - wartosc dodaje sie randomowo.
+        // Jest to wersja naszej klasy ktora pomaga w identyfikaci obiektow. Jesli numer ulednie zmianie obiekty sie nie zdeserializuja
+
+
 }
