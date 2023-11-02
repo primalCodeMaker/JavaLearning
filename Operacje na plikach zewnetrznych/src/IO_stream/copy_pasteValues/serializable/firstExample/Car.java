@@ -1,4 +1,4 @@
-package IO_stream.copy_pasteValues.serializable;
+package IO_stream.copy_pasteValues.serializable.firstExample;
 
 import java.io.Serializable;
 import java.util.List;

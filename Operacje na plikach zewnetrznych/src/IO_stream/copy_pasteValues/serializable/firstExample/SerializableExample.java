@@ -1,4 +1,4 @@
-package IO_stream.copy_pasteValues.serializable;
+package IO_stream.copy_pasteValues.serializable.firstExample;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -17,6 +17,7 @@ public class SerializableExample {
         File destination = new File("no mather what is here");
 
         serializeCars(cars, destination);
+
 
 
     }

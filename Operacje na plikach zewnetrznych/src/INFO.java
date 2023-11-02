@@ -111,6 +111,12 @@ public class INFO {
     // Static w serializacji jest pomijany bo nalezy do klasy a serializuje sie Obiekty
     // private static final long serialVersionUID = 1L - wartosc dodaje sie randomowo.
         // Jest to wersja naszej klasy ktora pomaga w identyfikaci obiektow. Jesli numer ulednie zmianie obiekty sie nie zdeserializuja
+    // Serializacja zapisuje obiekty klasy i pozwala je ponownie wczytać z pliku.
+    // Podczas wczytywania nie wywołuwane są żadne konstruktory i bloki związane z tworzeniem tego obiektu
+
+    // jesli wczytamu obiekt klasy implementujacej Serializable, która extenduje inną klasę bez Serializable
+        // to wywołają się bloki inicjalizacyjne i konstruktor pierwszej klasy implementujacej Serializable w hierarhii dziedziczenia
+        // i mogą nadpisać wartości obiektów wartościami typu default
 
 
 }
