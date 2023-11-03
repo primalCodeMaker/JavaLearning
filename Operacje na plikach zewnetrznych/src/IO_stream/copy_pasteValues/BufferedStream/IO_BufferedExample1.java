@@ -7,8 +7,14 @@ public class IO_BufferedExample1 {
 
     public static void main(String[] args) throws IOException {
 
-        File inputFile = new File("src/IO_stream/copy_pasteValues/BufferedStream/someInputFile.txt");
-        File outputFile = new File("src/IO_stream/copy_pasteValues/BufferedStream/someOutputFile.txt");
+
+      //  File inputFile = new File("src/IO_stream/copy_pasteValues/BufferedStream/someInputFile.txt");
+       // File outputFile = new File("src/IO_stream/copy_pasteValues/BufferedStream/someOutputFile.txt");
+
+
+        File inputFile = new File("src/IO_stream/copy_pasteValues/someInputFile.txt");
+        File outputFile = new File("src/IO_stream/copy_pasteValues/someOutputFile.txt");
+
 
         bufferedCopy(inputFile, outputFile);
 

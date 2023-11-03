@@ -74,7 +74,7 @@ public class INFO {
 //    In / Out stream - mechanizm do operacji na plikach
 //    InputStream / Output Stream - streamy do operacji na pojedyńczych bajtach
 //    BufferedStream - streamy do operacji na paczkach bajtów np:  8 / 16 / 32 ... 256 (kiedy chcemy operować na paczkach danych a nie pojedynczych wartosciach)
-//    Reader / Writer - streamy w ktorych operujemy na znakach
+//    Reader / Writer - streamy w ktorych operujemy na znakach, popularna metoda readLine
 
     // .flush() > metoda ktora wymusza zapis danych
 
