@@ -1,0 +1,4 @@
+11Car{name='Samochod Stefan'}
+zajavka
+some value: Car{name='Samochod Stefan'}
+ 
