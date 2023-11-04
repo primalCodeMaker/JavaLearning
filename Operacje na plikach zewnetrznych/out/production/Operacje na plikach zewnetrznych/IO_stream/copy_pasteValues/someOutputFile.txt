@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:Operacje na plikach zewnetrznych/src/IO_stream/copy_pasteValues/BufferedStream/someOutputFile.txt
+some file content 1some file content 2some file content 3some file content 4some file content 5some file content 6some file content 7some file content 8some file content 9some file content 1some file content 2some file content 3some file content 4some file content 5some file content 6some file content 7some file content 8some file content 9some file content 1some file content 2some file content 3some file content 4some file content 5some file content 6some file content 7some file content 8some file content 9some file content 1some file content 2some file content 3some file content 4some file content 5some file content 6some file content 7some file content 8some file content 9some file content 1some file content 2some file content 3some file content 4some file content 5some file content 6some file content 7some file content 8some file content 9some file content 1some file content 2some file content 3some file content 4some file content 5some file content 6some file content 7some file content 8some file content 9some file content 1some file content 2some file content 3some file content 4some file content 5some file content 6some file content 7some file content 8some file content 9some file content 1some file content 2some file content 3some file content 4some file content 5some file content 6some file content 7some file content 8some file content 9some file content 1some file content 2some file content 3some file content 4some file content 5some file content 6some file content 7some file content 8some file content 9some file content 1some file content 2some file content 3some file content 4some file content 5some file content 6some file content 7some file content 8some file content 9some file content 1some file content 2some file content 3some file content 4some file content 5some file content 6some file content 7some file content 8some file content 9some file content 1some file content 2some file content 3some file content 4some file content 5some file content 6some file content 7some file content 8some file content 9some file content 1some file content 2some file content 3some file content 4some file content 5some file content 6some file content 7some file content 8some file content 9some file content 1some file content 2some file content 3some file content 4some file content 5some file content 6some file content 7some file content 8some file content 9some file testing
+=======
+>>>>>>> 3ba8bbc45ee4dbe029986e5cfe84302627197ce6
 some file content 1
 some file content 2
 some file content 3
@@ -21,4 +27,113 @@ some file content 2
 some file content 3
 some file content 4
 some file content 5
+<<<<<<< HEAD
 sAWEMężćł
+=======
+some file content 6
+some file content 7
+some file content 8
+some file content 9
+some file content 1
+some file content 2
+some file content 3
+some file content 4
+some file content 5
+some file content 6
+some file content 7
+some file content 8
+some file content 9
+some file content 1
+some file content 2
+some file content 3
+some file content 4
+some file content 5
+some file content 6
+some file content 7
+some file content 8
+some file content 9
+some file content 1
+some file content 2
+some file content 3
+some file content 4
+some file content 5
+some file content 6
+some file content 7
+some file content 8
+some file content 9
+some file content 1
+some file content 2
+some file content 3
+some file content 4
+some file content 5
+some file content 6
+some file content 7
+some file content 8
+some file content 9
+some file content 1
+some file content 2
+some file content 3
+some file content 4
+some file content 5
+some file content 6
+some file content 7
+some file content 8
+some file content 9
+some file content 1
+some file content 2
+some file content 3
+some file content 4
+some file content 5
+some file content 6
+some file content 7
+some file content 8
+some file content 9
+some file content 1
+some file content 2
+some file content 3
+some file content 4
+some file content 5
+some file content 6
+some file content 7
+some file content 8
+some file content 9
+some file content 1
+some file content 2
+some file content 3
+some file content 4
+some file content 5
+some file content 6
+some file content 7
+some file content 8
+some file content 9
+some file content 1
+some file content 2
+some file content 3
+some file content 4
+some file content 5
+some file content 6
+some file content 7
+some file content 8
+some file content 9
+some file content 1
+some file content 2
+some file content 3
+some file content 4
+some file content 5
+some file content 6
+some file content 7
+some file content 8
+some file content 9
+some file content 1
+some file content 2
+some file content 3
+some file content 4
+some file content 5
+some file content 6
+some file content 7
+some file content 8
+some file content 9
+some file testing
+asdasdasdas
+>>>>>>> 011024b (back to JavaLerninng):Operacje na plikach zewnetrznych/out/production/Operacje na plikach zewnetrznych/IO_stream/copy_pasteValues/someOutputFile.txt
+>>>>>>> 3ba8bbc45ee4dbe029986e5cfe84302627197ce6

@@ -33,7 +33,7 @@ public class INFO {
 //          try ( ReaderZasobuDoZamkniecia1, ReaderZasobuDoZamkniecia2) {
 //                w tym miejscu dzieje sie zamykanie zasobu, jesli sie nie powiedzie przechodzimy do catcha
 //           } catch (IOException) {
-                    // ... dzialanie po zlapaniu bledu jesli nie uda sie zamknac zaspbu w bloku try()
+    // ... dzialanie po zlapaniu bledu jesli nie uda sie zamknac zaspbu w bloku try()
 //           } finally {
 //                 // ... opcjonalnie, ten blok zawsze sie wywola. Jak wpiszemy tu throw new exception to skasuje nam bledy wywalane w metodzie close()  interfasu AutoClosable
 //                          oraz dzialanie z bloku catch << to musze sprawdzic
@@ -44,15 +44,15 @@ public class INFO {
 //            W try(with resources) deklarujemy tylko obiekty AutoClosable
 
     //  interfejs AutoClosable
-        // jesli tworzymy obiekty, ktore implementuja ten interfejs, mozna overridowac metode close
-        // i zasoby beda automatycznie zamykane zgodnie z nasza zaimplementowana metoda
+    // jesli tworzymy obiekty, ktore implementuja ten interfejs, mozna overridowac metode close
+    // i zasoby beda automatycznie zamykane zgodnie z nasza zaimplementowana metoda
 
     // Supressed Exceptions -
-       // wyjatki, rzucone z metody close() z interfacu Autoclosable, ktore nadpisujemy nazywamy Supressed exception
-        // mozna sie do nich dostac w odpowiedni sposob oraz "dokleic je" podczas dzialania programu (SupressedExceptions_Example)
+    // wyjatki, rzucone z metody close() z interfacu Autoclosable, ktore nadpisujemy nazywamy Supressed exception
+    // mozna sie do nich dostac w odpowiedni sposob oraz "dokleic je" podczas dzialania programu (SupressedExceptions_Example)
 
     // jesli nie zrobimy catcha i po try rzucimy wyjatek w finally, to stracimy dostep do poprzednich wyjatkow,
-        // ktore rzucalismy wczesniej
+    // ktore rzucalismy wczesniej
 
 
     // --------------------------------------------------------------------
@@ -60,9 +60,9 @@ public class INFO {
     // klasa File - pozwala odwolywac sie do plikow i katalogow. Za pomoca tej klasy nie mozna modyfikowac plikow
     // klasa File ma metody np: exist, ktora sprawdza czy plik lub katalog istnieje
     // klasa File dziala na sciezkach relatwnych. Poczatkiem jest sciezka w ktorej umieszczeony jest projekt:
-            // D:\Git Clone\JavaLearning\Operacje na plikach zewnetrznych>
-            // jesli zrobimy sobie z poziomu InteliJ jakis plik i chcemy sie do niego odwolywac w kodzie to nalezy podac do niego dalsza sciezke
-            // ./src/nazwaPackage/nazwaKolejnegoPackage/nazwaPliku.rozszerzenie
+    // D:\Git Clone\JavaLearning\Operacje na plikach zewnetrznych>
+    // jesli zrobimy sobie z poziomu InteliJ jakis plik i chcemy sie do niego odwolywac w kodzie to nalezy podac do niego dalsza sciezke
+    // ./src/nazwaPackage/nazwaKolejnegoPackage/nazwaPliku.rozszerzenie
 
     // w Javie sciezki oddzielamy slashem "/" Java go rozumie niezaleznie od systemu
     // w windowsie oddziela sie backSlashem ale nie ma to znaczenia
@@ -94,7 +94,6 @@ public class INFO {
 //        inaczej jesli zdeklarujemy tablice o rozmiarze 4, a w ostatniej linijce zostanie 1 znak, to tablica powtorzy sie z przedostatniego zapisu i podmieni tylko ilosc znakow ktore byly nowe
 
 
-
 //    klasa Raeder / Writer operuje na znakach zgodnie z podanym kodowaniem podczas inicjalizacji
 //    jesli nie zdefiniujemy jakie kodowanie ma byc uzyte zostanie zaczytane default z systemu
 //    nie działa na obrazach tylko na danych textowych.
@@ -110,13 +109,19 @@ public class INFO {
     // transient - slowko kluczowe, ktore oznacza ze danego elementu w klasie nie chcemy seriaizowac (np pola, ktore zwraca obiekt z innej klasy)
     // Static w serializacji jest pomijany bo nalezy do klasy a serializuje sie Obiekty
     // private static final long serialVersionUID = 1L - wartosc dodaje sie randomowo.
-        // Jest to wersja naszej klasy ktora pomaga w identyfikaci obiektow. Jesli numer ulednie zmianie obiekty sie nie zdeserializuja
+    // Jest to wersja naszej klasy ktora pomaga w identyfikaci obiektow. Jesli numer ulednie zmianie obiekty sie nie zdeserializuja
     // Serializacja zapisuje obiekty klasy i pozwala je ponownie wczytać z pliku.
     // Podczas wczytywania nie wywołuwane są żadne konstruktory i bloki związane z tworzeniem tego obiektu
 
     // jesli wczytamu obiekt klasy implementujacej Serializable, która extenduje inną klasę bez Serializable
-        // to wywołają się bloki inicjalizacyjne i konstruktor pierwszej klasy implementujacej Serializable w hierarhii dziedziczenia
-        // i mogą nadpisać wartości obiektów wartościami typu default
+    // to wywołają się bloki inicjalizacyjne i konstruktor pierwszej klasy implementujacej Serializable w hierarhii dziedziczenia
+    // i mogą nadpisać wartości obiektów wartościami typu default
+
+//    BufferedReader - kolejna klasa opakowujaca FileReadera, ktora operuje na Liscie Stringow
+//    w tej klasie nie operujemy na bajtach. Podczas zapisywania trzeba zdefinowac kodowanie znakow
+//    daje mozlosc apend > true (opcjonalny argument do dodania po zdefiniowaniu kodowania)
+//       opcja ta nie tworzy pliku na nowo, tylko do istniejącego dodaje nową zawartość
+//    nie dziala przy kopiowaniu obrazkow
 
 
 }

@@ -3,13 +3,16 @@ package IO_stream.copy_pasteValues.BufferedStream;
 import java.io.*;
 import java.util.Arrays;
 
-public class BufferedExample1 {
+public class IO_BufferedExample1 {
 
     public static void main(String[] args) throws IOException {
 
 
         File inputFile = new File("src/IO_stream/copy_pasteValues/someInputFile.txt");
         File outputFile = new File("src/IO_stream/copy_pasteValues/someOutputFile.txt");
+
+        //  File inputFile = new File("src/IO_stream/copy_pasteValues/BufferedStream/someInputFile.txt");
+        // File outputFile = new File("src/IO_stream/copy_pasteValues/BufferedStream/someOutputFile.txt");
 
         bufferedCopy(inputFile, outputFile);
 
@@ -51,7 +54,8 @@ public class BufferedExample1 {
         return replaceNewLines(Arrays.toString(input));
 
     }
-    private static String replaceNewLines(String input){
+
+    private static String replaceNewLines(String input) {
         return input.replace("\n", "\\n").replace("\r", "\\r");
     }
 }

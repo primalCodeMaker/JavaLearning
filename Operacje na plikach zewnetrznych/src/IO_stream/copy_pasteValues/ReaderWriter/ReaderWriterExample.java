@@ -3,7 +3,6 @@ package IO_stream.copy_pasteValues.ReaderWriter;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class ReaderWriterExample {
@@ -15,6 +14,7 @@ public class ReaderWriterExample {
         File outputFile = new File("src/IO_stream/copy_pasteValues/someOutputFile.txt");
 
         List<String> fileRead = readFile(inputFile);
+
         writeFile(outputFile, fileRead);
 
     }
