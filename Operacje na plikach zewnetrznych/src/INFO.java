@@ -113,6 +113,13 @@ public class INFO {
     // Serializacja zapisuje obiekty klasy i pozwala je ponownie wczytać z pliku.
     // Podczas wczytywania nie wywołuwane są żadne konstruktory i bloki związane z tworzeniem tego obiektu
 
+    // Serializacja i Deserializacja"
+    // polega na zapisaniu obiektu w pliku a potem ponopwnym wczytywaniu go.
+    // Ważne aby zdefiniować włąsną stałą dla klasy":
+    //  private static final long serialVersionUID = 1L;
+    // inaczej Java sama niejawnie zrobi taki numer i ten numer bedzie sie zmieniał podczas jakiejkolwiek zmiany w klasie
+    // jesli zamienimy pole String na Int to taki obiekt również sie nie wczyta mimo naszego parametru
+
     // jesli wczytamu obiekt klasy implementujacej Serializable, która extenduje inną klasę bez Serializable
     // to wywołają się bloki inicjalizacyjne i konstruktor pierwszej klasy implementujacej Serializable w hierarhii dziedziczenia
     // i mogą nadpisać wartości obiektów wartościami typu default
@@ -122,6 +129,9 @@ public class INFO {
 //    daje mozlosc apend > true (opcjonalny argument do dodania po zdefiniowaniu kodowania)
 //       opcja ta nie tworzy pliku na nowo, tylko do istniejącego dodaje nową zawartość
 //    nie dziala przy kopiowaniu obrazkow
+
+
+
 
 
 }
