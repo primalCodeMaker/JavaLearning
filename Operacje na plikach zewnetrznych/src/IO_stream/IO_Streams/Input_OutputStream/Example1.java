@@ -1,4 +1,4 @@
-package IO_stream.copy_pasteValues.Input_OutputStream;
+package IO_stream.IO_Streams.Input_OutputStream;
 
 import java.io.*;
 

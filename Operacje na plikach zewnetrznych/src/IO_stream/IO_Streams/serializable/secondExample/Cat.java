@@ -1,6 +1,4 @@
-package IO_stream.copy_pasteValues.serializable.secondExample;
-
-import java.io.Serializable;
+package IO_stream.IO_Streams.serializable.secondExample;
 
 public class Cat {
 // Przyklad z kotem jest prykladem gdzie jedna klasa nie implementuje Serializable a kolejna, ktora po niej dziedziczy

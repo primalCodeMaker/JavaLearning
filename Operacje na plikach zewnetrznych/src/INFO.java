@@ -130,6 +130,16 @@ public class INFO {
 //       opcja ta nie tworzy pliku na nowo, tylko do istniejącego dodaje nową zawartość
 //    nie dziala przy kopiowaniu obrazkow
 
+    // paczka java.nio >> czyli operacje na plikach ktore nie bokuja zasobu na ktorym pracujemy (non blocking IO)
+    // Interfejs Path   pierwsza klasy ktora je implementuja to Paths
+    // Paths ma juz defaultowe metody ktore pozwalaja na stworzenie sciezki np Paths.get("adres sciezki + nazwa pliku")
+    // mozemy pracowac na siezkach ktore nie istnieja.   Path daje mozliweosci operacji na sciezkach, ktorych nie daje File
+    // wiecej metod i szczegolow w patalogu src\IO_stream\Path\
+    // aplikacje webowe nalezy pisac z wykozystaniem sciezek relatywnych bo jesli podamy sciezke absolutna z katalogow na naszym komputerze
+        // to serwer nie znajdzie tych plikow. Sciezke relatywna serwer sam sobie rozwiarze
+
+
+
 
 
 

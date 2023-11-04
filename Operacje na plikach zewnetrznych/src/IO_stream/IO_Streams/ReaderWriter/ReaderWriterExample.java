@@ -1,4 +1,4 @@
-package IO_stream.copy_pasteValues.ReaderWriter;
+package IO_stream.IO_Streams.ReaderWriter;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;

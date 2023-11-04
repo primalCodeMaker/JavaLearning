@@ -1,4 +1,4 @@
-package IO_stream.copy_pasteValues.serializable.secondExample;
+package IO_stream.IO_Streams.serializable.secondExample;
 
 import java.io.*;
 import java.util.ArrayList;

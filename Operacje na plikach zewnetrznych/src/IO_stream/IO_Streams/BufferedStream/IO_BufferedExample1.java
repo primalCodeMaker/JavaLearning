@@ -1,4 +1,4 @@
-package IO_stream.copy_pasteValues.BufferedStream;
+package IO_stream.IO_Streams.BufferedStream;
 
 import java.io.*;
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package IO_stream.copy_pasteValues.serializable.secondExample;
+package IO_stream.IO_Streams.serializable.firstExample;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -13,33 +13,24 @@ public class SerializableExample {
         cars.add(new Car("Ford Mustang", 1960L, List.of(new Door("left"), new Door("right"))));
         cars.add(new Car("VW Garbus", 1984L, List.of(new Door("left"), new Door("right"))));
         cars.add(new Car("Porshe Panamera", 2004L, List.of(new Door("leftFront"), new Door("leftBack"), new Door("rightFront"), new Door("rightBack"))));
-        File destination = new File("object file for second example");
 
-//        List<PersianCat> dogs = new ArrayList<>();
-//        dogs.add(new PersianCat("Karmel", "Karmelowy"));
-//        dogs.add(new PersianCat("Czarek", "Czarny"));
-//        dogs.add(new PersianCat("Pimpek", "Ciapaty"));
+        File destination = new File("no mather what is here");
 
-        serialize(cars, destination);
-        System.out.println();
-        System.out.println("SERIALIZED");
+        serializeCars(cars, destination);
+
 
 
     }
 
-    private static void serialize(List<?> objects, File destination) throws IOException {
+    private static void serializeCars(List<Car> cars, File destination) throws IOException {
         try (ObjectOutputStream objOutputStream = new ObjectOutputStream(
                 new BufferedOutputStream(
                         new FileOutputStream(destination)))
         ) {
-            for (Object object : objects) {
-                objOutputStream.writeObject(object);
+            for (Car car : cars) {
+                objOutputStream.writeObject(car);
             }
 
         }
-        for (Object object : objects) {
-            System.out.println(object);
-        }
     }
-
 }
