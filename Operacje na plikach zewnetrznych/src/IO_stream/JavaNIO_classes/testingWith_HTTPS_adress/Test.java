@@ -19,9 +19,9 @@ public class Test {
 
 
         // tak mozna pobierac dane ze stron
-        URI website = new URI("https://www.wp.pl");
+        URI website = new URI("https://some.adress.pl");
         ReadableByteChannel rbc = Channels.newChannel(website.toURL().openStream());
-        FileOutputStream fos = new FileOutputStream("information.html");
+        FileOutputStream fos = new FileOutputStream("information2.html");
         fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
     }
 }
