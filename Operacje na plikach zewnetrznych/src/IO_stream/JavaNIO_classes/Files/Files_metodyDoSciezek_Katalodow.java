@@ -5,7 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class Main1 {
+public class Files_metodyDoSciezek_Katalodow {
 
     public static void main(String[] args) {
 

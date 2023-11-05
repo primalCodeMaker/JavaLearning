@@ -32,10 +32,10 @@ public class Basics {
         // zlicza ilos katalogow i plikow na sicezce
         System.out.println(path.getNameCount());  // wyswietla 4 dla path
 
-        //metoda getName() << zwraca nazwe katalogu lub pliku na wybranej pozycji
+        // metoda getName() << zwraca nazwe katalogu lub pliku na wybranej pozycji
         System.out.println(path.getName(2)); //   0 = src  ||  2 = Path  ||  3 = testingFile.txt
 
-        //metoda getfileName()
+        // metoda getfileName()
         System.out.println(path.getFileName()); // zwraca nazwe ostatniego pliku lub katalogo do ktorego odnosi sie path
 
 
