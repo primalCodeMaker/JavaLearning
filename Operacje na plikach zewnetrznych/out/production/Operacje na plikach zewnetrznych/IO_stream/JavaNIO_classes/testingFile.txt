@@ -1,0 +1,25 @@
+some contetnt in file src/IO_stream/JavaNIO_classes/testingFile.txt
+some contetnt in file src/IO_stream/JavaNIO_classes/testingFile.txt
+src/IO_stream/JavaNIO_classes/testingFile.txt
+src/IO_stream/JavaNIO_classes/testingFile.txt
+
+
+Start line
+dfgsdf
+g
+
+gfjhhgfjhgkj hjdfgj s
+
+fdg adfg sdfhgj
+54654564
+45
+654;6plhil;jlykghj
+gfshftgh56465'p[
+
+ćżłęęęż    polskie znaki
+
+][12314
+#$#$%^^%&^&^(^*()_+
+
+testing finished
+End File

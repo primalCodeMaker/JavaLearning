@@ -134,11 +134,17 @@ public class INFO {
     // Interfejs Path   pierwsza klasy ktora je implementuja to Paths
     // Paths ma juz defaultowe metody ktore pozwalaja na stworzenie sciezki np Paths.get("adres sciezki + nazwa pliku")
     // mozemy pracowac na siezkach ktore nie istnieja.   Path daje mozliweosci operacji na sciezkach, ktorych nie daje File
-    // wiecej metod i szczegolow w patalogu src\IO_stream\Path\
+    // wiecej metod i szczegolow w katalogu src\IO_stream\Path\
     // aplikacje webowe nalezy pisac z wykozystaniem sciezek relatywnych bo jesli podamy sciezke absolutna z katalogow na naszym komputerze
         // to serwer nie znajdzie tych plikow. Sciezke relatywna serwer sam sobie rozwiarze
 
 
+//    newBufferedReader / Writer
+//    nowa metoda dodana do klasy Files aby ulatwic zapis. Pod spodem kozysta z BufferedWritera / Readera
+
+// Wiekszosc operacji na IO Streamach bedzie wykonywana na klasie File.
+    // przyklady JavaNIO_classes\Files
+    // zamiast wczytywania zawartosci całego pliku mozna uzyc podejscie funkcyjne. Uniknie to out of memmory Error
 
 
 
