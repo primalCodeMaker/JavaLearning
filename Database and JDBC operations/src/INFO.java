@@ -71,7 +71,7 @@ DELETE FROM EMPLOYEES   // usunie wszystkie dane z tabeli
 	zmiana ustawien kolumn:
 ALTER TABLE EMPLOYEES
 ALTER COLUMN SURNAME DROP NOT NULL;	// pozwala na wkladanie nulli
-ALTER COLUMN SURNAME DROP NOT NULL;	// nie pozwala na wkladanie nulli
+ALTER COLUMN SURNAME SET NOT NULL;	// nie pozwala na wkladanie nulli
 
 
 
