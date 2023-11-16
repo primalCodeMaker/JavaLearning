@@ -1,6 +1,8 @@
+package examples;
+
 import java.sql.*;
 
-public class JDBCexample {
+public class JDBC_BasicConnection {
 
     public static void main(String[] args) {
 

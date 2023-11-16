@@ -23,6 +23,14 @@ public class INFO {
       dodajemy go poprzez ctrl+alt+S (opcje) w zakladce library
 
 
+     Zapytania do bazy mozna robic poprzez metode statement.executeUpdate()
+
+     Druga mozliwosc to zapytania poprzez executeQuery, ktora implementuje Autoclosable()
+     Możemy go zapisać wewnatrz Try() {
+     Zapis jest trocho skomplikowany bo piszemy
+     Try(ResultSet statement.executeQuery(query)) wewnatrz Try() w ktorym jest Conection i Statement
+
+
 
 
 
