@@ -1,6 +1,8 @@
 public class INFO {
 
     /*
+    JDBC jest starym mechanizmem, nie bedzie uzywane w nowym kodzie.
+
     laczenie z zawnetrzna baza danych zachodzi poprzez zaimplementowanie 3 interfacow:
         Connection
         Statement
@@ -48,6 +50,23 @@ public class INFO {
         - zwraca boolin czy wynikiem zapytania jest ResultSet
         - mozemy nim sprawdzac czy zapytanie jest typu Select czy nie. Tylko dla Selecta zwraca true
         - lub czy samo zapytanie jest poprawne
+
+    Aby wywalić rekord z tabel relatuwnych trzeba sprawdzic czy w tabelach zaleznych nie ma
+    innych wpisow zwiazanych z tym rekordem. Inaczej wyskoczy blad. Trzeba takiegi rekord usunac wszedzie
+
+SECURITY:
+Tabele nalezy zabezpieczac przed skryprami i niechcianymi komendami.
+Jeśli znamy nazwe tabeli i wpiszemy ponizszy kod do niezabezpieczonej tabeli to usunie wszystko:
+    'whatever' or 1=1 or USER_NAME = 'whatever2';
+
+2. Równie dobrze może to być próba logowania/rejestracji -
+    w pole username wrzucimy " '; " i możemy pisać własne query np. drop table
+
+Taki rodzaj ataku nazywa sie SQL Injection
+aby uniknac takich zabiegow zamiast klasy Statement uzywamy PreparedStatement, ktora zabezpiecza nas przed takimi atakami
+PreparedStatement jest bardziej wydajny i czytelniejszy w uzyciu
+
+
 
 
 
