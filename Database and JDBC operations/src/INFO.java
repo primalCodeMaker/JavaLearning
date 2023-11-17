@@ -24,11 +24,34 @@ public class INFO {
 
 
      Zapytania do bazy mozna robic poprzez metode statement.executeUpdate()
+     executeUpdate() musi byc po za blokiem Try(), poniewaz zwraca inta, ktory nie implementuje autoClosable
+
 
      Druga mozliwosc to zapytania poprzez executeQuery, ktora implementuje Autoclosable()
      Możemy go zapisać wewnatrz Try() {
      Zapis jest trocho skomplikowany bo piszemy
      Try(ResultSet statement.executeQuery(query)) wewnatrz Try() w ktorym jest Conection i Statement
+
+
+
+     ExecuteUpdate powinein byc uzywany do zaptan:
+        - Insert
+        - Update
+        - Delete
+        (zwraca ilosc zmodyfikowanych wierszy)
+
+     ExecuteQuery powinein byc uzywany po to aby odczytac dane:
+        - Select
+        (zwraca jako wynik resultSet)
+
+     Execute
+        - zwraca boolin czy wynikiem zapytania jest ResultSet
+        - mozemy nim sprawdzac czy zapytanie jest typu Select czy nie. Tylko dla Selecta zwraca true
+        - lub czy samo zapytanie jest poprawne
+
+
+
+
 
 
 

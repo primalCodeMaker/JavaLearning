@@ -11,18 +11,21 @@ public class ExecuteQuery {
         String pass = "postgres";
 
         String query1 = "INSERT INTO PRODUCER(ID, PRODUCER_NAME, ADDRESS)"
-                + "VALUES (1, 'Zajavka Group', 'Zajavkowa 15, Warszawa')";
+                + "VALUES (1, 'Zajavka Group', 'Zajavkowa 15, Warszawa');";
         String query2 = "INSERT INTO PRODUCER(ID, PRODUCER_NAME, ADDRESS)"
-                + "VALUES (2, 'Zajavka Group_2', 'Zajavkowa 15, Warszawa')";
-        String query3 = "UPDATE PRODUCER SET ADDRESS = 'Nowy Adres Siedziby' WHERE ID = 1";
-        String query4 = "DELETE FROM PRODUCER WHERE ID = 2";
+                + "VALUES (2, 'Zajavka Group_2', 'Zajavkowa 15, Warszawa');";
+        String query3 = "UPDATE PRODUCER SET ADDRESS = 'Nowy Adres Siedziby' WHERE ID = 1;";
+        String query4 = "DELETE FROM PRODUCER WHERE ID = 2;";
+        String query5 = "SELECT * FROM PRRODUCER;";
 
         try (
                 Connection connection = DriverManager.getConnection(adress, username, pass);
                 Statement statement = connection.createStatement();
         ) {
-            // todo 12 min filmu
-            try (ResultSet resultSet = statement.executeQuery(query3)) {
+            try (ResultSet resultSet = statement.executeQuery(query4)) {
+                if (resultSet.next()) {
+                    System.out.println(resultSet.getString("producer_name"));
+                }
             }
 
         } catch (SQLException e) {
