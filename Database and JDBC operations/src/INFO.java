@@ -67,10 +67,31 @@ aby uniknac takich zabiegow zamiast klasy Statement uzywamy PreparedStatement, k
 PreparedStatement jest bardziej wydajny i czytelniejszy w uzyciu
 
 
+Parametry w resultSecie pozwalaja na odczytywanie lub odczytywanie i zapysywanie elementow jako obiekty Javowe
+    Result set ma metode next, która sprawdza czy jeszcze jest cos do pobrania z odczytywanych danych.
+    Pozniej w petli dodaje sie po kolei kazdy obiekt np do listy dopoki next nie zwroci false
+    Nazwy kolumn musza byc zgodne z nazwami w kodzie. Zamiast tego mozna napisac inta z numerem kolumny liczac od 1
+
+    Gdybysmy chcieli zapisywac dane z mazy jako osobne obiekty trzeba sprawdzic czy dana jest instanceof String lub Integer
+    i jak bedziemy pewni jakiego typu to jest obiekt to go rzutujemy na ten typ:
+            if (colu1 instanceof String) {
+                String colu1Str = (String)colu1;
+
+Pobierajac dane z bazy danych lepiej najpiero posortowaćte elementy na bazie a dopiero potem je wczytac
+W odwrotnej kolejnosci bedzie to mniej wydajne
+
+Mapowanie elementow baz danych do Javy jest złożone dlatego w praktyce sa uzywane biblioteki zewnetrzne
+JPA i Hibernate
+
+Aby wkladac elementy do bazy danych tak samo trzeba napisac metode, która przemapuje elementy z Javy
+i wstawic je do zapytania INSERT
 
 
-
-
+Podczas lapania wyjatkow SQLexception daje wiecej metod jak:
+.getErrorCode()
+.getSQLState()
+Daje to mozliwosc zwracania kodow bledow baz danych
+Jesli lapiemy Exception SQLException bedzie suppresed
 
 
 

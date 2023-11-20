@@ -1,4 +1,4 @@
-package examples;
+package examples.resultSet;
 
 import java.sql.*;
 import java.util.List;
@@ -20,7 +20,7 @@ public class ResultSet_example {
         ) {
             preparedStatement.setString(1, parameter);
             try (ResultSet resultSet = preparedStatement.executeQuery()) {
-                List<Customer> customers = mapToCustomers(resultSet);
+                List<Customer> customers = CustomerMapper.mapToCustomers(resultSet);
                 customers.forEach(customer -> System.out.println("customer: " + customer));
 
             }
