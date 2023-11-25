@@ -25,6 +25,23 @@ w ktorym beda umieszczane wyprodukowane przez mavena rezultaty
 maven jest domyslnie dodany do inteliJa
 jesli chcemy kzystac z niego z poziomu terminala trzeba go sciagnac i folder bin dodac do patha
 
+po uzyciu opcji install w mavenie w systemowym katalogu uzytkownika tworzy sie plik .jar z nasza biblioteka
+
+w pliku pom.xml jest opcja aby ustawic dziedziczenie z innego pliku pom.xml
+gdy kozystamy z dziedziczenia i  pogubimy sie co jest naszym pomem wynikowym (co jest efektem pracy),
+mozna uzyc komendy w terminalu mvn help:effective-pom
+to nam zwroci finalny pom ktory jest ostateczna konfiguracja tego co w projekcie bedzie sie dzialo na etapie budowania
+
+komendy w terminalu:
+mvn - clean
+    usowa katalog target
+
+mvn -v
+    sprawdza wersje
+
+mvn -
+
  */
+                    //    todo 17min filmu
 
 }

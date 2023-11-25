@@ -6,6 +6,11 @@
 
     <groupId>pl.zajavka</groupId>
     <artifactId>java-maven-examples</artifactId>
-    <version>1.0.0</version>
+    <version>1.8.0</version>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
 
 </project>
