@@ -34,7 +34,8 @@ to nam zwroci finalny pom ktory jest ostateczna konfiguracja tego co w projekcie
 
 
 
-budowa POM.xml
+-------------------------------------------------------------------------------------------------------------------
+budowa minimalnego pliku POM.xml:
 
 project
         xmlns="http://maven.apache.org/POM/4.0.0"
@@ -57,7 +58,10 @@ powyzsze dane wpisujemy recznie
 groupID - zazwyczaj nazwa organizacji dla ktorej robimy projekt
         odpowaiada hierarhi katalogowej gdzie znajduja sie pliki do projektu
 
-artifactID -
+artifactID - nazwa projektu np: java-maven-examples
+
+version - jesli wydajemy nasz kod w postaci pliku JAR, wpisujemy w jakiej wersji jest nsz plik
+          Pozwala prowadzic dokumentacje i wersjonowanie w nsaszym projekcie jesli dochodza zmiany
 
 --------
 
@@ -66,20 +70,44 @@ artifactID -
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
+------
+powyzej ustalamy wersje Javy z jaka nasz program ma dzialac. Musi sie zgrywac z wersja mavena z ktora kozystamy
+------
+
 </project>
+
+-------------------------------------------------------------------------------------------------------------------
 
 
 
 komendy w terminalu:
+mvn -v - sprawdza wersje
+
 mvn - clean
     usowa katalog target
 
-mvn -v
-    sprawdza wersje
+FAZY LIFECYCLE:
+mvn validate - nie buduje projektu, prawdza czy wsystko sie kompiluje zgodnie z naszymi ustaleniami
+                np: czy ilosc linijek kodu lub ich dlugosc jest ok
 
-mvn -
+mvn compie - wykonuje kompilacje kodu, buduje katalog target
+
+mvn -test uruchamia testy automatyczne
+
+mvn - package przygotuje paczke do wydania nie tworzy katalogu na dysku
+
+mvn - verify sprawdza pokrycie kodu testami
+
+mvn -install tworzy katalog na dysku z plikami projektu
+
+mvn - deploy pozwala wydac paczke do otwartego repozytorum dla spolecznosci
+
+(jesli odpalimy samo mvn -install to podspodem zostana pociagniete wszyskie poprzednie FAZY LIFECYCLE automatycznie.
+    tak jest ze wszystkimi fazmi)
+
+
+
 
  */
-                    //    todo 17min filmu
 
 }
