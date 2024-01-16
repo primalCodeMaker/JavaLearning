@@ -32,6 +32,44 @@ gdy kozystamy z dziedziczenia i  pogubimy sie co jest naszym pomem wynikowym (co
 mozna uzyc komendy w terminalu mvn help:effective-pom
 to nam zwroci finalny pom ktory jest ostateczna konfiguracja tego co w projekcie bedzie sie dzialo na etapie budowania
 
+
+
+budowa POM.xml
+
+project
+        xmlns="http://maven.apache.org/POM/4.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+-------
+powyzsze dane bedza zazwyczaj kopiowane z projektu
+modelVersion mowi nam, ze wersja pliku POM jest kompatybilna z mavenem w odpowiedniej wersji. To tez kopiujemy
+-------
+
+
+    <groupId>pl.zajavka</groupId>
+    <artifactId>java-maven-examples</artifactId>
+    <version>1.8.0</version>
+
+--------
+powyzsze dane wpisujemy recznie
+groupID - zazwyczaj nazwa organizacji dla ktorej robimy projekt
+        odpowaiada hierarhi katalogowej gdzie znajduja sie pliki do projektu
+
+artifactID -
+
+--------
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+</project>
+
+
+
 komendy w terminalu:
 mvn - clean
     usowa katalog target
