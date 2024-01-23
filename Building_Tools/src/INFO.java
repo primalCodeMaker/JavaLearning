@@ -33,6 +33,8 @@ mozna uzyc komendy w terminalu mvn help:effective-pom
 to nam zwroci finalny pom ktory jest ostateczna konfiguracja tego co w projekcie bedzie sie dzialo na etapie budowania
 
 
+Maven dodatkowo daje mozliwosc zapisu roznych konfiguracji uruchomieniowych dla programu
+    (np: debiging - w comand line wpisujemy clean package -X)
 
 -------------------------------------------------------------------------------------------------------------------
 budowa minimalnego pliku POM.xml:
@@ -105,9 +107,56 @@ mvn - deploy pozwala wydac paczke do otwartego repozytorum dla spolecznosci
 (jesli odpalimy samo mvn -install to podspodem zostana pociagniete wszyskie poprzednie FAZY LIFECYCLE automatycznie.
     tak jest ze wszystkimi fazmi)
 
+---------------------------------------------------------------------------------------------------------------
+<dependencies>
+        <dependency>
+            <groupId>org.jsoup</groupId>        <<< tu wpisujemy zaleznosc jaka pobieramy
+            <artifactId>jsoup</artifactId>      <<< te dane kopiujemy z internetu
+            <version>1.14.2</version>           <<< tu wpisujemy wersje biblioteki jaka pobieramy
+            <scope>compile</scope>                     <<< tu wpisujemy zakres dzialania [runtime / compile / provided + inne]
+        </dependency>
+    </dependencies>
 
+scope jest ustawiany domyslnie na wartosci compile (dziala na etapie kompilacji oraz uruchomienia programu)
+provided - na etapie kompilacji zaleznosc ma byc dodana ale na etapie uruchomienia programu juz nie
+    (np: dana biblioteke dostarczy nam serwer i nie musimy tego robic lokalnie (np: biblioteka Lombook))
+runtime - na etapie kompilacji biblioteka nie jest porzebna tylko na etapie dzialania programu
+test - dana zaleznosc ma dzialac tylko w testach
+
+SNAPSHOT - dependencja w fazie alfa, moze sie zmienic wiec nie waro uzywac do projektu
+
+-----------------------------------------------------------------------------------------------------------------
+
+
+   <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+compiler plugin - pozwala na automatyczne dostosowanie kompilacji javy, nie zmieniajac naszego domyslnego sourca w propertisach
+    np: jak ustawimy compile na jave 7 i w projekcie napiszemy lambde, ktora weszla w javie 8 to do pluginu zostanie
+    dodana opcja <configuration> ktora odpali jave w odpowiedniej wersji
+
+w <configuration> ustasiamy 2 parametry
+    source - jaka java na etapie kompilacji
+    target - jaka java na etapie uruchamiania
+
+z wersja 9 javy zamiast tego mozemy uzyc ustawienia <release>9</release>
+i ustawic ten parametr jednoczesnie dla kompilacji i uruchamiania
+
+------------------------------------------------------------------------------------------------------------------
 
 
  */
+
 
 }

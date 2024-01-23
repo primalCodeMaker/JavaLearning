@@ -5,6 +5,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
+import java.util.function.Predicate;
 
 public class Main {
 
@@ -19,6 +20,8 @@ public class Main {
         for (Element elem : myElement) {
             System.out.println(elem);
         }
+
+        Predicate predicate = (a -> true);
 
     }
 
