@@ -45,17 +45,17 @@ project
         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
--------
+
 powyzsze dane bedza zazwyczaj kopiowane z projektu
 modelVersion mowi nam, ze wersja pliku POM jest kompatybilna z mavenem w odpowiedniej wersji. To tez kopiujemy
--------
+-----------------------------------------------------------------------------------------------------------------
 
 
     <groupId>pl.zajavka</groupId>
     <artifactId>java-maven-examples</artifactId>
     <version>1.8.0</version>
 
---------
+
 powyzsze dane wpisujemy recznie
 groupID - zazwyczaj nazwa organizacji dla ktorej robimy projekt
         odpowaiada hierarhi katalogowej gdzie znajduja sie pliki do projektu
@@ -65,47 +65,14 @@ artifactID - nazwa projektu np: java-maven-examples
 version - jesli wydajemy nasz kod w postaci pliku JAR, wpisujemy w jakiej wersji jest nsz plik
           Pozwala prowadzic dokumentacje i wersjonowanie w nsaszym projekcie jesli dochodza zmiany
 
---------
+-------------------------------------------------------------------------------------------------------------
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
-------
 powyzej ustalamy wersje Javy z jaka nasz program ma dzialac. Musi sie zgrywac z wersja mavena z ktora kozystamy
-------
-
-</project>
-
--------------------------------------------------------------------------------------------------------------------
-
-
-
-komendy w terminalu:
-mvn -v - sprawdza wersje
-
-mvn - clean
-    usowa katalog target
-
-FAZY LIFECYCLE:
-mvn validate - nie buduje projektu, prawdza czy wsystko sie kompiluje zgodnie z naszymi ustaleniami
-                np: czy ilosc linijek kodu lub ich dlugosc jest ok
-
-mvn compie - wykonuje kompilacje kodu, buduje katalog target
-
-mvn -test uruchamia testy automatyczne
-
-mvn - package przygotuje paczke do wydania nie tworzy katalogu na dysku
-
-mvn - verify sprawdza pokrycie kodu testami
-
-mvn -install tworzy katalog na dysku z plikami projektu
-
-mvn - deploy pozwala wydac paczke do otwartego repozytorum dla spolecznosci
-
-(jesli odpalimy samo mvn -install to podspodem zostana pociagniete wszyskie poprzednie FAZY LIFECYCLE automatycznie.
-    tak jest ze wszystkimi fazmi)
 
 ---------------------------------------------------------------------------------------------------------------
 <dependencies>
@@ -153,7 +120,51 @@ w <configuration> ustasiamy 2 parametry
 z wersja 9 javy zamiast tego mozemy uzyc ustawienia <release>9</release>
 i ustawic ten parametr jednoczesnie dla kompilacji i uruchamiania
 
+Compiler Plugin jesli go nie nadpisujemy jest dodawany domyslnie w pom.xml
+
 ------------------------------------------------------------------------------------------------------------------
+
+
+komendy w terminalu:
+mvn -v - sprawdza wersje
+
+mvn - clean
+    usowa katalog target
+
+FAZY LIFECYCLE:
+mvn validate - nie buduje projektu, prawdza czy wsystko sie kompiluje zgodnie z naszymi ustaleniami
+                np: czy ilosc linijek kodu lub ich dlugosc jest ok
+
+mvn compie - wykonuje kompilacje kodu, buduje katalog target
+
+mvn -test uruchamia testy automatyczne
+
+mvn - package przygotuje paczke do wydania nie tworzy katalogu na dysku
+
+mvn - verify sprawdza pokrycie kodu testami
+
+mvn -install tworzy katalog na dysku z plikami projektu
+
+mvn - deploy pozwala wydac paczke do otwartego repozytorum dla spolecznosci
+
+(jesli odpalimy samo mvn -install to podspodem zostana pociagniete wszyskie poprzednie FAZY LIFECYCLE automatycznie.
+    tak jest ze wszystkimi fazmi)
+
+mvn help:effective-pom
+    wyswietla cala konfiguracje dla ustawien pom.xml w projekcie
+    oraz jakie pluginy zostaly uzyte
+
+
+Rodzaje repozytorium do bibliotek:
+Lokalne - czylo to co mamy sciagniete na dysku
+Centralne  - na www maven central repository
+Remote - dostepne w danej firmie, ktora wystawia swoje repo. np: firmy prowadza polityke jakiego rodzaju
+        zaleznosci moga byc przytrzymywane w tym repo.
+        Hermetyczne srodowisko, wszystkie zaleznosci sa zweryfikowane
+
+w takiej kolejnosci maven sprawdza dostep do biblliotek. Na projekcie bedzie mogla zaistniec taka sytuacja, w ktorej
+trzeba bedzdie zrobic konfiguracje w pom.xml aby maven nie pobieral bibliotek z central repo tylko z firmowego remote
+
 
 
  */
