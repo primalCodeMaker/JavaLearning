@@ -123,6 +123,49 @@ i ustawic ten parametr jednoczesnie dla kompilacji i uruchamiania
 Compiler Plugin jesli go nie nadpisujemy jest dodawany domyslnie w pom.xml
 
 ------------------------------------------------------------------------------------------------------------------
+aby wydac paczke z Jarem musimy dodac maven-assembly-plugin
+oraz skonfigurowac czy chcemy Jara czy fat jara <descriptorRef>jar-with-dependencies</descriptorRef>
+Fat Jar paczkuje wszystkie dodane zaleznosci do projektu a Jar tego nie robi
+
+oraz zdeklarowac klase uruchomieniowa nasz program:
+                    <archive>
+                        <manifest>
+                            <mainClass>Main</mainClass>
+                        </manifest>
+                    </archive>
+
+       zaimplementowana calosc tego pluginu wyglada tak:
+
+<plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.6.0</version>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <archive>
+                        <manifest>
+                            <mainClass>Main</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+aby odpalic program .jar z terminala wchodzimy do katalogu glownego gdzie mamy jary
+i wpisujemy komende java -jar + nazwe pliku fatJar z rozszerzeniem.jar
+
+java -jar java-maven-examples-1.8.0-jar-with-dependencies.jar
+
+-----------------------------------------------------------------------------------------------------------------
 
 
 komendy w terminalu:
@@ -139,7 +182,7 @@ mvn compie - wykonuje kompilacje kodu, buduje katalog target
 
 mvn -test uruchamia testy automatyczne
 
-mvn - package przygotuje paczke do wydania nie tworzy katalogu na dysku
+mvn - package przygotuje paczke do wydania nie tworzy katalogu na dysku. Z Jara mozna odpalac nasza apke
 
 mvn - verify sprawdza pokrycie kodu testami
 

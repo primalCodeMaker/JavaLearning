@@ -5,7 +5,6 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
-import java.util.function.Predicate;
 
 public class Main {
 
@@ -21,7 +20,9 @@ public class Main {
             System.out.println(elem);
         }
 
-        Predicate predicate = (a -> true);
+        System.out.println("Hello Java! :D");
+
+        //todo film 10:30
 
     }
 
