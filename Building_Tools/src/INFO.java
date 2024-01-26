@@ -124,8 +124,8 @@ Compiler Plugin jesli go nie nadpisujemy jest dodawany domyslnie w pom.xml
 
 ------------------------------------------------------------------------------------------------------------------
 aby wydac paczke z Jarem musimy dodac maven-assembly-plugin
-oraz skonfigurowac czy chcemy Jara czy fat jara <descriptorRef>jar-with-dependencies</descriptorRef>
-Fat Jar paczkuje wszystkie dodane zaleznosci do projektu a Jar tego nie robi
+oraz skonfigurowac czy chcemy Jara czy fatJara <descriptorRef>jar-with-dependencies</descriptorRef>
+FatJar paczkuje wszystkie dodane zaleznosci do projektu a Jar tego nie robi
 
 oraz zdeklarowac klase uruchomieniowa nasz program:
                     <archive>
@@ -167,6 +167,24 @@ java -jar java-maven-examples-1.8.0-jar-with-dependencies.jar
 
 -----------------------------------------------------------------------------------------------------------------
 
+W pom.xml mozemy okreslac rowniez profile uruchomieniowe, i okreslic dla nich odmiennego builda (pluginy / repo / zaleznosci)
+np: DEV / TEST / PROD
+
+<profiles>
+        <profile>
+            <id>DEV</id>
+            <build></build>
+            <repositories></repositories>
+            <dependencies></dependencies>
+        </profile>
+</profiles>
+
+aby odpalic program z odpowiednim profilem uruchomieniowym nalezy wpisac komende:
+mvn compile -P DEV
+
+
+
+-----------------------------------------------------------------------------------------------------------------
 
 komendy w terminalu:
 mvn -v - sprawdza wersje
@@ -207,7 +225,6 @@ Remote - dostepne w danej firmie, ktora wystawia swoje repo. np: firmy prowadza 
 
 w takiej kolejnosci maven sprawdza dostep do biblliotek. Na projekcie bedzie mogla zaistniec taka sytuacja, w ktorej
 trzeba bedzdie zrobic konfiguracje w pom.xml aby maven nie pobieral bibliotek z central repo tylko z firmowego remote
-
 
 
  */

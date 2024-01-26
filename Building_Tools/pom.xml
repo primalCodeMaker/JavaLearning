@@ -22,6 +22,22 @@
         </dependency>
     </dependencies>
 
+    <profiles>
+        <profile>
+            <id>DEV</id>
+            <build></build>
+            <repositories></repositories>
+            <dependencies></dependencies>
+        </profile>
+
+        <profile>
+            <id>TEST</id>
+            <build></build>
+            <repositories></repositories>
+            <dependencies></dependencies>
+        </profile>
+    </profiles>
+
 
     <build>
         <plugins>
