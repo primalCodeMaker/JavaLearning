@@ -22,7 +22,6 @@ public class Main {
 
         System.out.println("Hello Java! :D");
 
-        //todo film 10:30
 
     }
 
