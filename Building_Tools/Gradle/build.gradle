@@ -1,0 +1,6 @@
+task ourFirstTask{
+    doLast {
+        println'I am learning... :)'
+    }
+
+}
