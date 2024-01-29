@@ -4,6 +4,10 @@ Gradle rozni sie od Mavena tym, ze Maven jest gotowym szkieletem, w ktory wklada
     a Gradle jest osobnym programem, ktory sami piszemy, skladamy i konfigurujemy.
     Mozemy mu dodawac wlasnie opcje, ktore beda dzialac na etapie runtimu jak: println
 
+    GRADLE  NIE JEST  KOMPATYBILNY WSTECZNIE
+        w gradlu istnieje opcja Gradle Wrapper, dzieki ktorej mozemy ustawic jakiej wersji gradla chemy uzywac
+        w pliku gradle-wrapper.properties:
+
 
     W Gradle plik konfiguracyjny robimy pod nazwa:
         build.gradle
@@ -19,7 +23,20 @@ Gradle rozni sie od Mavena tym, ze Maven jest gotowym szkieletem, w ktory wklada
             zipStoreBase=GRADLE_USER_HOME
             zipStorePath=wrapper/dists
 
+            jesli nie kozystamy z intelliJ i chcieli bysmy zrobic taki wrapper to mozna to zrobic z konsoli
+                gradle wrapper --gradle-version 6.8 (ustalamy od razu wersje pod jave jaka mamy)
+
+        jesli mamy problemy z wersja Javy mimo ustawien w wrapper.propertisach warto zobaczyc
+        do zmiennych srodowiskowych systemu i usunac ustawienie JAVA_HOME poniewaz to porafi nadpisac
+        domyslna wersje Javy
+
+        w razie problemow wersje mozna sprawdzac w 2 miejscach:
+        gradle -v  dla gradla ustawionego w projekcie
+        gradlew - v dla ustawien javy w systemie operacyjnym
+
 Nasza klasa main nadal nie jest odczytywana jako klasa javowa i nie mozna jej odpalic
+    build.gradle nalezy dodac adnotacje     apply plugin: 'java'
+    w build.gradle mozna rowniez ustawic sourceCompatibility = '18' wersje kompatybilnosci z java dla projektu
 
 w Gradlu nie piszemy w xml jak w przypadku Mavena tylko DNS (domain specific language)
     mozna tu uzyc jezyk Groovy lub Kotlin
