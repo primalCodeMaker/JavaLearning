@@ -1,5 +1,10 @@
 public class INFO {
     /*
+Gradle rozni sie od Mavena tym, ze Maven jest gotowym szkieletem, w ktory wkladamy pluginy i dependencje
+    a Gradle jest osobnym programem, ktory sami piszemy, skladamy i konfigurujemy.
+    Mozemy mu dodawac wlasnie opcje, ktore beda dzialac na etapie runtimu jak: println
+
+
     W Gradle plik konfiguracyjny robimy pod nazwa:
         build.gradle
         po zrobieniu pliku IntelliJ automatycznie nas zapyta czy chcemy zbudowac projekt gradle
@@ -32,6 +37,29 @@ w Gradlu mamy- Project i Task
 Aby odpalic gradle z terminala wpisujemy: gradle nazwaTaskaKtoryChcemyOdpalic
     mozna tez odpalic z paremetrem -q (quiet) i wydrukuje tylko polecenia bez automatycznych Gradlowych informacji
 
+przy uruchomieniu komendy gradle tasks wyswietli nam wsystkie dostepne takski dla projektu w gradle
+    z paramerem --all pokaze rowniez nasze napisane taski
+
+Isnieje rowniez koncepcja taskow domyslnych:
+defaultTasks 'ourFirstTask', 'ourThirTask'
+    mozemy w nim podac kilka taskow ktore chcemy odpalic jeden po drugim
+    odpalamy komenda w terminalu "gradle"
+    lub z poziomu intelliJ jako Run Gradle
+
+
+Taski moga wzajemnie od siebie zalezec:
+
+    task afterCompie(dependsOn: 'compile') {
+        group 'tasks dependent on each other'
+        doLast {
+             println 'afterCompile task runing'
+        }
+    }
+
+    lub
+
+    afterClean.dependsOn clean
+    calkowicie po za scopami taskow
 
      */
 

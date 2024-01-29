@@ -1,6 +1,54 @@
-task ourFirstTask{
+defaultTasks 'ourFirstTask', 'ourThirTask'
+
+task ourFirstTask {
+    group 'firs group tasks'
     doLast {
-        println'I am learning... :)'
+        println 'I am learning... :)'
+    }
+}
+task ourSecnondTask {
+    group 'firs group tasks'
+    description("zajavka description")
+    println gradle.gradleHomeDir
+}
+task ourThirTask {
+    group('firs group tasks')
+    doFirst {
+        println "do first"
     }
 
+    doLast {
+        println "do last"
+    }
 }
+
+
+task clean {
+    group 'tasks dependent on each other'
+    doLast {
+        println 'clean task runing'
+    }
+}
+
+task compile {
+    group 'tasks dependent on each other'
+    doLast {
+        println 'compile task runing'
+    }
+}
+
+task afterCompie(dependsOn: 'compile') {
+    group 'tasks dependent on each other'
+    doLast {
+        println 'afterCompile task runing'
+    }
+}
+
+task afterClean {
+    group 'tasks dependent on each other'
+    doLast {
+        println 'afterClean task runing'
+    }
+}
+
+afterClean.dependsOn clean
