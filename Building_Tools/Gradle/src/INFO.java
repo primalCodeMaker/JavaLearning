@@ -37,6 +37,16 @@ Gradle rozni sie od Mavena tym, ze Maven jest gotowym szkieletem, w ktory wklada
 Nasza klasa main nadal nie jest odczytywana jako klasa javowa i nie mozna jej odpalic
     build.gradle nalezy dodac adnotacje     apply plugin: 'java'
     w build.gradle mozna rowniez ustawic sourceCompatibility = '18' wersje kompatybilnosci z java dla projektu
+    oraz parametr version '0.1.0' << ustalamy w jakiej wersji jest nasz projek
+
+    mozna rowniez wpisac targetCompatibility = '17' << odpowiednik source i target dla Mavena
+        ustalamy rozne wersje compilacji i runtimu dla aplikacji.
+        Jesli nie wpiszemy targetCompatibility to Gradle samoczynnie ustawi ta sama wersje jak dla sourceCompatibility
+
+
+
+
+
 
 w Gradlu nie piszemy w xml jak w przypadku Mavena tylko DNS (domain specific language)
     mozna tu uzyc jezyk Groovy lub Kotlin
@@ -45,7 +55,7 @@ w Gradlu nie piszemy w xml jak w przypadku Mavena tylko DNS (domain specific lan
 W Mavenie mamy- Lifecycle, Phase oraz Golas
 w Gradlu mamy- Project i Task
 
-    Project - moze sluzyc reprezentacji bytu koncowego ktorym moze byc np: koncowy klik .jar
+    Project - moze sluzyc reprezentacji bytu koncowego ktorym moze byc np: koncowy plik .jar
         caly nasz projekt moze byc "projectem w Gradlu" lub byc podzielona na podczesci (osobne Projecty Gradlowe)
 
     Task- jakas czesc pracy, ktora nalezy wykonac aby przyczynic sie do powstania koncowego builda

@@ -1,5 +1,7 @@
 apply plugin: 'java'
+version '0.1.0'
 sourceCompatibility = '18'
+targetCompatibility = '17'
 
 defaultTasks 'ourFirstTask', 'ourThirTask'
 
