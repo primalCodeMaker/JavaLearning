@@ -1,7 +1,14 @@
 apply plugin: 'java'
 version '0.1.0'
 sourceCompatibility = '18'
-targetCompatibility = '17'
+
+jar {
+    archivesBaseName = 'myGradle-jar-new'
+    manifest {
+        attributes 'Main-Class': "pl.gradleExample.Main"
+    }
+}
+
 
 defaultTasks 'ourFirstTask', 'ourThirTask'
 
