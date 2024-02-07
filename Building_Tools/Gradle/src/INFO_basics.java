@@ -15,7 +15,7 @@ Gradle rozni sie od Mavena tym, ze Maven jest gotowym szkieletem, w ktory wklada
 
 
     W Gradle plik konfiguracyjny robimy pod nazwa:
-        build.gradle
+        build.gradle_BASICS
         po zrobieniu pliku IntelliJ automatycznie nas zapyta czy chcemy zbudowac projekt gradle
 
         kolejno trzeba wybrac odpowiednia wersje gradla do javy ktora uzywamy.
@@ -40,8 +40,8 @@ Gradle rozni sie od Mavena tym, ze Maven jest gotowym szkieletem, w ktory wklada
         gradlew - v dla ustawien javy w systemie operacyjnym
 
 Nasza klasa main nadal nie jest odczytywana jako klasa javowa i nie mozna jej odpalic
-    build.gradle nalezy dodac plugin     apply plugin: 'java'
-    w build.gradle mozna rowniez ustawic sourceCompatibility = '18' wersje kompatybilnosci z java dla projektu
+    build.gradle_BASICS nalezy dodac plugin     apply plugin: 'java'
+    w build.gradle_BASICS mozna rowniez ustawic sourceCompatibility = '18' wersje kompatybilnosci z java dla projektu
     oraz parametr version '0.1.0' << ustalamy w jakiej wersji jest nasz projek
 
     mozna rowniez wpisac targetCompatibility = '17' << odpowiednik source i target dla Mavena
