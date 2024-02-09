@@ -11,6 +11,6 @@ public class Main {
 
         System.out.println(Jsoup.connect("https://zajavka.pl/").get().title());
 
-        //todo 5min fimu
+
     }
 }

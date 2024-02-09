@@ -1,5 +1,5 @@
 plugins {
-    id  'java'
+    id 'java'
 }
 
 group = 'pl.gradleExample'
@@ -8,15 +8,20 @@ sourceCompatibility = '15'
 
 repositories {
     mavenCentral()
+
 }
 
 dependencies {
-    implementation group: 'org.jsoup', name: 'jsoup', version: '1.14.3'
-
+//    implementation group: 'org.jsoup', name: 'jsoup', version: '1.14.3'
+    implementation 'org.jsoup:jsoup:1.14.3'
 }
 
 jar {
     manifest {
         attributes 'Main-Class': 'pl.gradleExample.Main'
+    }
+    from {
+        configurations.runtimeClasspath.collect {it.isDirectory() ? it : zipTree(it)
+        }
     }
 }
