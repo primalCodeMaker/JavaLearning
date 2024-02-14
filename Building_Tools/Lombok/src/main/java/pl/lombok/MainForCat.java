@@ -1,6 +1,6 @@
 package pl.lombok;
 
-public class Main {
+public class MainForCat {
 
     public static void main(String[] args) {
 

@@ -1,6 +1,8 @@
 
 Lombok dziala w scopie compileOnly dla Gradle oraz provided dla Mavena
 nie ma potrzeby aby byl uruchamiany na poziomie Runtimu
+Lombok importuje klase Lombok
+    jesli cos jest z klast Lombok.experimental to moze to zostac usuniete
 
 W zakladce Refactor jest opcja Delombok, ktora zamieni w klasie adnotacje na metody z jakich lombok kozysta
     mozna w ten sposob sprawdzic zachowanie zaciaganych metod
@@ -54,3 +56,47 @@ KONSTRUKTORY:
     @AllArgsConstructor - robi konstruktor dla wszystkich pol
     @AllArgsConstructor(staticName = "of")   <<< mozna tez zrobic z parametrem staticName "xxx"
         stwozy to podspodem metode statyczna z konstruktorem o nazwie jaka wpiszemy
+
+    @ToString
+        aby wylaczyc jakies pole nalezy dodac przy nim adnotacje @ToString.Exclude
+        jesli chemy tylko pojedncze pola dodac do ToStringa do w glownej adnotacji nad klasa piszemy:
+          @ToString(onlyExplicitlyIncluded = true)
+          i nad polem ktore chcemy dodac: @ToString.Include
+
+    @EqualsAndHashCode
+        jak wyzej dostepne opcje wykluczania pol @EqualsAndHashCode.Exclude
+            lub dodanie tylko specyficznych pol:
+             @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+             oraz nad polem @EqualsAndHashCode.Include
+
+    @With
+        jesli uzyjemy Withera na jakims obiekcie i zmienimy jedno z jego pol to zostanie stwozony nowy obiekt
+            ze wszystkimi polami jak poprzedni, tylko z jednym zmienionym ktore nadpisalismy
+
+        jesli w metodzie With uzyjemy takiej samej wartosci dla nadpizywanego pola to zwroci ten sam obiekt
+        metody typu With mozna chainowac
+        @With mozna dodac nad klasa lub nad wybranym polem
+
+    @Data
+        adnotacja, ktora skraca kod. Dodaje jednoczesnie Gettery, Settery, Equals&Hashcode, ToString i konstruktor bezparametrowy
+        jesli ktore pole bedzie final, lub oznaczone jako @NonNull to takie pola zostana dodane do konstruktora
+        jesli chcieli bysmy miec dodatkowy konstruktor np ze wszystkimi parametrami nalezy dodac druga adnotacje @AllArgsConstructor
+
+    @Value
+        po dodaniu tej adnotacji klasa staje sie niemutowalna
+        wszystkie pola sa private final, a sama klasa jest final
+            natomiast jesli taka klasa przyjmuje obiekt innej klasy to istnieje mozliwosc,
+            ze bedziemy mogli zmienic stan tego obiektu i obiekt przestanie byc niemutowalny
+
+    @Builder (przyklad Employee)
+        jesli mamy klase immutable z adnotacja @Value i w konstruktorze jest duzo pol do zdefiniowania, ale nie wszystkie chcemy definiowac
+        To dodajemy adnotacje @Builder i pozwala nam to na definiowanie tylko pol ktore nas interesuja podczas tworzenia obiektu
+        reszta automatycznie dostanie wartosc domyslna
+        Dzieki temu nie trzeba tworzyc wielu konstruktorow
+
+    @SneakyThrows
+        podczas robienia metod ktore wymagaja obslugi wyjatkow jak np: IO Exception na operacjah na plikach zew.
+        mozna uzyc takiej adnotacji i automatycznie mamy opakowane to w wyjatek.
+            Pod spodem lapiemy IO exception i zucamy Runtime Exception
+
+
