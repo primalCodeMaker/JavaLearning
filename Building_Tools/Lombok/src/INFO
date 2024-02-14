@@ -1,0 +1,56 @@
+
+Lombok dziala w scopie compileOnly dla Gradle oraz provided dla Mavena
+nie ma potrzeby aby byl uruchamiany na poziomie Runtimu
+
+W zakladce Refactor jest opcja Delombok, ktora zamieni w klasie adnotacje na metody z jakich lombok kozysta
+    mozna w ten sposob sprawdzic zachowanie zaciaganych metod
+
+Po dodaniu Lomboka do Gradla/Mavena nalezy skonfigurowac IntelliJa
+
+CTRL + ALT + S >>> Plugins
+i dodaj Lomboka jesli nie jest domyslnie zainstalowany
+
+oraz sprawdzic kolejne ustawienie, w opcjach wyszukaj AnnotationProcessor i musi byc zaznaczone:
+    Enable Annoatation Processing
+    Obtain processors from project classpatch
+
+POJO - termin, ktory mowi ze klasa nie zalezy od bibliotek zewnwtrznych (nie ma dodanych zadnych dependencji)
+
+konwencja JAVA Been:
+    - posiada prywatne pola, do ktorych mozna sie dostac tylko poprzez gettery i settery
+    - gettery i settery spelniaja konwencje getX(), setX()
+    - ma dostepny bezargumentowy konstruktor
+    - implementuje Serializable
+
+BoilerPlate:
+    - taki kod ktorego trzeba napisac duzo aby zrealizowac male zagadnienie
+        np: gettery i settery
+    - dzieki Lombokowi mozemy ograniczyc taki kod
+
+    @Getter i @Setter:
+Jesli wstawimy adnotacje @Getter nad klasa to da nam dostep do wszystkch pol tej klasy
+Jesli wstawimy adnotacje @Getter tylko nad wybranym polem to dostepne bedzie tylko to pole
+Jesli chcemy wyłączyc tylko wybrane pole z getera albo setera to piszemy adnotacje nad tym polem
+   ze specjalnym parametrem >> @Getter(value = AccessLevel.NONE)
+
+
+    @NonNull
+mozna przekazac np: do parametru w metodzie
+Dziala jak napisany if == null throw NullPointerException
+    @NonNull nie dziala bezposrednio dla pol klasy,
+    chyba ze uzyjemy go dla pola final ze zdefoniowanym  @RequiredArgsConstructor
+
+KONSTRUKTORY:
+    @NoArgsConstructor - pola nie moga byc final w klasie
+                         a jesli sa nalezy dodac ponizszy parametr do adnotacji:
+    @NoArgsConstructor(force = true)    <<<< w takim zapisie pola final sa inicjowane wartosciami domyslnymi null dla Klas oraz 0 dla prymitywow
+        - oznaczenie @NonNull przy polach nie dziala przy takim rodzaju konstruktora
+
+
+    @RequiredArgsConstructor - konstruktor ktory pozwala zrobic obiekt klasy z polami
+        - final
+        - oraz oznaczonymi @NonNull (tylko wtedy pole nie moze byc nullem)
+
+    @AllArgsConstructor - robi konstruktor dla wszystkich pol
+    @AllArgsConstructor(staticName = "of")   <<< mozna tez zrobic z parametrem staticName "xxx"
+        stwozy to podspodem metode statyczna z konstruktorem o nazwie jaka wpiszemy

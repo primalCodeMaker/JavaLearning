@@ -1,0 +1,25 @@
+apply plugin: 'java'
+version '0.1.0'
+sourceCompatibility = '17'
+
+
+repositories {
+    mavenCentral()
+
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.30'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
+}
+
+jar {
+    archivesBaseName = 'myGradle-jar-new'
+    manifest {
+        attributes 'Main-Class': "main.java.pl.lombok.Main"
+
+    }
+}
