@@ -86,6 +86,12 @@ Samego streama nie mozna soutPrintowac bo wychodza krzaki. Trzeba poprzez metode
                      oraz implementacje kolekcji, w ktorej bedziemy przechowywac wartosci
                      bardzo zlozony kolektor
 
+       TeeingCollector - kolektor dodany w javie 12, pozwala laczyc ze soba 2 kolektory i zwrocic je np: w postaci
+                         obiektu klasy, ktora wczesniej musiby sobie zrobic. W polach tej kalsy musimy zdefiniowac
+                         pola, ktore beda przyjmowac typ, ktory zwracaja 2 kolektory, ktore bedziemy laczyc,
+                         plus getery / setery / klonstruktor i wszystko co bedzie nam potrzebne
+                         Po skolektowaniu dostajemy obiekt, ktory przyjmuje wartosci dla 2 kolektorow ktore laczylismy
+
 
 
     // Streamy obslugujace prymitywy:
