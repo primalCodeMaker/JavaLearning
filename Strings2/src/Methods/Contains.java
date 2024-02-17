@@ -1,15 +1,12 @@
 package Methods;
 
-import java.util.Locale;
-
 public class Contains {
 
-    // TODO Contains - SPRAWDZA CZY W ZAWARTOSCI JEDNEGO STRINGA JEST DANY FTAGMENT. (EqualsIgnoreCase tu nie dziala)
 
     public Contains(String javka) {
     }
 
-    @SuppressWarnings("MismatchedStringCase")
+
     public static void main(String[] args) {
 
         String s1 = "MICHALRobiKursZaJavka.pl";
@@ -33,6 +30,9 @@ public class Contains {
 
         String s8 = "jaVA";
         System.out.println("SubstringUpper+lowerCase: " + (s8.substring(0, 1).toUpperCase() + (s8.substring(1, 4)).toLowerCase()).contains("Java"));
+
+        System.out.println("contains Mi: " + s1.contains("Mi"));
+        System.out.println("contains MI: " + s1.contains("MI"));
 
 
     }
