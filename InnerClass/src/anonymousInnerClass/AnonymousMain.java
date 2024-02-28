@@ -21,7 +21,8 @@ public class AnonymousMain {
 
     private String callInnerInterface() {
         Singable singable = songName -> "I am singing my favourite Song";
-        return singable.singASong("my favourite song"); //todo czy da sie wyciagnac stad songName?
+       // return singable.singASong("my favourite song"); //todo czy da sie wyciagnac stad songName?
+        return singable.singASong(singable.toString());   //fixme da sie :)
     }
 
     interface Voiceable {
