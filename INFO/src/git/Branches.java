@@ -20,17 +20,28 @@ public class Branches {
     git checkout nazwa_nowego_brancha >> zmienia galaz na ktorej chcemy pracowac
         commity dodaja sie na branchu na ktorym aktualnie jestesmy
 
+    git checkout -b nazwa_kolejnego_brancha_na_ktory_od_razu_sie_przelaczamy
+        tworzy brancha, i przelecza nas od razu na niego w projekcie
 
+    git switch >> nowa komenda dodana aby byla bardziej zrozumiala niz git checkout
+        robi to samo - przelacza miedzy branchami
 
+    git switch -c new_branch >> zaklada nowego brancha i przelacza na niego
 
+    git detached HEAD - przelacza sie na konkretny commit w projekcie
+        np: gdy chcemy zdebugowac projekt w stanie w przeszlosci
 
+    git branch -m nazwa-brancha_1 nazwa-brancha_1111  >> parametr -m oznacza modify
+        w tym przypadku zmienia nazwe brancha. Jesli nie podamy nazwy brancha ktory chcemy zmodyfikwoac
+        to automatycznie zmieni nazwe brancha na ktorym bylismy
 
+    git branch -d nazwa_galezi   >> usowa brancha
+        nie mozna usunac brancha, na ktorym sie znajdujemy
 
-
-
+    git branch -D nazwa_galezi >> parametr duze D oznacza --delete --force
+        uzywamy gdy chcemy usunac brancha, na ktorym sa jakies commity rozne od maina i nie zostaly wcielone
 
 
      */
-
 
 }
