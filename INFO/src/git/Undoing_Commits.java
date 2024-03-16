@@ -54,6 +54,9 @@ public class Undoing_Commits {
                     po tej komendzie nie ciezko przywrocic zmian, ktore usunelismy i nie mamy pewnosci ze to sie uda
                         robimy to komenda git reflog
 
+               git reset --hard origin/main >> na twardo resetuje stan repo lokalnego do stanu repozytorium zdalnego
+
+
      */
 
 }
