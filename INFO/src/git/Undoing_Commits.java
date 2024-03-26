@@ -57,6 +57,15 @@ public class Undoing_Commits {
                git reset --hard origin/main >> na twardo resetuje stan repo lokalnego do stanu repozytorium zdalnego
 
 
+          3. Cofanie merg commita
+          Aby cofnac merga do stanu galezi glownej main robimy:
+            git revert -m 1 ID COMMITA mergujacego
+
+          Aby cofnac merga do stanu galezi inny branch robimy:
+            git revert -m 2 ID COMMITAm mergujacego
+
+
+
      */
 
 }

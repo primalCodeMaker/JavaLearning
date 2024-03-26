@@ -10,7 +10,8 @@ public class Merge {
 
     git merge inny_branch
 
-    po zrobieniu merga dodaje sie automatycznie commit znawny merg commitem.
+    po zrobieniu merga dodaje sie automatycznie specjalny commit znawny merg commitem.
+        Spina on z soba 2 galezie zachowujac ID commitow obu z nich, przez co mozna cofnac merga do stanu maina lub innego brancha
 
     Jesli po tym usuniemy branch to nadal bedzie on widoczny w historii wersji
     a jesli po tym usuniemy commit po przez git reset --soft~1
@@ -25,6 +26,12 @@ public class Merge {
         gdyby zalezalo nam na zachowaniu historii branchy w projekcie to w takiej sytuacji
         musimy zrobic merga za pomoca komendy git merge --no-ff inny_branch
         po tym na grafie dodatkowa galaz zostanie dodana i bedzie widoczna
+
+   Aby cofnac merga do stanu galezi glownej main robimy:
+   git revert -m 1 ID COMMITA mergujacego
+
+   Aby cofnac merga do stanu galezi inny branch robimy:
+   git revert -m 2 ID COMMITAm ergujac
 
 
 
