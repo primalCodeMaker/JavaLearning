@@ -3,9 +3,6 @@ package git;
 public class PobieranieDanych {
     /*
 
-    orogin - odnosi się do domyślnego zdalnego repozytorium, z którym lokalne repozytorium Git jest
-             skonfigurowane do synchronizacji
-
     Aby pobrac zmiany z repo zdalengo musimy wykoanc  kroki:
         1. sprawdzic czy sa jakies zmaiany do pobrania
         2. zmergowac zmiany z repo zdalnego do lokalnego
@@ -26,7 +23,12 @@ public class PobieranieDanych {
 
    Git pull - laczy ze soba 2 kroki Git Fetch oraz Git pull i pobiera od razu zmiany
    nie powinno sie wykonywac pulla bezposrednio na galezi main bez wczesniejszego ogarniecia Fetcha / Rebase i Merge
-    moze to doprowadzic do drzewa w historii wersji repo zdalnego
+        moze to doprowadzic do drzewa w historii wersji repo zdalnego
+
+   Istnieje komenda laczaca pull i rebase jednoczesnie. Jesli  uzyjemy tej komendy
+   to przesunie nam to nasze commity lokalne za pobrane commity z repo zdalnego. Historia zmian pozostanie liniowa
+
+        git pull --rebase
 
 
 w pluginach w MarketPlace jest dostepny GitToolBox ktory automatycznie potrafi miedzy innymi
