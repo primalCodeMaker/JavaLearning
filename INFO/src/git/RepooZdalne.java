@@ -21,6 +21,18 @@ public class RepooZdalne {
         podaje wiecej danych
 
 
+    git push --force
+        uzywamy gdy chcemy zmodyfikwoac historje wersji w repo zdalnym
+        np: w repo lokalny, robimy git reset --soft~2
+        git push >> bez flagi --force nie przejdzie bo wplywa to bezposrednio na repo zdalne
+
+        rebase wymaga push --force bo zmienia ID commita
+        git amend wymaga push --force bo zmienia ID commita
+
+     nie nalezy Force-Pushowac na publiczne branche zdalne bo zepsuje to historie wersji u innych uzytkownikow
+
+
+
 
      */
 }

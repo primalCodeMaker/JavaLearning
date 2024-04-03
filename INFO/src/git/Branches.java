@@ -7,6 +7,9 @@ public class Branches {
     git branch          >> sprawdza na jakim branchu jestesmy
     git branch -l "m*"  >> znajduje branche ktore zaczynaja sie od "m"
 
+    git branch -r   >> sprawdza branche na repo zdalnym
+    git branch -a   >> sprawdza wszystkie branche
+
     git branch nazwa_nowego_brancha  >> tworzy nowego brancha ale nie ustawia go jako galaz robocza
         nowa galaz jest dokladna kopia stanu jaki znajdowal sie na galezi main w momencie tworzenia go
         nowy branch nie ma dostepu do nowych zmian na galezi main dopoki nie zrobimy merga
