@@ -15,6 +15,10 @@ repositories {
 dependencies {
     implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.36'
     implementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.36'
+        // slf4j-simple  >> info z jakiego frameworka do logowania kozystamy w ramach uzycia: slf4j-api
+        // slf4j sam w sobie nie wystarczy, musimy jeszcze podac co bedzie odpowiedzialne za logowanie
+             // w tej konfigutacji uzycia slf4j nie kozustamy juz z java.util.logger
+            // kozystamy z paczki: org.slf4j.impl.SimpleLogger
 
     compileOnly 'org.projectlombok:lombok:1.18.22'
     annotationProcessor 'org.projectlombok:lombok:1.18.22'
