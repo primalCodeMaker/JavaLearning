@@ -1,3 +1,9 @@
 # Default ignored files
 /shelf/
+/build/
+/.gradle/
+.gradle/
+/.gradle/7.4/
+/.gradle/buildOutputCleanup/buildOutputCleanup/
+
 /workspace.xml
