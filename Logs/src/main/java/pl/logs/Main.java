@@ -11,15 +11,21 @@ public class Main {
 
     public static void main(String[] args) {
 
-        log.trace("Trace Message in: {}", Main.class.getName());
-        log.debug("Debug Message in: {}", Main.class.getName());
-        log.info("Info Message in: {}", Main.class.getName());
-        log.warn("Warn Message in: {}", Main.class.getName());
-        log.error("Error Message in: {}", Main.class.getName());
+//        log.trace("Trace Message in: {}", Main.class.getName());
+//        log.debug("Debug Message in: {}", Main.class.getName());
+//        log.info("Info Message in: {}", Main.class.getName());
+//        log.warn("Warn Message in: {}", Main.class.getName());
+//        log.error("Error Message in: {}", Main.class.getName());
 
         Logger1.log();
         Logger2.log();
 
+        otherMethod();
 
+
+    }
+    public static String otherMethod() {
+        log.error("Error Message in: {}", Main.class.getName());
+        return "Hrello!";
     }
 }

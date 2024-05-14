@@ -2,9 +2,17 @@
 <configuration>
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>%d{HH::mm:ss.SSS} [%t] %-5level %logger {36} -  %msg%n</pattern>
+            <pattern>%d{HH::mm:ss.SSS} [%t] %-5level %logger{36}%logger {36}:%method:%line: -  %msg%n</pattern>
         </encoder>
     </appender>
+
+<!--    <logger name="pl.logs.logger" level="debug" additivity="false">-->
+<!--        <appender-ref ref="CONSOLE"/>-->
+<!--    </logger>-->
+
+<!--    <logger name="pl.logs.logger" level="trace" additivity="false">-->
+<!--        <appender-ref ref="CONSOLE"/>-->
+<!--    </logger>-->
 
     <root level="info">
         <appender-ref ref="CONSOLE"/>
