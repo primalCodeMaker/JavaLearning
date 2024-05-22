@@ -50,6 +50,46 @@ public class INFO {
         <appender-ref ref="CONSOLE"/>
     </root>
 
+------------------------------------------------------------
+
+Logowanie do pliku:
+wcześniej pod tagiem <configuration> tworzymy zmienna, ktora podaja nam sciezke do pliku:
+
+<property name = "HOME_LOG" value = "${user.dir}/logs/pl.logs.log"/>
+
+Apender wyglada w taki sposob z wykozystaniem zmiennej:
+
+<appender name="toFileLogs" class="ch.qos.logback.core.FileAppender">
+        <file>${HOME_LOG}</file>
+        <append>true</append>                    <<<< to nie nadpisuje starych logow tylko wpisuje kolejne wiersze
+        <immediateFlush>True</immediateFlush>    <<< zapisuje od razu logi do pliku bez przetrzymywania ich w pamieci
+
+        <encoder>                                <<< patern okresla nam format logow do pliku
+            <pattern>%d{HH::mm:ss.SSS} [%t] %-5level %logger{36}%logger {36}:%method:%line: -  %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    mozemy taka konfiguracje uzyc dla folderu, jesli root aplikacji jest inny:
+
+    <logger name="pl.logs.logger" level="debug" additivity="false">
+        <appender-ref ref="toFileLogs"/>
+    </logger>
+
+jesli roota logujemy do consoli a tylko wybrana paczke do pliku, to ta paczka ma podmieniony calkowicie config
+i bedzie logowala tylko do pliku. W consoli nie bedzie info
+Aby to zmienic mozna zmienic additivity="true":
+wtedy bedzie logowal i root i dodatkowy logger, logi nie beda sie nadpisywac tylko beda w 2 miejscach zgodnie z konfiguracja
+(dziedziczenie logerow)
+
+<logger name="pl.logs.logger" level="debug" additivity="true">
+
+
+lub dopisac drugi apender w tej osobnej konfiguracji, ktory bedzie mowil gdzie ma jeszcze logowac:
+<logger name="pl.logs.logger" level="debug" additivity="false">
+        <appender-ref ref="toFileLogs"/>
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+
 
 
 
