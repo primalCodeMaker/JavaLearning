@@ -2,6 +2,7 @@
 <configuration>
 
     <property name = "HOME_LOG" value = "${user.dir}/logs/pl.logs.log"/>
+    <property name = "HOME_LOG_ROLLING" value = "${user.dir}/logs/pl.rolling.log"/>
 
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
@@ -9,20 +10,39 @@
         </encoder>
     </appender>
 
-    <appender name="toFileLogs" class="ch.qos.logback.core.FileAppender">
-        <file>${HOME_LOG}</file>
-        <append>true</append>
-        <immediateFlush>True</immediateFlush>
+<!--    <appender name="toFileLogs" class="ch.qos.logback.core.FileAppender">-->
+<!--        <file>${HOME_LOG}</file>-->
+<!--        <append>true</append>-->
+<!--        <immediateFlush>True</immediateFlush>-->
+<!--        <encoder>-->
+<!--            <pattern>%d{HH::mm:ss.SSS} [%t] %-5level %logger{36}%logger {36}:%method:%line: -  %msg%n</pattern>-->
+<!--        </encoder>-->
+<!--    </appender>-->
+
+<!--    <logger name="pl.logs.logger" level="debug" additivity="false">-->
+<!--        <appender-ref ref="toFileLogs"/>-->
+<!--        <appender-ref ref="CONSOLE"/>-->
+<!--    </logger>-->
+
+    <appender name="rollingFiles" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${HOME_LOG_ROLLING}</file>
+        <rollingPolicy class ="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+                <fileNamePattern>${user.dir}/logs/archived/pl.logs.rolling.%d{yyyy-mm-dd}.%i.log</fileNamePattern>
+            <maxFileSize>10MB</maxFileSize>
+            <totalSizeCup>1GB</totalSizeCup>
+            <maxHistory>10</maxHistory>
+        </rollingPolicy>
+
         <encoder>
             <pattern>%d{HH::mm:ss.SSS} [%t] %-5level %logger{36}%logger {36}:%method:%line: -  %msg%n</pattern>
         </encoder>
     </appender>
 
-    <logger name="pl.logs.logger" level="debug" additivity="false">
-        <appender-ref ref="toFileLogs"/>
-        <appender-ref ref="CONSOLE"/>
-    </logger>
 
+    <logger name="pl.logs.loggerLoop" level="debug" additivity="false">
+        <appender-ref ref="rollingFiles"/>
+<!--        <appender-ref ref="CONSOLE"/>-->
+    </logger>
 
 
     <root level="info">

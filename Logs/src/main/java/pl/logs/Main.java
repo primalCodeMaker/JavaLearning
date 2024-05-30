@@ -5,6 +5,8 @@ import org.slf4j.LoggerFactory;
 import pl.logs.logger.Logger1;
 import pl.logs.logger.Logger2;
 
+import static pl.logs.loggerLoop.LoggerLoop.log;
+
 public class Main {
     private static final Logger log = LoggerFactory.getLogger(Main.class);
 
@@ -17,10 +19,12 @@ public class Main {
 //        log.warn("Warn Message in: {}", Main.class.getName());
 //        log.error("Error Message in: {}", Main.class.getName());
 
-        Logger1.log();
-        Logger2.log();
+//        Logger1.log();
+//        Logger2.log();
+//
+//        otherMethod();
 
-        otherMethod();
+        log();
 
 
     }

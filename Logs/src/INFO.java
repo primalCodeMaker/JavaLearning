@@ -91,12 +91,44 @@ lub dopisac drugi apender w tej osobnej konfiguracji, ktory bedzie mowil gdzie m
     </logger>
 
 
+Logowanie do jednego pliku jest problematyczne bo z czasem ma on za duzy rozmiar.
+Nalezy takie pliki dzielic
+
+tutaj uzywamy rollingPolicy aby zdefiniowac kiedy maja sie tworzyc nowe pliki z logami:
+
+ <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">                  <<< SizeAndTimeBasedRollingPolicy nowy plik jesli przekroczy rozmiar lub nasz ustalona date
+ <fileNamePattern>${user.dir}/logs/archived/pl.logs.rolling.%d{yyyy-mm-dd}.%i.log</fileNamePattern> <<< tu ustalamy co ile ma sie robic nowy plik. %i jest licznikiem do robienia nowych plikow
+
+ dodatkowe opcje:
+            <maxFileSize>10MB</maxFileSize>
+            <totalSizeCup>1GB</totalSizeCup>
+            <maxHistory>10</maxHistory>
+
+PELEN PRZYKLAD:
+ <property name = "HOME_LOG_ROLLING" value = "${user.dir}/logs/pl.rolling.log"/>      <<< zmienna ZDEFINIOWANA GDZIE MA BYC PLIK I JAK SIE NAZYWAC
+
+NIZEJ DEFINIUJEMY LOGGER TYPU ROLLING POLICY (ZAWIJANIE PLIKOW):
+
+ <appender name="rollingFiles" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${HOME_LOG_ROLLING}</file>
+        <rollingPolicy class ="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+                <fileNamePattern>${user.dir}/logs/archived/pl.logs.rolling.%d{yyyy-mm-dd}.%i.log</fileNamePattern>
+            <maxFileSize>10MB</maxFileSize>
+            <totalSizeCup>1GB</totalSizeCup>
+            <maxHistory>10</maxHistory>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>%d{HH::mm:ss.SSS} [%t] %-5level %logger{36}%logger {36}:%method:%line: -  %msg%n</pattern>
+        </encoder>
+    </appender>
 
 
+A TU PLISZEMY ODDZIELY LOGGER DLA TEGO ROZWIAZANIA PO ZA ROOTEM:
 
-
-
-
+    <logger name="pl.logs.loggerLoop" level="debug" additivity="false">
+        <appender-ref ref="rollingFiles"/>
+    </logger>
 
 
 
