@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+group = 'main.java.exercise1'
+version = '0.1.0'
+sourceCompatibility = '17'
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok:1.18.32'
+    annotationProcessor 'org.projectlombok:lombok:1.18.32'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.32'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.32'
+}
