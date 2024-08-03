@@ -1,4 +1,4 @@
-package org.designPatterns.structural.adapter.composite;
+package org.designPatterns.structural.composite;
 
 public class Main {
 
