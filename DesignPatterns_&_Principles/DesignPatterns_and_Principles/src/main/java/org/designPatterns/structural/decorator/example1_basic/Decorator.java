@@ -1,4 +1,4 @@
-package org.designPatterns.structural.decorator;
+package org.designPatterns.structural.decorator.example1_basic;
 
 import lombok.RequiredArgsConstructor;
 
