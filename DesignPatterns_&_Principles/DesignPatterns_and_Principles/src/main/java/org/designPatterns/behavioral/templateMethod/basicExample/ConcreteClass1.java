@@ -1,6 +1,6 @@
-package org.designPatterns.behavioral.templateMethod;
+package org.designPatterns.behavioral.templateMethod.basicExample;
 
-public class ConcreteClass2 extends AbstractClass {
+public class ConcreteClass1 extends AbstractClass {
 
     public void stepOne() {
         System.out.println("Performing step one in ConcreteClass1");

@@ -1,4 +1,4 @@
-package org.designPatterns.behavioral.templateMethod;
+package org.designPatterns.behavioral.templateMethod.basicExample;
 
 public class Main {
 
