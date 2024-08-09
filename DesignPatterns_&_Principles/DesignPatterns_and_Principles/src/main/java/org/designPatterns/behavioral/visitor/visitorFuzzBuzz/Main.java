@@ -4,8 +4,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        MyList myList = new MyList();
-        myList.addToList();
+        VolumeSetter myList = new MyList();
+        myList.addToList(100000);
 
         Visitor myKeyMap = new MyKeyMap();
 

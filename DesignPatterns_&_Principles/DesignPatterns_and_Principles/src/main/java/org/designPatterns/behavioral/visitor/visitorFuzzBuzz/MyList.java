@@ -7,13 +7,13 @@ import java.util.List;
 
 @ToString
 
-public class MyList {
+public class MyList implements VolumeSetter {
 
     public List<Integer> list = new ArrayList<>();
 
-    List addToList() {
+    public List addToList(int counter) {
         if (list.isEmpty()) {
-            for (int i = 1; i <= 100; i++) {
+            for (int i = 1; i <= counter; i++) {
                 list.add(i);
             }
         }
