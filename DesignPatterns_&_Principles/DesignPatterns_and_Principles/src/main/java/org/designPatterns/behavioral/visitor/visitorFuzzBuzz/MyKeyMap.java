@@ -23,6 +23,7 @@ public class MyKeyMap implements Visitor {
             System.out.println("For value " + item + ": " + result);
         });
     }
+
 }
 
 
