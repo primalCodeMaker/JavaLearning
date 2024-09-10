@@ -1,4 +1,4 @@
-package org.example;
+package org.example1;
 
 public class INFO {
 
@@ -55,6 +55,14 @@ Then - co jest spodziewanym wynikiem testow
 Podczas buildu Mavenowego mozna dodac flage -DskipTests i uruchomi sie build ale testy zostana pominiete
 Podczas buildu Gradlowegeo mozna dodac flage -x test i uruchomi sie build ale testy zostana pominiete
 
+
+Szybkie zakładanie klasy testowej dla naszej klasy Bazowej:
+CTRL + SHIFT + T  >> Create new Test
+
+Kolejnosc metod w testach jest niezalezna i sa wywolywane randomowo jesli chodzi o kolejnosc,
+kazda metoda jest trakowana oddzielnie
+nie mozna polegac, ze metody wywolaja sie zgodnie z klejnoscia jak je napiszemy
+Da sie to wymusic, ale nie jest to dobra praktyka
 
      */
 }
