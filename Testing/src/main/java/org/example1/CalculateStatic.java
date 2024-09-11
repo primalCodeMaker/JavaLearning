@@ -1,7 +1,7 @@
 package org.example1;
 
 
-public class Calculate {
+public class CalculateStatic {
 
     public static int add(int left, int right) {
         return left + right;

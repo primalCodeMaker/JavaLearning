@@ -7,6 +7,6 @@ public class Main {
         int x = 1;
         int y = 2;
 
-        Calculate.add(x,y);
+        CalculateStatic.add(x,y);
     }
 }

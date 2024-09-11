@@ -1,6 +1,6 @@
 package org.example1;
 
-public class INFO {
+public class INFO1_basics_implementacja_adnotacje {
 
     /*
     JUnit - framework do pisania testów
@@ -35,8 +35,8 @@ Klasa testowa musi odpowiadac klasie, ktora testujemy z dopiskiem Test
 moze posiadac wiele testow
 metody testowe moga miec rozne nazwy niz metody z klasy bazowej
 
-
 W projektach Gradlowych nie musimy implementowac surefire-plugina, tylko ma obsluge JUnita wbudowana domyslnie.
+W Gradle klasa nie musi konczyc sie na "Test", program i tak je uruchomi.
 Aby ja wlaczyc wpisujemy po zamknieciu dependencji:
 
 tet {
@@ -46,12 +46,6 @@ events "passed", "skipped", "failed"
 }
 }
 
-
-Podczas pisania ciala testow uzywamy konwencji:
-Given - deklarujemy dane wejsciowe do testow
-When - co ten test faktycznie robi
-Then - co jest spodziewanym wynikiem testow
-
 Podczas buildu Mavenowego mozna dodac flage -DskipTests i uruchomi sie build ale testy zostana pominiete
 Podczas buildu Gradlowegeo mozna dodac flage -x test i uruchomi sie build ale testy zostana pominiete
 
@@ -59,10 +53,45 @@ Podczas buildu Gradlowegeo mozna dodac flage -x test i uruchomi sie build ale te
 Szybkie zakładanie klasy testowej dla naszej klasy Bazowej:
 CTRL + SHIFT + T  >> Create new Test
 
+
+jesli metody w klasie glownej sa statyczne mozemy je testowac bez instancji klasy
+jezeli metody nie sa statyczne musimy stworzyc instancje tej klasy w klasie testowej
+    i pozniej w kazdym tescie mozemy zdefiniowac ten obiekt na nowo poprzez nadpisanie zmiennej myClass = new myClass();
+
+Podczas pisania ciala testow uzywamy konwencji:
+Given - deklarujemy dane wejsciowe do testow
+When - co ten test faktycznie robi
+Then - co jest spodziewanym wynikiem testow
+
+
 Kolejnosc metod w testach jest niezalezna i sa wywolywane randomowo jesli chodzi o kolejnosc,
 kazda metoda jest trakowana oddzielnie
 nie mozna polegac, ze metody wywolaja sie zgodnie z klejnoscia jak je napiszemy
 Da sie to wymusic, ale nie jest to dobra praktyka
+
+
+@DisplayName("what test do")
+    ta adnotacja pozwala na opisanie testu, ktory sie wypisze w Logach po wykonaniu testow
+
+        Adnotacje, ktore pzowalaja odpalic metody / kod przed lub po testach w roznych wariantach
+        nie trzeba ich pisac kazdorazowo przy pojedynczych testach, wystarczy raz na poczatku klasy z odpowiednia adnotacja
+@BeforeAll
+    adnotacja, ktora wykonuje czesc kodu, przed wszystkimi testami
+    np: moze otworzyc polaczenie z baza danych aby nie robic tego za kazdym razem przy nowym tescie
+    metody w tej adnotacji musza byc statyczne
+
+@AfterAll
+    adnotacja, ktora wykonuje czesc kodu, po wszystkich testach
+    metody w tej adnotacji musza byc statyczne
+
+@BeforeEach
+    adnotacja, ktora wykonuje moetody przed kazdym jednym testem w klasie
+    metody w tej adnotacji nie moga byc statyczne
+
+@AfterEach
+    adnotacja ktra wykonuje czesc kodu po kazdym pojedynczym tescie w klasie
+    metody w tej adnotacji nie moga byc statyczne
+
 
      */
 }

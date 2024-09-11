@@ -1,11 +1,31 @@
 package org.example1;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
-class CalculateTest {
+class CalculateStaticTest {
+
+    @BeforeAll
+    static void beforeAll() {
+        System.out.println("BeforeAll annotation");
+    }
+
+    @AfterAll
+    static void afterAll() {
+        System.out.println("AfterAll annotation");
+    }
+
+    @BeforeEach
+    void beforeEach() {
+        System.out.println("   Before each test code ");
+    }
+
+    @AfterEach
+    void afterEach() {
+        System.out.println("   After each test code ");
+    }
 
     @Test
+    @DisplayName("This Test add two numbers")
     void add() {
         // Given
         int left = 5;
@@ -13,7 +33,7 @@ class CalculateTest {
         Integer expected = 12;
 
         // When
-        Integer result = Calculate.add(left, right);
+        Integer result = CalculateStatic.add(left, right);
 
         // Then
         Assertions.assertEquals(expected, result);
@@ -28,7 +48,7 @@ class CalculateTest {
         Integer expected = -2;
 
         // When
-        Integer result = Calculate.subrtact(left, right);
+        Integer result = CalculateStatic.subrtact(left, right);
 
         // Then
         Assertions.assertEquals(expected, result);
@@ -43,7 +63,7 @@ class CalculateTest {
         Integer expected = 35;
 
         // When
-        Integer result = Calculate.multiply(left, right);
+        Integer result = CalculateStatic.multiply(left, right);
 
         // Then
         Assertions.assertEquals(expected, result);
@@ -58,7 +78,7 @@ class CalculateTest {
         Integer expected = 5;
 
         // When
-        Integer result = Calculate.divide(left, right);
+        Integer result = CalculateStatic.divide(left, right);
 
         // Then
         Assertions.assertEquals(expected, result);
