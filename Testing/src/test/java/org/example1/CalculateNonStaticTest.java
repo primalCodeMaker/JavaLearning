@@ -16,9 +16,14 @@ class CalculateNonStaticTest {
         calculator = new CalculateNonStatic();
     }
 
+    private String createMessage(int param) {
+        System.out.println("nice, the test is passed " + param);
+        return "FAIL " + param;
+    }
+
 
     @Test
-    @DisplayName("This Test add two numbers")
+    @DisplayName("assertEquals / assertNotEquals -> with messages")
     void add() {
         // Given
         int left = 5;
@@ -30,10 +35,14 @@ class CalculateNonStaticTest {
 
         // Then
         Assertions.assertEquals(expected, result);
+        Assertions.assertEquals(expected, result, "Good");
+        Assertions.assertEquals(expected, result, createMessage(5));
+        Assertions.assertNotEquals(expected, 2, () -> createMessage(444));
 
     }
 
     @Test
+    @DisplayName("assertTrue / assertFalse & assertNull / assertNotNull")
     void subrtact() {
         // Given
         int left = 5;
@@ -44,7 +53,9 @@ class CalculateNonStaticTest {
         Integer result = calculator.subrtact(left, right);
 
         // Then
-        Assertions.assertEquals(expected, result);
+        Assertions.assertNotNull(result);
+        Assertions.assertTrue(true);
+        Assertions.assertFalse(false);
 
     }
 
