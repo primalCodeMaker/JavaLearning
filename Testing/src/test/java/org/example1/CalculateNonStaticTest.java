@@ -17,7 +17,7 @@ class CalculateNonStaticTest {
     }
 
     private String createMessage(int param) {
-        System.out.println("nice, the test is passed " + param);
+        System.out.println("nice, the test passed " + param);
         return "FAIL " + param;
     }
 
@@ -60,32 +60,29 @@ class CalculateNonStaticTest {
     }
 
     @Test
+    @DisplayName("Assertion.assertAll >> wywolywanie testow po sobie w przypadku faila")
     void multiply() {
-        // Given
-        int left = 5;
-        int right = 7;
-        Integer expected = 35;
-
-        // When
-        Integer result = calculator.multiply(left, right);
-
-        // Then
-        Assertions.assertEquals(expected, result);
+        Assertions.assertAll(
+                () -> Assertions.assertTrue(true, () -> "test 1 "),
+                () -> Assertions.assertTrue(true, () -> "test 2 "),
+                () -> Assertions.assertTrue(true, () -> "test 3 ")
+        );
 
     }
 
     @Test
+    @DisplayName("Exception throw Test")
     void divide() {
         // Given
-        int left = 10;
-        int right = 2;
-        Integer expected = 5;
+        String left = "10";
+        String right = "XXX";
 
-        // When
-        Integer result = calculator.divide(left, right);
+        // When, Then
+        Assertions.assertThrows(IllegalArgumentException.class, () -> calculator.divide(left, right));
+//        Assertions.assertThrows(EnumConstantNotPresentException.class, ()-> calculator.divide(left, right));  // fail!
 
-        // Then
-        Assertions.assertEquals(expected, result);
-
+        // przyklad z wiadomoscia podczas faila
+        NumberFormatException thowable = Assertions.assertThrows(NumberFormatException.class, () -> calculator.divide(left, right));
+        Assertions.assertEquals("For input String: \"" + right + "\"", thowable.getMessage());
     }
 }

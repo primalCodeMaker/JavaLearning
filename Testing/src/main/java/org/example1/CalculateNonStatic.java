@@ -15,8 +15,8 @@ public class CalculateNonStatic {
         return left * right;
     }
 
-    public int divide(int left, int right) {
-        return left / right;
+    public int divide(String left, String right) {
+        return Integer.parseInt(left) / Integer.parseInt(right);
     }
 
 }
