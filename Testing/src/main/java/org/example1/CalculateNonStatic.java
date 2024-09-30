@@ -3,6 +3,12 @@ package org.example1;
 
 public class CalculateNonStatic {
 
+
+
+    public int paramAdd(int left, int right) {
+        return left + right;
+
+    }
     public int add(int left, int right) {
         return left + right;
     }

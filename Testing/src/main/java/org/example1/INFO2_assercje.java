@@ -32,6 +32,34 @@ public class INFO2_assercje {
     przykład CalculateNonStaticTest >> void divide()
 
 
+    WYLACZENIE TESTOW:
+    Aby zignoworac jakis test w kodzie nalezy oznaczyc go adnotacja
+            @Disabled("wiadomosc dlaczego blokujemy ten test")
+        kiedys byla uzywana adnotacja @Ignore ale w nowej wersji Junit zostala zastapiona
+        w interfejsie taki test zostanie oznaczony specjalna ikonka dla zablokowanych testow
+    Ta adnotacja dodana na poziomie klasy testowej wylaczy wszystkie testy w niej zapisane
+
+
+
+TESTY PARAMETRYZOWALNE
+    aby robic testy z roznym parametrami dodajemy dependencje
+    <artifactId>junit-jupiter-params</artifactId> ze scopem <test>
+
+w metodzie testowej dodajemy tablice intow jako argumrnty metody
+taka metode oznaczamy adnotacja:
+@ParameterizedTest
+@MethodSource(value = "testData")  >>> w nawiasie nazwa metody, ktora ma nam zwrocic tablice 2 wymiarowa
+                                       w ktorej okreslimy dane testowe.
+                                       Ta metode robimy sami i w niej podajemy grupy parametrow testowych
+                                       w formie kolejnych wpisow w tabeli 2-wymiarowej
+
+w tym podejsciu mozemy zrobic wykonanie 1 testu wiele razy, z roznymi parametrami.
+np: jak chcemy sprawdzic wartosci graniczne
+Taka metoda jest uruchamiana wielokrotnie, z kolejnymi wywolaniami parametrow jakie mamy w metodzie testData()
+
+przyklad:  class CalculateNonStaticTest,
+    metoda void paramAdd(int[] testData) + public static int[][] testData111()
+
 
      */
 }

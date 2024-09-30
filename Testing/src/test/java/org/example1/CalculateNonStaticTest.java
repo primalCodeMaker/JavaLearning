@@ -1,6 +1,8 @@
 package org.example1;
 
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
 class CalculateNonStaticTest {
 
@@ -85,4 +87,23 @@ class CalculateNonStaticTest {
         NumberFormatException thowable = Assertions.assertThrows(NumberFormatException.class, () -> calculator.divide(left, right));
         Assertions.assertEquals("For input String: \"" + right + "\"", thowable.getMessage());
     }
+
+    @ParameterizedTest
+    @MethodSource(value = "testData111")
+    void paramAdd(int[] testData) {
+        // Given, When
+        int result = calculator.paramAdd(testData[1], testData[2]);
+
+        // Then
+        Assertions.assertEquals(testData[0], result);
+
+    }
+    public static int[][] testData111() {
+        return new int [][]{
+            {5, 2, 3},
+            {8, 3, 5},
+            {9, 2, 7}
+        };
+    }
+
 }
